@@ -1,0 +1,35 @@
+:root{
+    --primary-color: darkblue;
+    --secondary-color: green;
+    --third-color: rgb(167, 167, 167);
+
+    --dark-primary-color: rgb(0, 0, 74);
+    --dark-secondary-color: rgb(0, 72, 0);
+    --dark-third-color: rgb(27, 27, 28);
+
+    --very-dark-primary-color: rgb(0, 0, 34);
+    --very-dark-secondary-color: rgb(0, 35, 0);
+    --very-dark-third-color: rgb(15, 15, 15);
+
+    --ambient-darkest-color: #000000;
+    --ambient-dark-color: #2F4550;
+    --ambient-mid-color: #586F7C;
+    --ambient-light-color: #B8DBD9;
+    --ambient-lightest-color: #F4F4F9;
+    
+    --general-padding: 10px 20px;
+    --primary-border-all: 1px solid darkblue;
+    --primary-border-all-bottom: 4px solid darkblue;
+    --primary-border-all-top: 0px solid black;
+
+    /* 
+    can be used like the following: 
+
+    background-color: var(--primary-color);
+    padding: var(--general-padding);
+
+    border: var(--primary-border-all);
+    border-bottom: var(--primary-border-all-bottom);
+    border-top: var(--primary-border-all-top); 
+    */
+}

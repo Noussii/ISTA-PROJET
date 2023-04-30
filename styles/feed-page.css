@@ -1,0 +1,24 @@
+@import url('./root_styles.css');
+body{
+    height: 100%;
+}
+.main{
+    padding-left: 310px;
+}
+.left-side{
+    padding-top: 15px;
+    background-color: var(--ambient-lightest-color);
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.left-side-button{
+    background-color: var(--ambient-mid-color);
+    height: 50px;
+    width: 90%;
+    color: white;
+}
