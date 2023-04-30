@@ -10,3 +10,13 @@ https://docs.google.com/document/d/1ootluzQ7fbNMmPeERvh0agLtItsX8paomJ57GX2Q0CU/
 
 ## server used : 
 apache 2.4  https://httpd.apache.org/docs/2.4/
+
+### server structure :
+
+root - +
+       |
+       |---- Apache24
+       .
+       .     other directories...
+       .
+       |---- php
