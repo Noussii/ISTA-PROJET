@@ -13,10 +13,10 @@ apache 2.4  https://httpd.apache.org/docs/2.4/
 
 ### server structure :
 
-root - +
-       |
-       |---- Apache24
-       .
-       .     other directories...
-       .
-       |---- php
+root '/'  - +
+            |
+            |---- Apache24
+            .
+            .     other directories...
+            .
+            |---- php
