@@ -1,6 +1,5 @@
 <?php
 session_start()
-
 // Read the contents of the JSON file
 $json_data = file_get_contents('../config.json');
 // Decode the JSON data into a PHP object
