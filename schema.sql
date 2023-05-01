@@ -71,13 +71,32 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`article_resources` (
 ENGINE = InnoDB;
 
 
--- -----------------------------------------------------
--- Table `ista_website_db`.`student`
--- -----------------------------------------------------
+-- -- -----------------------------------------------------
+-- -- Table `ista_website_db`.`student`
+-- -- -----------------------------------------------------
+-- CREATE TABLE IF NOT EXISTS `ista_website_db`.`student` (
+--   `student_id` INT NOT NULL AUTO_INCREMENT,
+--   `email` VARCHAR(300) NOT NULL,
+--   `password` VARCHAR(100) NOT NULL,
+--   `national_student_id` VARCHAR(45) NULL,
+--   `numberInClass` INT NULL,
+--   `is_publisher` INT NOT NULL DEFAULT 0,
+--   `is_responsable` INT NOT NULL DEFAULT 0,
+--   `photo_path` VARCHAR(500) NULL,
+--   PRIMARY KEY (`student_id`),
+--   UNIQUE INDEX `user_id_UNIQUE` (`student_id` ASC) VISIBLE,
+--   UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
+--   UNIQUE INDEX `numberInClass_UNIQUE` (`numberInClass` ASC) VISIBLE,
+--   UNIQUE INDEX `national_student_id_UNIQUE` (`national_student_id` ASC) VISIBLE,
+--   UNIQUE INDEX `photo_path_UNIQUE` (`photo_path` ASC) VISIBLE)
+-- ENGINE = InnoDB;
+
 CREATE TABLE IF NOT EXISTS `ista_website_db`.`student` (
   `student_id` INT NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(300) NOT NULL,
   `password` VARCHAR(100) NOT NULL,
+  `first_name` VARCHAR(100) NOT NULL,
+  `last_name` VARCHAR(100) NOT NULL,
   `national_student_id` VARCHAR(45) NULL,
   `numberInClass` INT NULL,
   `is_publisher` INT NOT NULL DEFAULT 0,
@@ -90,7 +109,6 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`student` (
   UNIQUE INDEX `national_student_id_UNIQUE` (`national_student_id` ASC) VISIBLE,
   UNIQUE INDEX `photo_path_UNIQUE` (`photo_path` ASC) VISIBLE)
 ENGINE = InnoDB;
-
 
 -- -----------------------------------------------------
 -- Table `ista_website_db`.`super_user`
