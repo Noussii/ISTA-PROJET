@@ -1,6 +1,6 @@
 {
     "servername": "localhost",
     "username": "root",
-    "password": "dbpassword",
+    "password": "",
     "dbname": "ista_website_db"
 }
