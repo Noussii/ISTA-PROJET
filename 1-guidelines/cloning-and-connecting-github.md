@@ -8,4 +8,4 @@ tfarajo had video otab9o lifih bach t'installiw git : https://www.youtube.com/wa
 
 fdak "github-id-ta3k" dir id ta3k li fgithub (chof image) :
 
-![profile-id-image](https://github.com/Noussii/ISTA-PROJET/tree/DEV_branch/descriptive-images/profile-id.PNG)
+![profile-id-image](https://raw.githubusercontent.com/Noussii/ISTA-PROJET/DEV_branch/1-guidelines/descriptive_images/profile-id.PNG)
