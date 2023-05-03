@@ -11,18 +11,9 @@
 
 </head>
 <body>
-    <header class="h-main">
-        <div class="header-logo-container">
-            <a href="../index.php">Corner</a>
-        </div>
-        <nav>
-            <a href="./updates.html">Updates</a>
-            <a href="./login.html">Login</a>
-        </nav>
-    </header>
-
+    <?php include '../page_components/header_public.php'; ?>
     <main>
-        <h1 style="text-align: center;">Login</h1>
+        <h1 class='login-title'>Login</h1>
         <form action="../api/authentication.php" method="post">
             <legend>Fill in your login credentials:</legend>
             <div class="form-row">

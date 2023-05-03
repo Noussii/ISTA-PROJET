@@ -1,8 +1,13 @@
-header[class="h-main"]{
+/* header[class="h-main"]{
     position: relative;
+} */
+.login-title{
+    text-align: center;
+    padding-top: 20px;
 }
 form{
     margin: 50px auto;
+    margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 20px;
     max-width: 95%;

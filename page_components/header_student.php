@@ -3,8 +3,9 @@
         <a href="./index.php">Corner</a>
         </div>
         <nav>
-            <a href="./page/updates.php">Updates</a>
             <a href="./page/login.php">Login</a>
+            <a href="./page/updates.php">Updates</a>
+            <a href="../api/logout.php">Logout</a>
         </nav>
 </header>
 
