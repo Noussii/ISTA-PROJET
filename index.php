@@ -9,16 +9,7 @@
         
     </head>
     <body>
-        <header class="h-main">
-            <div class="header-logo-container">
-        <a href="./index.php">Corner</a>
-        </div>
-        <nav>
-            <a href="./page/updates.php">Updates</a>
-            <a href="./page/login.php">Login</a>
-        </nav>
-    </header>
-    
+    <?php include "./page_components/header_public.php"; ?>
     
     <section class="slidshow">
         <h1 class="slidshow-title">Hello php</h1>

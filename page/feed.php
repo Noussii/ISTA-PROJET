@@ -29,7 +29,9 @@ include "../logic_php_layer/feed-page-logic.php";
     </aside>
     <main class='main'>
         <h1>welcome <?= $_SESSION['first_name']; ?> you are a <?= $_SESSION['user_type']; ?> </h1>
+        <h2  id="label">label</h2>
         <a href="../api/logout.php">logout</a>
     </main>
 </body>
+<script src='../scripts/feed_test.js'></script>
 </html>
