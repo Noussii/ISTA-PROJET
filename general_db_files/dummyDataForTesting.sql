@@ -1,60 +1,54 @@
+
+
 INSERT INTO `student` (`email`, `password`, `national_student_id`, `numberInClass`, `is_publisher`, `is_responsable`, `photo_path`, `first_name`, `last_name`, `phone_number`, `contact_email`)
 VALUES 
-('st-Ahmed@ofppt.com', 'password1', 'MA12345', 1, 0, 0, '/path/to/photo1.jpg', 'Ahmed', 'Khalid', '+212600000001', 'contact1@ofppt.com'),
-('st-Mohamed@ofppt.com', 'password2', 'MA12346', 2, 0, 0, '/path/to/photo2.jpg', 'Mohamed', 'Ali', '+212600000002', 'contact2@ofppt.com'),
-('st-Youssef@ofppt.com', 'password3', 'MA12347', 3, 0, 0, '/path/to/photo3.jpg', 'Youssef', 'Mohamed', '+212600000003', 'contact3@ofppt.com'),
-('st-Nadia@ofppt.com', 'password4', 'MA12348', 4, 0, 0, '/path/to/photo4.jpg', 'Nadia', 'Saleh', '+212600000004', 'contact4@ofppt.com'),
-('st-Sara@ofppt.com', 'password5', 'MA12349', 5, 0, 0, '/path/to/photo5.jpg', 'Sara', 'Ahmed', '+212600000005', 'contact5@ofppt.com'),
-('st-Fatima@ofppt.com', 'password6', 'MA12350', 6, 0, 0, '/path/to/photo6.jpg', 'Fatima', 'Hassan', '+212600000006', 'contact6@ofppt.com'),
-('st-Aya@ofppt.com', 'password7', 'MA12351', 7, 0, 0, '/path/to/photo7.jpg', 'Aya', 'Hamed', '+212600000007', 'contact7@ofppt.com'),
-('st-Adam@ofppt.com', 'password8', 'MA12352', 8, 0, 0, '/path/to/photo8.jpg', 'Adam', 'Ibrahim', '+212600000008', 'contact8@ofppt.com'),
-('st-Ali@ofppt.com', 'password9', 'MA12353', 9, 0, 0, '/path/to/photo9.jpg', 'Ali', 'Moussa', '+212600000009', 'contact9@ofppt.com'),
-('st-Hana@ofppt.com', 'password10', 'MA12354', 10, 0, 0, '/path/to/photo10.jpg', 'Hana', 'Abdullah', '+212600000010', 'contact10@ofppt.com'),
-('st-Abdullah@ofppt.com', 'password11', 'MA12355', 11, 0, 0, '/path/to/photo11.jpg', 'Abdullah', 'Omar', '+212600000011', 'contact11@ofppt.com');
+('st-ahmedrashid@ofppt.com', 'p@ssw0rd1', 'a123456', 1, 0, 1, '/photos/ahmed_rashid.jpg', 'Ahmed', 'Rashid', '+971501234567', 'ahmed.rashid@ofppt.com'),
+('st-alimohammed@ofppt.com', 'p@ssw0rd2', 'b234567', 2, 0, 0, '/photos/ali_mohammed.jpg', 'Ali', 'Mohammed', '+971501234568', 'ali.mohammed@ofppt.com'),
+('st-fatimahassan@ofppt.com', 'p@ssw0rd3', 't345678', 3, 1, 0, '/photos/fatima_hassan.jpg', 'Fatima', 'Hassan', '+971501234569', 'fatima.hassan@ofppt.com'),
+('st-hassanahmed@ofppt.com', 'p@ssw0rd4', 'th456789', 4, 0, 0, '/photos/hassan_ahmed.jpg', 'Hassan', 'Ahmed', '+971501234570', 'hassan.ahmed@ofppt.com'),
+('st-abdelrahmanmohammed@ofppt.com', 'p@ssw0rd5', 'j567890', 5, 1, 0, '/photos/abdelrahman_mohammed.jpg', 'Abdelrahman', 'Mohammed', '+971501234571', 'abdelrahman.mohammed@ofppt.com'),
+('st-fatmahamza@ofppt.com', 'p@ssw0rd6', 'h678901', 6, 0, 0, '/photos/fatma_hamza.jpg', 'Fatma', 'Hamza', '+971501234572', 'fatma.hamza@ofppt.com'),
+('st-younesahmed@ofppt.com', 'p@ssw0rd7', 'k789012', 7, 0, 1, '/photos/younes_ahmed.jpg', 'Younes', 'Ahmed', '+971501234573', 'younes.ahmed@ofppt.com'),
+('st-khadijabouazza@ofppt.com', 'p@ssw0rd8', 'l890123', 8, 0, 0, '/photos/khadija_bouazza.jpg', 'Khadija', 'Bouazza', '+971501234574', 'khadija.bouazza@ofppt.com'),
+('st-mouhamedabdelaziz@ofppt.com', 'p@ssw0rd9', 'm901234', 9, 1, 0, '/photos/mouhamed_abdelaziz.jpg', 'Mouhamed', 'Abdelaziz', '+971501234575', 'mouhamed.abdelaziz@ofppt.com');
 
 select * from student;
 
-INSERT INTO `ista_website_db`.`teacher` (`fname`, `lname`, `photo_path`, `phone_number`, `contact_email`, `email`, `password`)
-VALUES 
-('Ahmed', 'Hassan', 'teachers/ahmed.jpg', '0601020304', 'ahmed.hassan@example.com', 'te-ahmed.hassan@ofppt.com', 'password1'),
-('Mohammed', 'Ali', 'teachers/mohammed.jpg', '0601020305', 'mohammed.ali@example.com', 'te-mohammed.ali@ofppt.com', 'password2'),
-('Hassan', 'Abdullah', 'teachers/hassan.jpg', '0601020306', 'hassan.abdullah@example.com', 'te-hassan.abdullah@ofppt.com', 'password3'),
-('Aisha', 'Ahmed', 'teachers/aisha.jpg', '0601020307', 'aisha.ahmed@example.com', 'te-aisha.ahmed@ofppt.com', 'password4'),
-('Youssef', 'Saleh', 'teachers/youssef.jpg', '0601020308', 'youssef.saleh@example.com', 'te-youssef.saleh@ofppt.com', 'password5'),
-('Nadia', 'Omar', 'teachers/nadia.jpg', '0601020309', 'nadia.omar@example.com', 'te-nadia.omar@ofppt.com', 'password6'),
-('Sara', 'Abdul', 'teachers/sara.jpg', '0601020310', 'sara.abdul@example.com', 'te-sara.abdul@ofppt.com', 'password7'),
-('Fatima', 'Ibrahim', 'teachers/fatima.jpg', '0601020311', 'fatima.ibrahim@example.com', 'te-fatima.ibrahim@ofppt.com', 'password8'),
-('Omar', 'Hassan', 'teachers/omar.jpg', '0601020312', 'omar.hassan@example.com', 'te-omar.hassan@ofppt.com', 'password9'),
-('Ali', 'Mohammed', 'teachers/ali.jpg', '0601020313', 'ali.mohammed@example.com', 'te-ali.mohammed@ofppt.com', 'password10'),
-('Mariam', 'Abdullah', 'teachers/mariam.jpg', '0601020314', 'mariam.abdullah@example.com', 'te-mariam.abdullah@ofppt.com', 'password11'),
-('Zainab', 'Ahmed', 'teachers/zainab.jpg', '0601020315', 'zainab.ahmed@example.com', 'te-zainab.ahmed@ofppt.com', 'password12'),
-('Salim', 'Saleh', 'teachers/salim.jpg', '0601020316', 'salim.saleh@example.com', 'te-salim.saleh@ofppt.com', 'password13'),
-('Amina', 'Omar', 'teachers/amina.jpg', '0601020317', 'amina.omar@example.com', 'te-amina.omar@ofppt.com', 'password14');
+INSERT INTO `ista_website_db`.`teacher` (`first_name`, `last_name`, `photo_path`, `phone_number`, `contact_email`, `email`, `password`)
+VALUES
+('Karim', 'Benkoussa', '/teachers/karim_benkoussa.jpg', '0678908765', 'karim.benkoussa@ofppt.com', 'te-kbenkoussa@ofppt.com', 'Tg37#dQf'),
+('Fatima', 'El Azzouzi', '/teachers/fatima_elazzouzi.jpg', '0623456789', 'fatima.elazzouzi@ofppt.com', 'te-felazzouzi@ofppt.com', 'Yb98&kTc'),
+('Mohammed', 'El Ghaouti', '/teachers/mohammed_elghaouti.jpg', '0665432178', 'mohammed.elghaouti@ofppt.com', 'te-melghaouti@ofppt.com', 'Sr91*qZp'),
+('Nadia', 'El Majdoub', '/teachers/nadia_elmajdoub.jpg', '0654321789', 'nadia.elmajdoub@ofppt.com', 'te-nelmajdoub@ofppt.com', 'Vc63$wFx'),
+('Hicham', 'El Yazami', '/teachers/hicham_elyazami.jpg', '0687654321', 'hicham.elyazami@ofppt.com', 'te-helyazami@ofppt.com', 'Gp52!zBs'),
+('Sanae', 'Zarrouk', '/teachers/sanae_zarrouk.jpg', '0612345678', 'sanae.zarrouk@ofppt.com', 'te-szarrouk@ofppt.com', 'Wt26%uHd'),
+('Omar', 'Boussaid', '/teachers/omar_boussaid.jpg', '0678912345', 'omar.boussaid@ofppt.com', 'te-oboussaid@ofppt.com', 'Fk81#rNm'),
+('Amina', 'El Haddadi', '/teachers/amina_elhaddadi.jpg', '0656789012', 'amina.elhaddadi@ofppt.com', 'te-aehaddadi@ofppt.com', 'Jn59@qYh');
 
 select * from teacher;
 
-INSERT INTO `ista_website_db`.`administration` (`email`, `password`, `first_name`, `last_name`) VALUES
-('ad-ahmad@ofppt.com', 'password1', 'Ahmad', 'Mohammed'),
-('ad-fatima@ofppt.com', 'password2', 'Fatima', 'Ali'),
-('ad-youssef@ofppt.com', 'password3', 'Youssef', 'Hussein'),
-('ad-khaled@ofppt.com', 'password4', 'Khaled', 'Khalil'),
-('ad-nour@ofppt.com', 'password5', 'Nour', 'Salah'),
-('ad-mohammed@ofppt.com', 'password6', 'Mohammed', 'Omar'),
-('ad-lina@ofppt.com', 'password7', 'Lina', 'Abdulrahman'),
-('ad-asmaa@ofppt.com', 'password8', 'Asmaa', 'Salem'),
-('ad-sara@ofppt.com', 'password9', 'Sara', 'Abdullah'),
-('ad-ali@ofppt.com', 'password10', 'Ali', 'Hassan'),
-('ad-reem@ofppt.com', 'password11', 'Reem', 'Saleh'),
-('ad-zeinab@ofppt.com', 'password12', 'Zeinab', 'Khalid'),
-('ad-said@ofppt.com', 'password13', 'Said', 'Rashid'),
-('ad-hassan@ofppt.com', 'password14', 'Hassan', 'Saeed');
+INSERT INTO `administration` (`email`, `password`, `first_name`, `last_name`, `contact_email`)
+VALUES
+('ad-mohamed@ofppt.com', 'gjt4D6JvUhtX', 'Mohamed', 'Ali', 'mohamed.ali@gmail.com'),
+('ad-nabil@ofppt.com', 'uV7v5DEhNmWb', 'Nabil', 'Bouchra', NULL),
+('ad-zahra@ofppt.com', 'Cj7hNvX8WmS6', 'Zahra', 'Hassani', 'zahra.hassani@yahoo.com'),
+('ad-sarah@ofppt.com', 'rJg2fPnLwKt8', 'Sarah', 'El Hamidi', 'sarah.elhamidi@gmail.com'),
+('ad-fatima@ofppt.com', 'sLz5vG8xNhT6', 'Fatima', 'Chakir', 'fatima.chakir@yahoo.com'),
+('ad-aymane@ofppt.com', 'tBz6rR3sPvN8', 'Aymane', 'Bouzidi', NULL),
+('ad-mariam@ofppt.com', 'pHf5jC7wGtL9', 'Mariam', 'Bennani', 'mariam.bennani@hotmail.com'),
+('ad-hassan@ofppt.com', 'nMq4kF9bKjE2', 'Hassan', 'Ibrahim', 'hassan.ibrahim@gmail.com'),
+('ad-youssef@ofppt.com', 'sTn6zX8yRvG5', 'Youssef', 'Khalil', 'youssef.khalil@yahoo.com'),
+('ad-imane@ofppt.com', 'qJf4wS5pLhV8', 'Imane', 'Sahraoui', 'imane.sahraoui@gmail.com');
 
 select * from administration;
 
+
 INSERT INTO `ista_website_db`.`super_user` (`email`, `password`, `super_user_privelage`, `super_user_legacy`)
 VALUES
-    ('sp-ahmed.ali@ofppt.com', 'password1', 'admin', 'ghost'),
-    ('sp-fatima.khaldi@ofppt.com', 'password2', 'editor', 'sparta'),
-    ('sp-omar.benabdeljalil@ofppt.com', 'password3', 'user', 'L');
+  ('sp-user1@ofppt.com', 'pass123', 'admin', 'ghost'),
+  ('sp-user2@ofppt.com', 'pass123', 'admin', 'shadow'),
+  ('sp-user3@ofppt.com', 'pass123', 'editor', 'L');
+
 
 select * from super_user;
+

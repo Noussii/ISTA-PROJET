@@ -1,10 +1,12 @@
 <?php 
 
 class Dbc {
+
     private $servername;
     private $username;
     private $password;
     private $dbname;
+    private $charset;
 
     public function connect() {
 
@@ -18,10 +20,11 @@ class Dbc {
             $dsn = "mysql:host=".$this->servername.";dbname=".$this->dbname.";charset=".$this->charset;
             $pdo = new PDO($dsn, $this->username, $this->password);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            
             return $pdo;
         } catch (PDOException $e){
             echo 'db connection failed: '.$e->getMessage();
-            die('db connection failed');
         }
     }
 }

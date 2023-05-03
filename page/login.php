@@ -32,7 +32,7 @@
                 <input required placeholder="Password" type="password" name="password" id="password">
             </div>
             <div class="form-row">
-                <input type="submit" value="Login">
+                <input type="submit" value="Login" name='submit'>
             </div>
             <div class="form-row">
                 <a style="color: rgb(78, 78, 78); font-size: 15px;" href="../page/login-help.html">get help</a>

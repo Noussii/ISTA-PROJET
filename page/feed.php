@@ -1,4 +1,6 @@
-<?php include "../logic_php_layer/feed-page-logic.php"; ?>
+<?php 
+include "../logic_php_layer/feed-page-logic.php"; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +28,8 @@
         <div class="left-side-button"></div>
     </aside>
     <main class='main'>
-        <h1>welcome <?= $_SESSION['username']; ?> you are a <?= $_SESSION['user_type']; ?> </h1>
+        <h1>welcome <?= $_SESSION['first_name']; ?> you are a <?= $_SESSION['user_type']; ?> </h1>
+        <a href="../api/logout.php">logout</a>
     </main>
 </body>
 </html>

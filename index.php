@@ -1,17 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corner</title>
-    <link rel="stylesheet" href="/styles/index.css">
-
-</head>
-<body>
-    <header class="h-main">
-        <div class="header-logo-container">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Corner</title>
+        <link rel="stylesheet" href="/styles/index.css">
+        
+    </head>
+    <body>
+        <header class="h-main">
+            <div class="header-logo-container">
         <a href="./index.php">Corner</a>
         </div>
         <nav>
@@ -19,10 +18,10 @@
             <a href="./page/login.php">Login</a>
         </nav>
     </header>
-
+    
     
     <section class="slidshow">
-            <h1 class="slidshow-title">Hello php</h1>
+        <h1 class="slidshow-title">Hello php</h1>
         <img width="100%" src="/media/ista.jpg" alt="">
         <div class="clickable"></div>
     </section>
@@ -49,9 +48,9 @@
                 <img width="50%" src="/media/ista.jpg">
                 <div class="text">
                     <h1>ISTA Lazaret</h1>
-                <p>    
-                    institution since 1945 this Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed distinctio harum velit iure quod, ratione rerum porro maxime fuga explicabo voluptate soluta eligendi numquam dolorem corrupti voluptas dolore. Deleniti, delectus?
-                </p>
+                    <p>    
+                        institution since 1945 this Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed distinctio harum velit iure quod, ratione rerum porro maxime fuga explicabo voluptate soluta eligendi numquam dolorem corrupti voluptas dolore. Deleniti, delectus?
+                    </p>
                 </div>
 
             </div>
