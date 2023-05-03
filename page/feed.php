@@ -12,15 +12,7 @@ include "../logic_php_layer/feed-page-logic.php";
     <link rel="stylesheet" href="../styles/feed-page.css">
 </head>
 <body>
-    <header class="h-main">
-        <div class="header-logo-container">
-            <a href="../index.php">Corner</a>
-        </div>
-        <nav>
-            <a href="./updates.html">Updates</a>
-            <a href="./login.html">Login</a>
-        </nav>
-    </header>
+    <?php include '../page_components/header_student.php';?>
     <aside class='left-side'>
         <div class="left-side-button"></div>
         <div class="left-side-button"></div>
