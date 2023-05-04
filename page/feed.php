@@ -40,13 +40,15 @@ include "../logic_php_layer/feed-page-logic.php";
         <img src="../media/icons/home_icon_feed.png"> <span>Newsletter</span>
         </a>
     </aside>
-    <main class='main-section'>
-        <section>
-            <h1>welcome <?= $_SESSION['first_name']; ?> you are a <?= $_SESSION['user_type']; ?> </h1>
-            <h2 id="label">label</h2>
-            <a href="../api/logout.php">logout</a>
-        </section>
-    </main>
-</body>
+
+    <section class="outer-container">
+        <main class='main-container'>
+            <section>
+                <h1>welcome <?= $_SESSION['first_name'];?>. </h1>
+                <a href="../api/logout.php">logout</a>
+            </section>
+        </main>
+    </section>
+    </body>
 <script src='../scripts/feed_page.js'></script>
 </html>

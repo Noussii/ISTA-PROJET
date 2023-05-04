@@ -5,19 +5,24 @@ body{
 a {
     text-decoration: none;
 }
-.main-section{
+.outer-container{
     padding-left: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* background-color: red; */
 }
-.main-section > section{
-    background-color: darkblue;
+.main-container {
+    width: 95%;
+}
+.main-container > section{
+    background-color: var(--very-light-gray);
     padding: 20px 20px;
+    margin-bottom: 15px;
 }
 .left-side{
     padding-top: 0px;
-    background-color: lightgray;
+    background-color: var(--very-light-gray);
     height: 100%;
     width: 230px;
     position: fixed;
