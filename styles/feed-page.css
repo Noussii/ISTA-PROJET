@@ -2,23 +2,41 @@
 body{
     height: 100%;
 }
-.main{
-    padding-left: 310px;
+a {
+    text-decoration: none;
+}
+.main-section{
+    padding-left: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-section > section{
+    background-color: darkblue;
+    padding: 20px 20px;
 }
 .left-side{
     padding-top: 15px;
-    background-color: var(--ambient-lightest-color);
+    background-color: var(--dark-primary-color);
     height: 100%;
-    width: 300px;
+    width: 230px;
     position: fixed;
     display: flex;
     align-items: center;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 12px;
+    transition: 160ms;
 }
 .left-side-button{
-    background-color: var(--ambient-mid-color);
-    height: 50px;
-    width: 90%;
+    height: 40px;
+    width: 95%;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.left-side-button:hover{
+    cursor: pointer;
+    background-color: var(--third-color);
 }
