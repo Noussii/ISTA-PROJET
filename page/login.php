@@ -13,6 +13,10 @@
 <body>
     <?php include '../page_components/header_public.php'; ?>
     <main>
+        <div class="alert-message">
+            <span class='err-title'>something wrong: </span>
+            <span>please enter a valid email and password.</span>
+        </div>
         <h1 class='login-title'>Login</h1>
         <form action="../api/authentication.php" method="post">
             <legend>Fill in your login credentials:</legend>
@@ -30,5 +34,6 @@
             </div>
         </form>
     </main>
+    <script src="../scripts/login_page.js"></script>
 </body>
 </html>

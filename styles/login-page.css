@@ -1,6 +1,28 @@
 /* header[class="h-main"]{
     position: relative;
 } */
+.alert-message{
+    background-color: rgb(150, 32, 32);
+    height: 60px;
+    padding-left: 30px;
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+    display: none;
+}
+.alert-message > span{
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+.alert-message > span.err-title{
+    background-color: rgba(0, 0, 0, 0.103);
+}
 .login-title{
     text-align: center;
     padding-top: 20px;

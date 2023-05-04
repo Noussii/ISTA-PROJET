@@ -16,6 +16,7 @@
 }
 header[class="h-main"]{
     margin-top: -50px;
+    margin-bottom: 100px;
     position: fixed;
     z-index: 1000;
     box-sizing: border-box;

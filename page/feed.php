@@ -25,5 +25,5 @@ include "../logic_php_layer/feed-page-logic.php";
         <a href="../api/logout.php">logout</a>
     </main>
 </body>
-<script src='../scripts/feed_test.js'></script>
+<script src='../scripts/feed_page.js'></script>
 </html>
