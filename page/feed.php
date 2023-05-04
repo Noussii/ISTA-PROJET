@@ -10,24 +10,34 @@ include "../logic_php_layer/feed-page-logic.php";
     <title>corner</title>
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/feed-page.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <?php include '../page_components/header_student.php';?>
     <aside class='left-side' data-visibility='1'>
+
+        <a class='left-side-profile-card' href="./profile.php">
+            <span class='profile-img'></span>
+            <span class='profile-right-text'>
+                <span><?= $_SESSION['first_name'] ?></span>
+                <span style="font-size: 10px;">profile</span>
+            </span>
+        </a>
+
         <a href='../index.php' class="left-side-button">
-            <span>home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <img src="../media/icons/home_icon_feed.png"> <span>Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
         <a href='../index.php' class="left-side-button">
-        <span>homework&nbsp;&nbsp;</span>
+        <img src="../media/icons/home_icon_feed.png"> <span>Homework&nbsp;&nbsp;</span>
         </a>
         <a href='../index.php' class="left-side-button">
-        <span>notes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <img src="../media/icons/home_icon_feed.png"> <span>Notes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
         <a href='../index.php' class="left-side-button">
-        <span>class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <img src="../media/icons/home_icon_feed.png"> <span>Class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
         <a href='../index.php' class="left-side-button">
-        <span>newsletter</span>
+        <img src="../media/icons/home_icon_feed.png"> <span>Newsletter</span>
         </a>
     </aside>
     <main class='main-section'>

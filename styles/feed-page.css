@@ -16,8 +16,8 @@ a {
     padding: 20px 20px;
 }
 .left-side{
-    padding-top: 15px;
-    background-color: var(--dark-primary-color);
+    padding-top: 0px;
+    background-color: lightgray;
     height: 100%;
     width: 230px;
     position: fixed;
@@ -27,14 +27,50 @@ a {
     row-gap: 12px;
     transition: 160ms;
 }
+.left-side-profile-card{
+    background-color: var(--dark-third-color);
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.left-side-profile-card > .profile-img{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: white;
+    background-image: url('../media/man.png');
+    background-size: contain;
+}
+.left-side-profile-card > .profile-right-text{
+    color: white;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    height: 50px;
+    width: 100px;
+}
 .left-side-button{
     height: 40px;
     width: 95%;
-    color: white;
+    color: black;
+    font-weight: 900;
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 10px;
+    position: relative;
+}
+.left-side-button > img{
+    position: absolute;
+    left: 25px;
+    width: 28px;
 }
 .left-side-button:hover{
     cursor: pointer;
