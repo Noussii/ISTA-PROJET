@@ -1,5 +1,5 @@
 :root{
-
+    font-family: monospace;
     --primary-color: darkblue;
     --secondary-color: green;
     --third-color: rgb(167, 167, 167);
@@ -33,4 +33,7 @@
     border-bottom: var(--primary-border-all-bottom);
     border-top: var(--primary-border-all-top); 
     */
+}
+* {
+    font-family: monospace, sans-serif;
 }

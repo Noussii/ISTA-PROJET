@@ -131,7 +131,7 @@
     background-color: lightgray;
     cursor: pointer;
 }
-header[class="h-main"]{
+.header{
     margin-top: -50px;
     position: fixed;
     z-index: 1000;
@@ -146,17 +146,20 @@ header[class="h-main"]{
     justify-content: space-between;
     border-bottom: 3px solid darkblue;
 }
-header[class="h-main"] a {
+.header a {
     color: black;
     text-decoration: none;
 }
-
+body{
+    padding-top: 50px;
+    margin: 0px;
+}
 </style>
 
 
 
 
-<header class="h-main">
+<header class="header">
         <div class="header-logo-container">
             <button class='left-side-visibility-btn' onclick="leftSideVisibilityHandler()">|||</button>
             <a href="../index.php">
@@ -170,10 +173,10 @@ header[class="h-main"] a {
             </button>
             <button class="header-all-button">
                 <nav class="header-drop-down-menu">
+                    <a class="drop-down-menu-item" href="../page/profile.php">Profile</a>
                     <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
                     <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
-                    <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
-                    <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
+                    <a class="drop-down-menu-item" href="../page/help.php">Help</a>
                     <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
                 </nav>
             </button>

@@ -1,4 +1,5 @@
 <style>
+@import url('./root_styles.css');
 
 .left-side{
     padding-top: 0px;
@@ -12,6 +13,7 @@
     row-gap: 12px;
     transition: 160ms;
 }
+
 .left-side-profile-card{
     background-color: var(--very-dark-primary-color);
     height: 70px;
@@ -62,6 +64,30 @@
     background-color: var(--third-color);
 }
 
+body{
+    height: 100%;
+}
+a {
+    text-decoration: none;
+}
+.outer-container{
+    padding-left: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+.main-container {
+    width: 95%;
+}
+.main-container > section{
+    background-color: var(--very-light-gray);
+    padding: 20px 20px;
+    /* margin-bottom: 15px; */
+    box-sizing: border-box;
+}
+
+
 </style>
 
 
@@ -105,3 +131,6 @@
         <img src="../media/icons/newsLetter_icon_feed.png"> <span>Newsletter</span>
         </a>
     </aside>
+
+
+    <script src='../scripts/left_side_feed_C.js'></script>
