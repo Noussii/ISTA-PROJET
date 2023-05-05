@@ -1,27 +1,6 @@
-@import url('./root_styles.css');
-body{
-    height: 100%;
-}
-a {
-    text-decoration: none;
-}
-.outer-container{
-    padding-left: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-color: red; */
-}
-.main-container {
-    width: 95%;
-}
-.main-container > section{
-    background-color: var(--very-light-gray);
-    padding: 20px 20px;
-    /* margin-bottom: 15px; */
-    box-sizing: border-box;
-}
-/* .left-side{
+<style>
+
+.left-side{
     padding-top: 0px;
     background-color: var(--very-light-gray);
     height: 100%;
@@ -56,6 +35,7 @@ a {
 .left-side-profile-card > .profile-right-text{
     color: white;
     display: flex;
+    /* align-items: center; */
     justify-content: center;
     flex-direction: column;
     height: 50px;
@@ -80,4 +60,48 @@ a {
 .left-side-button:hover{
     cursor: pointer;
     background-color: var(--third-color);
-} */
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<aside class='left-side' data-visibility='1'>
+
+        <a class='left-side-profile-card' href="./profile.php">
+            <span class='profile-img'></span>
+            <span class='profile-right-text'>
+                <span><?= $_SESSION['first_name'] ?></span>
+                <span style="font-size: 10px;">profile</span>
+            </span>
+        </a>
+
+        <a href='../index.php' class="left-side-button">
+            <img src="../media/icons/home_icon_feed.png"> <span>Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </a>
+        <a href='../index.php' class="left-side-button">
+        <img src="../media/icons/homework_icon_feed.png"> <span>Homework&nbsp;&nbsp;</span>
+        </a>
+        <a href='../index.php' class="left-side-button">
+        <img src="../media/icons/notes_icon_feed.png"> <span>Notes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </a>
+        <a href='../index.php' class="left-side-button">
+        <img src="../media/icons/class_icon_feed.png"> <span>Class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </a>
+        <a href='../index.php' class="left-side-button">
+        <img src="../media/icons/newsLetter_icon_feed.png"> <span>Newsletter</span>
+        </a>
+    </aside>

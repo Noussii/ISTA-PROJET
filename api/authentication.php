@@ -10,7 +10,9 @@ if(isset($_POST['submit'])){
 
     $loginData = $login->authenticate($email, $password);
     if(is_array($loginData)){
-        session_set_cookie_params(7890000, '/', null, true, true);
+        // $json = json_encode($loginData);
+        // header("location:../err_page.php?err=db connected succesfully $json");
+        session_set_cookie_params(7890000, '/', null, false, true);
         session_start();
         $_SESSION['user_type'] = $loginData['user_type'];
         $_SESSION['user_id'] = $loginData['user_id'];
