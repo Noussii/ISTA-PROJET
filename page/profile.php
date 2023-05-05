@@ -19,6 +19,9 @@
                 <h1>this is profile page</h1>
                 <a href="../api/logout.php">logout</a>
             </section>
+            <section>
+                <p>just a test</p>
+            </section>
         </main>
     </section>
 </body>

@@ -12,18 +12,19 @@
 }
 
 .header-notification-menu{
-    background: var(--very-light-gray);
+    background: white;
     height: auto;
     width: 400px; 
     position: absolute;
     right: 0px;
-    top: 40px;
-    border-radius: 10px;
+    top: 45px;
+    border-radius: 0px 0px 10px 10px;
     display: none;
     flex-direction: column;
     align-items: center;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
     border: 1px solid gray;
+    border-top: none;
     overflow: hidden;
     max-width: 100%;
     /* background-color: rgba(255, 255, 255, 0.8);
@@ -34,7 +35,7 @@
     padding: 10px;
     min-height: 60px;
     width: 100%;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid gray;
     box-sizing: border-box;
     position: relative;
 }
@@ -98,9 +99,9 @@
     /* border: 1px solid gray; */
     border-top: none;
     transition: 500ms;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
     overflow: hidden;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
 }
 .header-drop-down-menu > .drop-down-menu-item{
     height: 40px;
@@ -145,7 +146,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 3px solid darkblue;
+    border-bottom: 3px solid var(--very-dark-primary-color);
 }
 .header a {
     color: black;
