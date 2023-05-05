@@ -85,7 +85,7 @@
     display: flex;
 }
 .header-drop-down-menu{
-    background-color: var(--very-dark-primary-color);
+    background-color: white;
     padding-top: 30px;
     height: auto;
     width: 250px;
@@ -110,7 +110,7 @@
     align-items: center;
     border-bottom: 1px solid gray;
     box-sizing: border-box;
-    color: white;
+    color: black;
 }
 .drop-down-menu-item:hover{
     background-color: var(--dark-primary-color);

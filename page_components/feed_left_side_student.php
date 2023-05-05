@@ -3,7 +3,7 @@
 
 .left-side{
     padding-top: 0px;
-    background-color: var(--very-light-gray);
+    background-color: white;
     height: 100%;
     width: 230px;
     position: fixed;
@@ -12,6 +12,7 @@
     flex-direction: column;
     row-gap: 12px;
     transition: 160ms;
+    box-shadow: 5px 0px 8px rgba(0,0,0,0.1);
 }
 
 .left-side-profile-card{
