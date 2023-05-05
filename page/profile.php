@@ -12,8 +12,8 @@
 <body>
     <?php include '../page_components/header_student.php';?>
     <?php include '../page_components/feed_left_side_student.php';?>
-    <section class="outer-container">
-        <main class='main-container'>
+    <section class="outer-container-reactive">
+        <main class='main-container-reactive'>
             <section>
                 <h1>welcome <?= $_SESSION['first_name'];?>. </h1>
                 <h1>this is profile page</h1>

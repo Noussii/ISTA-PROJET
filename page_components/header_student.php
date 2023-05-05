@@ -91,7 +91,7 @@
     width: 250px;
     position: absolute;
     right: -10px;
-    top: 35px;
+    top: 40px;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -125,6 +125,7 @@
     border: none;
     height: 40px;
     width: 40px;
+    border-radius: 50%;
     background-color: transparent;
 }
 .left-side-visibility-btn:hover{

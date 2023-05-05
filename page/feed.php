@@ -20,9 +20,10 @@ include "../logic_php_layer/feed-page-logic.php";
 
     <section class="outer-container">
         <main class='main-container'>
-            <section>
-                <h1>welcome <?= $_SESSION['first_name'];?>. </h1>
-                <a href="../api/logout.php">logout</a>
+            <section class="feed-section">
+                <h1>welcome <?= $_SESSION['first_name'];?>.</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates ea consectetur quis rem. Error, quis non! Exercitationem labore facere fugiat, saepe soluta veritatis doloremque, aspernatur numquam voluptatibus commodi adipisci necessitatibus.</p>
+                <img src="../media/man.png">
             </section>
         </main>
     </section>

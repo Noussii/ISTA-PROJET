@@ -1,5 +1,5 @@
 <style>
-@import url('./root_styles.css');
+@import url('../styles/root_styles.css');
 
 .left-side{
     padding-top: 0px;
@@ -53,6 +53,7 @@
     align-items: center;
     column-gap: 10px;
     position: relative;
+    border-radius: 20px;
 }
 .left-side-button > img{
     position: absolute;
@@ -61,32 +62,8 @@
 }
 .left-side-button:hover{
     cursor: pointer;
-    background-color: var(--third-color);
+    background-color: rgba(0,0,0,0.2);
 }
-
-body{
-    height: 100%;
-}
-a {
-    text-decoration: none;
-}
-.outer-container{
-    padding-left: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background-color: red; */
-}
-.main-container {
-    width: 95%;
-}
-.main-container > section{
-    background-color: var(--very-light-gray);
-    padding: 20px 20px;
-    /* margin-bottom: 15px; */
-    box-sizing: border-box;
-}
-
 
 </style>
 
