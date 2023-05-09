@@ -208,7 +208,7 @@ section[class="slidshow"] > img{
 }
 
 /* CSS of the slide-show section*/
-.banner_taital {
+.carousel-text {
     width: 100%;
     font-size: 60px;
     color: #ffffff;
