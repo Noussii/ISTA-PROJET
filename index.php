@@ -28,19 +28,19 @@
     <div class="carousel-item active">
         <img src="/media/banner-ga.jpg" class="d-block w-100 img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block">
-            <h2 class="text-center carousel-text">Best selection for your studies</h2>
+            <h2 class="text-center banner_taital">Best selection for your studies</h2>
         </div>
     </div>
     <div class="carousel-item">
         <img src="/media/banner-ga.jpg" class="d-block w-100 img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block">
-            <h2 class="text-center carousel-text">Hands-on experience</h2>
+            <h2 class="text-center banner_taital">Hands-on experience</h2>
         </div>
     </div>
     <div class="carousel-item">
         <img src="/media/banner-ga.jpg" class="d-block w-100 img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block">
-            <h2 class="text-center carousel-text">Celebrate your achievements</h2>
+            <h2 class="text-center banner_taital">Celebrate your achievements</h2>
         </div>
     </div>
   </div>
