@@ -26,19 +26,19 @@
     <section id="banner" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-        <img src="/media/banner-ga.jpg" class="d-block w-100 img-fluid" alt="...">
+        <img src="/media/slider-1.jpg" class="d-block w-100 img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block">
             <h2 class="text-center banner_taital">Best selection for your studies</h2>
         </div>
     </div>
     <div class="carousel-item">
-        <img src="/media/banner-ga.jpg" class="d-block w-100 img-fluid" alt="...">
+        <img src="/media/slider-2.jpg" class="d-block w-100 img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block">
             <h2 class="text-center banner_taital">Hands-on experience</h2>
         </div>
     </div>
     <div class="carousel-item">
-        <img src="/media/banner-ga.jpg" class="d-block w-100 img-fluid" alt="...">
+        <img src="/media/slider-3.jpg" class="d-block w-100 img-fluid" alt="...">
         <div class="carousel-caption d-none d-md-block">
             <h2 class="text-center banner_taital">Celebrate your achievements</h2>
         </div>

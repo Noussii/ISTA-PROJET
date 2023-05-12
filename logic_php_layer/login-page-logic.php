@@ -1,5 +1,5 @@
 <?php
-if(isset($_COOKIE['SIDSPARTA'])){
+if(isset($_COOKIE['PHPSESSID'])){
     session_start();
     if(isset($_SESSION['user_id'])){
         header('location:../page/feed.php');
