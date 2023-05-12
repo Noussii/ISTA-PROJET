@@ -95,7 +95,7 @@ section[class="slidshow"] > img{
     text-decoration: none;
 }
 .go-to-main-btn:hover{
-    background-color: darkblue;
+    background-color: #252525;
     color: white;
     cursor: pointer;
 }
@@ -184,3 +184,42 @@ section[class="slidshow"] > img{
     margin-left: 50px;
     color: white;
 }
+
+
+
+/* cards section */
+.card-title {
+  font-size: 24px;
+}
+.card-subtitle {
+  font-size: 16px;
+  color: #999;
+}
+/* colors of cards section*/
+.cc{
+    background-color: #252525;
+    color: white;
+    font-weight: bolder;
+}
+.cc:hover{
+    background-color: #f26522;
+    color: white;
+    font-weight: bolder;
+}
+
+/* CSS of the slide-show section*/
+.banner_taital {
+    width: 100%;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+  .carousel-caption {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }

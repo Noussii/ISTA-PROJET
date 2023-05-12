@@ -190,5 +190,5 @@ body{
             </div>
         </div>
 </header>
-<script src='../scripts/header_student.js'></script>
+<script src='../scripts/header_student_C.js'></script>
 
