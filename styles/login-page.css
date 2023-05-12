@@ -1,0 +1,78 @@
+body{
+    background-color: white !important;
+}
+.alert-message{
+    background-color: rgb(150, 32, 32);
+    height: 60px;
+    padding-left: 30px;
+    padding-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 50px;
+    display: none;
+}
+.alert-message > span{
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+.alert-message > span.err-title{
+    background-color: rgba(0, 0, 0, 0.103);
+}
+.login-title{
+    text-align: center;
+    padding-top: 20px;
+}
+form{
+    margin: 50px auto;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    max-width: 95%;
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    border: 1px solid darkblue;
+    border-bottom: 4px solid darkblue;
+    border-top: none;
+}
+form > legend{
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.form-row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+input[type="text"], input[type="password"]{
+    height: 40px;
+    width: 80%;
+    border: 1px solid black;
+    box-sizing:border-box;
+    padding-left: 10px;
+    background-color: rgb(255, 255, 255);
+}
+input[type="text"]:focus, input[type="password"]:focus{
+    outline-color: purple;
+}
+input[type="submit"]{
+    width: 80%;
+    padding: 10px 0px;
+    color: white;
+    background-color: green;
+    border: none;
+}
+input[type="submit"]:hover{
+    background-color: rgb(0, 92, 0);
+    cursor: pointer;
+}

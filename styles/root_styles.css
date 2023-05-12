@@ -1,0 +1,103 @@
+* {
+    font-family: monospace, sans-serif;
+}
+
+
+
+:root{
+    font-family: monospace;
+    --primary-color: darkblue;
+    --secondary-color: green;
+    --third-color: rgb(167, 167, 167);
+
+    --dark-primary-color: rgb(0, 0, 74);
+    --dark-secondary-color: rgb(0, 72, 0);
+    --dark-third-color: rgb(27, 27, 28);
+
+    --very-dark-primary-color: rgb(0, 0, 34);
+    --very-dark-secondary-color: rgb(0, 35, 0);
+    --very-dark-third-color: rgb(15, 15, 15);
+
+    --ambient-darkest-color: #000000;
+    --ambient-dark-color: #2F4550;
+    --ambient-mid-color: #586F7C;
+    --ambient-light-color: #B8DBD9;
+    --ambient-lightest-color: #F4F4F9;
+    
+    --general-padding: 10px 20px;
+    --primary-border-all: 1px solid darkblue;
+    --primary-border-all-bottom: 4px solid darkblue;
+    --primary-border-all-top: 0px solid black;
+    --very-light-gray: rgb(239, 239, 239);
+    /* 
+    can be used like the following: 
+
+    background-color: var(--primary-color);
+    padding: var(--general-padding);
+
+    border: var(--primary-border-all);
+    border-bottom: var(--primary-border-all-bottom);
+    border-top: var(--primary-border-all-top); 
+    */
+}
+
+body{
+    background-color: var(--very-light-gray);
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.outer-container-reactive{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 230px;
+    box-sizing: border-box;
+    /* background-color: red; */
+}
+
+.main-container-reactive{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+.main-container-reactive > section{
+    padding: 5px;
+    padding-top: 100px;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: red;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
+}
+.outer-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.main-container > section{
+    background-color: white;
+    /* padding: 20px 20px; */
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+.main-container-reactive > section{
+    background-color: white;
+    padding:5px 20px 20px 20px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.no-padding{
+    padding:0px;
+}
