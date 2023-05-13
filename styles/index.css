@@ -11,10 +11,11 @@ body{
     background: white;
 }
 .header-logo-container{
-    /* background-color: red; */
+    /* background-color: yellow; */
 }
 header[class="h-main"]{
-    margin-top: -50px;
+margin-top: -50px;
+    margin-bottom: 100px;
     position: fixed;
     z-index: 1000;
     box-sizing: border-box;
@@ -22,7 +23,7 @@ header[class="h-main"]{
     padding-right: 10px;
     width: 100%;
     background-color: white;
-    height: 60px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,53 +32,6 @@ header[class="h-main"]{
 header[class="h-main"] a {
     color: black;
     text-decoration: none;
-} 
-section[class="slidshow"]{
-    background-color: black;
-    height: 400px;
-    max-height: 90%;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-section[class="slidshow"] > img{
-    transition-duration: 1s;
-    transition-property: transform, background-color;
-}
-.slidshow > .clickable{
-    background-color: rgba(0, 0, 0, 0.31);
-    height: 100%;
-    width: 100%;
-    position: absolute; 
-    z-index: 10;
-    transition-duration: 1s;
-    transition-property: background-color;
-}
-.slidshow > .clickable:hover{
-    cursor: pointer;
-    background-color: rgba(160, 158, 255, 0.053);
-}
-
-
-.slidshow-title{
-    max-width: 300px;
-    background-color: rgba(0, 0, 0, 0.552);
-    color: white;
-    padding: 20px 150px;
-    font-size: 40px;
-    position: absolute;
-    z-index: 11;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-transform: capitalize;
-    max-width: 400px;
-}
-.slidshow-title:hover{
-    cursor: pointer;
 }
 .go-to-main-btn{
     display: block;
@@ -188,6 +142,12 @@ section[class="slidshow"] > img{
 
 
 /* cards section */
+.card {
+    /* background-color: blue; */
+    height: 100%;
+    padding-bottom: 50px;
+    background-color: rgb(237, 239, 244);
+}
 .card-title {
   font-size: 24px;
 }
@@ -200,26 +160,73 @@ section[class="slidshow"] > img{
     background-color: #252525;
     color: white;
     font-weight: bolder;
+    position: absolute;
+    width: 95%;
+    bottom: 10px;
+    left: calc(2.5%);
 }
 .cc:hover{
     background-color: #f26522;
     color: white;
     font-weight: bolder;
 }
-
 /* CSS of the slide-show section*/
 .banner_taital {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    font-size: 60px;
+    font-size: 4vw;
     color: #ffffff;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
+    transition: 300ms;
+    background-color: rgba(0, 0, 29, 0.608);
+    backdrop-filter: blur(5px);
+    min-height: 100px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border-bottom: 2px solid rgb(224, 224, 224);
+}
+.banner_taital:hover{
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 28, 0);
+    border-radius: 10px;
+    box-shadow: 0px 10px 0px rgb(255, 255, 255);
 }
   .carousel-caption {
-    top: 60%;
+    padding: 0px !important;
+    display: flex !important; 
+    justify-content: center;
+    align-items: center;
+    top: 50%;
     left: 50%;
+    height: auto;
     transform: translate(-50%, -50%);
     color: white;
     text-shadow: 1px 1px 2px black;
+  }
+.custom-slideshow-container-class .slideshow-img{
+    height: 410px;
+    width: auto;
+    max-height: 80vh;
+    overflow: hidden;
+}
+
+  .invisible-clickable-slideshow-link-layer{
+    /* background-color: rgba(255, 0, 0, 0.275); */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 200ms;
+    background: linear-gradient(transparent, transparent, rgb(0, 0, 20));
+  }
+  .invisible-clickable-slideshow-link-layer:hover{
+    /* background-color: rgba(0, 0, 0, 0.352); */
+    opacity: 0;
+    cursor: pointer;
   }

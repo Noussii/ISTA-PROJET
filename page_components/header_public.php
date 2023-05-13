@@ -11,6 +11,10 @@
 </header>
 
 <style>
+body{
+    margin: 0;
+    padding-top: 50px;
+}
 .header-logo-container{
     /* background-color: yellow; */
 }
@@ -24,7 +28,7 @@ header[class="h-main"]{
     padding-right: 10px;
     width: 100%;
     background-color: white;
-    height: 60px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
