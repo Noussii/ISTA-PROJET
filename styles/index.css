@@ -208,12 +208,34 @@ header[class="h-main"] a {
     color: white;
     text-shadow: 1px 1px 2px black;
   }
-.custom-slideshow-container-class .slideshow-img{
+
+  .custom-slideshow-container-class{
+    /* height: 410px;
+    width: 100%; */
+  }
+.custom-slideshow-container-class .slideshow-img-container{
     height: 410px;
-    width: auto;
+    width: 100%;
     max-height: 80vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.slideshow-img-container img{
+    width: 100%;
+}
+.carousel-item{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 410px;
+    width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+    background-color: black;
+}
+
 
   .invisible-clickable-slideshow-link-layer{
     /* background-color: rgba(255, 0, 0, 0.275); */
