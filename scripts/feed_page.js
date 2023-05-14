@@ -1,5 +1,3 @@
-
-
 function createPost(contentString, color, img){
     let mainContainer = document.querySelector('.main-container')
     let container = document.createElement('section');

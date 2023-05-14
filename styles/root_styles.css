@@ -6,6 +6,7 @@
 
 :root{
     font-family: monospace;
+    --sn-dark-blue: #252525;
     --primary-color: darkblue;
     --secondary-color: green;
     --third-color: rgb(167, 167, 167);

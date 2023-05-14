@@ -1,3 +1,4 @@
+<?php include_once './logic_php_layer/index-page-logic.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
