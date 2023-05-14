@@ -59,3 +59,32 @@ VALUES
 
 select * from super_user;
 
+
+
+
+INSERT INTO `subject` (`subject_id`, `subject_name`, `class_id`, `teacher_id`)
+VALUES
+(1, 'Introduction to Programming', 1, 1),
+(2, 'Web Development', 1, 2),
+(3, 'Object-Oriented Programming', 1, 1),
+(4, 'Databases', 2, 2),
+(5, 'Operating Systems', 2, 1),
+(6, 'Algorithms', 3, 3),
+(7, 'Data Structures', 3, 3),
+(8, 'Programming Languages', 3, 1),
+(9, 'Artificial Intelligence', 3, 2),
+(10, 'Computer Networks', 3, 2);
+
+
+
+INSERT INTO `note` (`subject_id`, `student_id`, `note_value`) VALUES
+(1, 11, 18),
+(2, 11, 19),
+(1, 12, 17.5),
+(2, 12, 18.5),
+(3, 12, 17),
+(3, 13, 19.5),
+(4, 13, 18.5),
+(4, 14, 18),
+(5, 14, 19),
+(5, 15, 19.5);

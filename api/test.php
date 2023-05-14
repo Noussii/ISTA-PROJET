@@ -6,5 +6,6 @@ include_once '../models/Student.php';
 
 if(check_authentication()){   
     $std = new Student($_SESSION['user_id']);
-    echo json_encode($std->get_all_data());
+    echo json_encode($std->get_property_value('id')).'<br>';
+    echo json_encode($std->get_all_notes());
 }
