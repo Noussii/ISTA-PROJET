@@ -24,3 +24,6 @@ if(isset($_POST['submit'])){
         header('location:../page/login.php?err=invalid_password_or_email');
     }
 }
+else{
+    header('location:../page/unauthorized.php');
+}

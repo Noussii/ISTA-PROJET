@@ -14,7 +14,7 @@ function check_authentication_with_redirection_unauthorized($redirection_link){
     if(!check_authentication()){
         header("location:$redirection_link");
         exit();
-    }
+    }else return true;
 }
 function check_authentication_with_redirection_logged_in($redirection_link){
     if(check_authentication()){
