@@ -1,18 +1,25 @@
-
-
-INSERT INTO `student` (`email`, `password`, `national_student_id`, `numberInClass`, `is_publisher`, `is_responsable`, `photo_path`, `first_name`, `last_name`, `phone_number`, `contact_email`)
-VALUES 
-('st-ahmedrashid@ofppt.com', 'p@ssw0rd1', 'a123456', 1, 0, 1, '/photos/ahmed_rashid.jpg', 'Ahmed', 'Rashid', '+971501234567', 'ahmed.rashid@ofppt.com'),
-('st-alimohammed@ofppt.com', 'p@ssw0rd2', 'b234567', 2, 0, 0, '/photos/ali_mohammed.jpg', 'Ali', 'Mohammed', '+971501234568', 'ali.mohammed@ofppt.com'),
-('st-fatimahassan@ofppt.com', 'p@ssw0rd3', 't345678', 3, 1, 0, '/photos/fatima_hassan.jpg', 'Fatima', 'Hassan', '+971501234569', 'fatima.hassan@ofppt.com'),
-('st-hassanahmed@ofppt.com', 'p@ssw0rd4', 'th456789', 4, 0, 0, '/photos/hassan_ahmed.jpg', 'Hassan', 'Ahmed', '+971501234570', 'hassan.ahmed@ofppt.com'),
-('st-abdelrahmanmohammed@ofppt.com', 'p@ssw0rd5', 'j567890', 5, 1, 0, '/photos/abdelrahman_mohammed.jpg', 'Abdelrahman', 'Mohammed', '+971501234571', 'abdelrahman.mohammed@ofppt.com'),
-('st-fatmahamza@ofppt.com', 'p@ssw0rd6', 'h678901', 6, 0, 0, '/photos/fatma_hamza.jpg', 'Fatma', 'Hamza', '+971501234572', 'fatma.hamza@ofppt.com'),
-('st-younesahmed@ofppt.com', 'p@ssw0rd7', 'k789012', 7, 0, 1, '/photos/younes_ahmed.jpg', 'Younes', 'Ahmed', '+971501234573', 'younes.ahmed@ofppt.com'),
-('st-khadijabouazza@ofppt.com', 'p@ssw0rd8', 'l890123', 8, 0, 0, '/photos/khadija_bouazza.jpg', 'Khadija', 'Bouazza', '+971501234574', 'khadija.bouazza@ofppt.com'),
-('st-mouhamedabdelaziz@ofppt.com', 'p@ssw0rd9', 'm901234', 9, 1, 0, '/photos/mouhamed_abdelaziz.jpg', 'Mouhamed', 'Abdelaziz', '+971501234575', 'mouhamed.abdelaziz@ofppt.com');
-
+INSERT INTO `class` (`emploi`, `class_year`, `name`, `is_current`)
+VALUES
+    ('{"monday": {"8:00-10:00": "Math", "10:00-12:00": "Science"}, "tuesday": {"8:00-10:00": "French", "10:00-12:00": "English"}}', '2022-09-01', 'Class A', 1),
+    ('{"monday": {"8:00-10:00": "Art", "10:00-12:00": "Science"}, "tuesday": {"8:00-10:00": "Math", "10:00-12:00": "History"}}', '2022-09-01', 'Class B', 1),
+    ('{"monday": {"8:00-10:00": "English", "10:00-12:00": "Science"}, "tuesday": {"8:00-10:00": "French", "10:00-12:00": "Math"}}', '2022-09-01', 'Class C', 1),
+    ('{"monday": {"8:00-10:00": "History", "10:00-12:00": "Science"}, "tuesday": {"8:00-10:00": "Math", "10:00-12:00": "Art"}}', '2022-09-01', 'Class D', 1),
+    ('{"monday": {"8:00-10:00": "Science", "10:00-12:00": "Math"}, "tuesday": {"8:00-10:00": "French", "10:00-12:00": "English"}}', '2022-09-01', 'Class E', 1);
 select * from student;
+
+
+INSERT INTO `student` (`email`, `password`, `national_student_id`, `numberInClass`, `is_publisher`, `is_responsable`, `photo_path`, `first_name`, `last_name`, `phone_number`, `contact_email`, `class`) 
+VALUES 
+('st-ahmedrashid@ofppt.com', 'p@ssw0rd1', 'a123456', 1, 0, 1, '/photos/ahmed_rashid.jpg', 'Ahmed', 'Rashid', '+971501234567', 'ahmed.rashid@ofppt.com', 1),
+('st-alimohammed@ofppt.com', 'p@ssw0rd2', 'b234567', 2, 0, 0, '/photos/ali_mohammed.jpg', 'Ali', 'Mohammed', '+971501234568', 'ali.mohammed@ofppt.com', 1),
+('st-fatimahassan@ofppt.com', 'p@ssw0rd3', 't345678', 3, 1, 0, '/photos/fatima_hassan.jpg', 'Fatima', 'Hassan', '+971501234569', 'fatima.hassan@ofppt.com', 2),
+('st-hassanahmed@ofppt.com', 'p@ssw0rd4', 'th456789', 4, 0, 0, '/photos/hassan_ahmed.jpg', 'Hassan', 'Ahmed', '+971501234570', 'hassan.ahmed@ofppt.com', 2),
+('st-abdelrahmanmohammed@ofppt.com', 'p@ssw0rd5', 'j567890', 5, 1, 0, '/photos/abdelrahman_mohammed.jpg', 'Abdelrahman', 'Mohammed', '+971501234571', 'abdelrahman.mohammed@ofppt.com', 3),
+('st-fatmahamza@ofppt.com', 'p@ssw0rd6', 'h678901', 6, 0, 0, '/photos/fatma_hamza.jpg', 'Fatma', 'Hamza', '+971501234572', 'fatma.hamza@ofppt.com', 3),
+('st-younesahmed@ofppt.com', 'p@ssw0rd7', 'k789012', 7, 0, 1, '/photos/younes_ahmed.jpg', 'Younes', 'Ahmed', '+971501234573', 'younes.ahmed@ofppt.com', 4),
+('st-khadijabouazza@ofppt.com', 'p@ssw0rd8', 'l890123', 8, 0, 0, '/photos/khadija_bouazza.jpg', 'Khadija', 'Bouazza', '+971501234574', 'khadija.bouazza@ofppt.com', 4),
+('st-mouhamedabdelaziz@ofppt.com', 'p@ssw0rd9', 'm901234', 9, 1, 0, '/photos/mouhamed_abdelaziz.jpg', 'Mouhamed', 'Abdelaziz', '+971501234575', 'mouhamed.abdelaziz@ofppt.com', 5);
+
 
 INSERT INTO `ista_website_db`.`teacher` (`first_name`, `last_name`, `photo_path`, `phone_number`, `contact_email`, `email`, `password`)
 VALUES
