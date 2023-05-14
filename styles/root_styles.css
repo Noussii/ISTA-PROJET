@@ -62,11 +62,20 @@ a {
 }
 
 .main-container-reactive{
+    max-width: 1000px;
     width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* background-color: blue; */
+}
+.main-container{
+    /* max-width: 1000px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blue; */
 }
 
 .main-container-reactive > section{
