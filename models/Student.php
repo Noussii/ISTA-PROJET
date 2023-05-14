@@ -93,6 +93,22 @@ class Student extends User{
         }
     }
 
+    
+    public function get_all_subjects(){
+        try{
+            $pre_stmt = "select subject.subject_name from note join student on student.student_id = note.student_id
+            join subject on subject.class_id = student.class where student.student_id = ?;";
+            $stmt = $this->connect()->prepare($pre_stmt);
+            $stmt->execute([$this->id]);
+            $result = $stmt->fetchAll();
+            if(count($result)){
+                return array_column($result,'subject_name');
+            }
+        }catch (PDOException $e){
+            die($e);
+        }
+    }
+
     public function get_property_value($prop_name){
         $arr = get_object_vars($this);
         if($arr[$prop_name]){
