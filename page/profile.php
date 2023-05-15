@@ -1,6 +1,6 @@
 <?php 
 include_once '../usefulFunctions.php';
-include_once '../models/Student.php';
+include_once '../classes/Student.php';
 
 if(check_authentication_with_redirection_unauthorized('./unauthorized.php')){
     $student = new Student($_SESSION['user_id']);
@@ -53,12 +53,8 @@ if(check_authentication_with_redirection_unauthorized('./unauthorized.php')){
                             <span class="value"><?=$student->get_property_value('national_student_id'); ?></span>
                         </div>
                         <div class="one-line">
-                            <span class="title">national_student_id:</span>
-                            <span class="value">shfoshhos.sdfh@offpt.com</span>
-                        </div>
-                        <div class="one-line">
-                            <span class="title">email:</span>
-                            <span class="value">shfoshhos.sdfh@offpt.com</span>
+                            <span class="title">Phone:</span>
+                            <span class="value"><?=$student->get_property_value('phone_number'); ?></span>
                         </div>
                     </div>
                 </div>

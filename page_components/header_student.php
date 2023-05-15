@@ -165,7 +165,8 @@ if(isset($_SESSION['user_type']) && isset($_SESSION['user_id'])){
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 3px solid var(--very-dark-primary-color);
+    border-bottom: 3px solid lightgray;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 .header a {
     color: black;

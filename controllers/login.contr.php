@@ -1,5 +1,5 @@
 <?php
-require_once '../models/Dbc.php';
+require_once '../classes/Dbc.php';
 
 class Login extends Dbc {
 
