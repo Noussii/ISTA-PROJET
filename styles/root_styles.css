@@ -49,6 +49,7 @@ body{
 a {
     text-decoration: none;
     font-weight: 900;
+    color: black;
 }
 
 .outer-container-reactive{
@@ -97,13 +98,13 @@ a {
 .main-container > section{
     background-color: white;
     /* padding: 20px 20px; */
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 15px;
     box-sizing: border-box;
 }
 .main-container-reactive > section{
     background-color: white;
-    padding:5px 20px 20px 20px;
+    padding:20px 20px 20px 20px;
     margin-bottom: 15px;
     box-sizing: border-box;
 }

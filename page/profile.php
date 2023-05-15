@@ -25,7 +25,6 @@ if(check_authentication_with_redirection_unauthorized('./unauthorized.php')){
         <main class='main-container-reactive'>
             <section>
                 <div class="top-section-container">
-
                     <div class="name-and-img-div">
                         <div class="profile-img-container">
                             <div class="profile-img">

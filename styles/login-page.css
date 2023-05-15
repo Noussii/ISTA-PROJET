@@ -8,16 +8,16 @@ main {
 .uf-form-signin {
     position: relative;
     top:50px;
-    max-width: 380px;
+    max-width: 400px;
     padding: 15px;
     margin: 0 auto;
     background-color:white;
     border: 1px solid #ccc;
     border-radius: 2%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    padding: 30px 30px; 
     
 }
-
 .uf-form-signin .text-center {
     margin-bottom: 2rem;
 }
@@ -32,7 +32,7 @@ main {
 .btn-cc{
     background-color:#252525;
 }
-form{
+/* form{
     margin: 50px auto;
     margin-top: 50px;
     padding-top: 50px;
@@ -48,14 +48,14 @@ form{
     border: 1px solid darkblue;
     border-bottom: 4px solid darkblue;
     border-top: none;
-}
-form > legend{
+} */
+/* form > legend{
     font-weight: 800;
     font-size: 18px;
     margin-bottom: 10px;
-}
+} */
 .form-row{
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
 }
