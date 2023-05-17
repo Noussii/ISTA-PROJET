@@ -26,46 +26,13 @@
         </tr>
     </thead>
     <tbody id='notes-body'>
-        <tr>
-            <td>Math</td>
-            <td>15</td>
-            <td>17</td>
-            <td>13</td>
-            <td>16</td>
-        </tr>
-        <tr>
-            <td>Science</td>
-            <td>12</td>
-            <td>14</td>
-            <td>16</td>
-            <td>15</td>
-        </tr>
-        <tr>
-            <td>English</td>
-            <td>18</td>
-            <td>17</td>
-            <td>19</td>
-            <td>20</td>
-        </tr>
-        <tr>
-            <td>History</td>
-            <td>13</td>
-            <td>15</td>
-            <td>11</td>
-            <td>14</td>
-        </tr>
-        <tr>
-            <td>Geography</td>
-            <td>11</td>
-            <td>13</td>
-            <td>12</td>
-            <td>14</td>
-        </tr>
+
     </tbody>
 </table>
 
             </section>
         </main>
     </section>
+    <script src="../scripts/notes-page.js"></script>
 </body>
 </html>

@@ -25,14 +25,7 @@ check_authentication_with_redirection_unauthorized('../api/logout.php');
                 <h1>welcome <?= $_SESSION['first_name'];?>.</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates ea consectetur quis rem. Error, quis non! Exercitationem labore facere fugiat, saepe soluta veritatis doloremque, aspernatur numquam voluptatibus commodi adipisci necessitatibus.</p>
             </section>
-            <section class='feed-section'>
-                <h1>Test</h1>
-                <p>This section here just for testing purposes.</p>
-            </section>
             <!-- feed-section class is in /style/feed-page.css -->
-            <section class='feed-section'>
-                <p>This section also.</p>
-            </section>
         </main>
     </section>
     </body>

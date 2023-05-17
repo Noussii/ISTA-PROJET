@@ -74,6 +74,25 @@ class Student extends User{
         }
     }
 
+    public function get_all_subjects_notes(){
+        try{
+            if($this->id){
+                $pre_stmt = "select subject.subject_name, note.controle_1, note.controle_2, note.controle_3, note.EFM from note join subject on note.subject_id = subject.subject_id
+                where note.student_id = ?;";
+                $stmt = $this->connect()->prepare($pre_stmt);
+                $stmt->execute([$this->id]);
+                $result = $stmt->fetchAll();
+                if(count($result) > 0) {
+                    return $result;
+                }else {
+                    return false;
+                }
+            }
+        }catch(PDOExecption $e){
+            die($e);
+        }
+    }
+
     public function get_all_data(){
         return get_object_vars($this);
     }

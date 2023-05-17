@@ -77,7 +77,6 @@ VALUES
 
 
 
-
 INSERT INTO `note` (`subject_id`, `student_id`, `controle_1`, `controle_2`, `controle_3`, `EFM`) VALUES
 (1, 11, 18, 12, 16, 14),
 (2, 11, 19, 12, 16, 14),

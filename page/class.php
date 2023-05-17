@@ -20,10 +20,10 @@ if(check_authentication_with_redirection_unauthorized('./unauthorized.php')){
         <main class='main-container-reactive'>
             <section>
                 <div class="top-cards-container">
-                    <a href='../api/class.php?emploi=true' class="card emploi_card">
-                        <h4>Emploi</h4>
-                    </a>
-                    <div class="card ">
+                    <div target='_blank' href='../api/class.php?req=emploi' class="card">
+                        <h4>Chat</h4>
+                    </div>
+                    <div class="card emploi_card">
                         <h4>Emploi</h4>
                     </div>
                     <div class="card ">
@@ -34,7 +34,47 @@ if(check_authentication_with_redirection_unauthorized('./unauthorized.php')){
                     </div>
                 </div>
             </section>
-        </main>
+            <section class='messages-outer-container'>
+                <h1>latest messages: </h1>
+                <div class="messages-container">
+                    <div class="one-message-container">
+                        <div class="user-identifier">
+                            <span class="message-user-name">Ilias</span>
+                            <span class="message-datetime">2023-05-17 6:23pm</span>
+                        </div>
+                        <p>Hello</p>
+                    </div>
+
+                    <div class="one-message-container">
+                        <div class="user-identifier">
+                            <span class="message-user-name">John</span>
+                            <span class="message-datetime">2023-05-17 7:45pm</span>
+                        </div>
+                        <p>How are you doing?</p>
+                    </div>
+
+                    <div class="one-message-container">
+                        <div class="user-identifier">
+                            <span class="message-user-name">Sarah</span>
+                            <span class="message-datetime">2023-05-17 8:12pm</span>
+                        </div>
+                        <p>Hey there!</p>
+                    </div>
+
+                    <div class="one-message-container">
+                        <div class="user-identifier">
+                            <span class="message-user-name">Ilias</span>
+                            <span class="message-datetime">2023-05-17 8:35pm</span>
+                        </div>
+                        <p>I'm doing well, thank you!</p>
+                    </div>
+                </div>
+            </section>
+            <section class='message-writing-container'>
+                <input type="text" placeholder='type message here..'>
+                <input type="button" value='send'>
+            </section>
+        </main> 
     </section>
     <script src="../scripts/class_page.js"></script>
 </body>
