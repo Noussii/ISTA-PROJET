@@ -1,6 +1,6 @@
 <?php 
 include_once '../usefulFunctions.php';
-check_authentication_with_redirection_unauthorized('../api/logout.php');
+check_authentication_with_redirection_unauthorized_student('../api/logout.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">

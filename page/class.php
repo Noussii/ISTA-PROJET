@@ -1,6 +1,6 @@
 <?php
 include_once '../usefulFunctions.php';
-if(check_authentication_with_redirection_unauthorized('./unauthorized.php')){
+if(check_authentication_with_redirection_unauthorized_student('./unauthorized.php')){
     
 }
 ?>
@@ -45,7 +45,7 @@ if(check_authentication_with_redirection_unauthorized('./unauthorized.php')){
                         <p>Hello</p>
                     </div>
 
-                    <div class="one-message-container">
+                    <div class="one-message-container my-message">
                         <div class="user-identifier">
                             <span class="message-user-name">John</span>
                             <span class="message-datetime">2023-05-17 7:45pm</span>

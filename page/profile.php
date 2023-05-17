@@ -2,7 +2,7 @@
 include_once '../usefulFunctions.php';
 include_once '../classes/Student.php';
 
-if(check_authentication_with_redirection_unauthorized('./unauthorized.php')){
+if(check_authentication_with_redirection_unauthorized_student('./unauthorized.php')){
     $student = new Student($_SESSION['user_id']);
 }
 
