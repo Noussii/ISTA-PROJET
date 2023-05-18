@@ -247,11 +247,10 @@ header[class="h-main"] a {
     color: white;
     text-shadow: 1px 1px 2px black;
   }
-
- /* .custom-slideshow-container-class{
-     height: 410px;
-    width: 100%;
-  } */
+  .custom-slideshow-container-class{
+    /* height: 410px;
+    width: 100%; */
+  }
 .custom-slideshow-container-class .slideshow-img-container{
     height: 410px;
     width: 100%;
