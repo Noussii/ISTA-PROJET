@@ -23,10 +23,10 @@ if(check_authentication_with_redirection_unauthorized_student('./unauthorized.ph
                     <div target='_blank' href='../api/class.php?req=emploi' class="card">
                         <h4>Chat</h4>
                     </div>
-                    <div class="card emploi_card">
-                        <h4>Emploi</h4>
+                    <div class="card">
+                        <h4>Cours</h4>
                     </div>
-                    <div class="card ">
+                    <div class="card emploi_card">
                         <h4>Emploi</h4>
                     </div>
                     <div class="card ">

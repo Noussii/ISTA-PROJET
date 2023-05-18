@@ -112,6 +112,19 @@ class Student extends User{
         }
     }
 
+    public function get_all_notifications(){
+        try{
+            $pre_stmt = "select * from notification where recepient = ?;";
+            $stmt = $this->connect()->prepare($pre_stmt);
+            $stmt->execute([$this->id]);
+            $result = $stmt->fetchAll();
+            if(count($result) > 0){
+                return $result;
+            }
+        }catch (PDOException $e){
+            die($e);
+        }
+    }
     
     public function get_all_subjects(){
         try{

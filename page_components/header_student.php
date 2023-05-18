@@ -45,9 +45,13 @@ if(isset($_SESSION['user_type']) && isset($_SESSION['user_id'])){
         padding: 10px;
         min-height: 60px;
         width: 100%;
-        border-bottom: 1px solid gray;
+        border-bottom: 1px solid lightgray;
         box-sizing: border-box;
         position: relative;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .active-notification{
         background-color: var(--ambient-light-color);
@@ -66,6 +70,19 @@ if(isset($_SESSION['user_type']) && isset($_SESSION['user_id'])){
     background-color: lightgray;
     cursor: pointer;
 }
+
+/* the styles below are used in root/scripts/header_student_C.js script to change notifications colors according to their context */
+.ad{
+    background-color: rgba(255,255,240);
+}
+.te{
+    background-color: rgba(240,255,240);
+}
+.sys{
+    background-color: white;
+}
+/* the styles above are used in root/scripts/header_student_C.js script to change notifications colors according to their context */
+
 
 .header-all-button, .header-notification-menu-button{
     display: flex;
@@ -190,7 +207,7 @@ body{
         </div>
         <div class="header-right-side-buttons-container">
 
-            <button id='header-notification-btn' class="header-notification-menu-button active-notification">              
+            <button id='header-notification-btn' class="header-notification-menu-button">              
             </button>
             <button class="header-all-button">
                 <nav class="header-drop-down-menu">
@@ -202,10 +219,7 @@ body{
                 </nav>
             </button>
             <div class="header-notification-menu" data-visibility="0">
-                <div class="header-one-notification active-notification">noti1</div>
-                <div class="header-one-notification">noti2</div>
-                <div class="header-one-notification">noti3</div>
-                <div class="header-one-notification">noti4</div>
+                <div class="header-one-notification" style="text-align: center;">You have no notifications today.</div>
             </div>
         </div>
 </header>

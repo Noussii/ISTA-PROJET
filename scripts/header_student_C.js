@@ -37,6 +37,51 @@ document.addEventListener('touchstart', function (e){
     }
 })
 
+{/* <div class="header-notification-menu" data-visibility="0">
+        <div class="header-one-notification active-notification">noti1</div>
+        <div class="header-one-notification">noti2</div>
+        <div class="header-one-notification">noti3</div>
+        <div class="header-one-notification">noti4</div>
+    </div> */}
+
+
+function getNotifications(){
+    function populateNotifications(json){
+        let noti_menu = document.querySelector('.header-notification-menu');
+        
+        if(json.dont_have_notifications) return;
+
+        while(noti_menu.lastChild){
+            noti_menu.removeChild(noti_menu.lastChild);
+        }
+        
+        json.forEach(dataObj => {
+            let one_noti = document.createElement('div');
+            one_noti.innerText = dataObj.message;
+            one_noti.classList.add('header-one-notification', 'active-notification');
+            one_noti.dataset.checked = dataObj.checked;
+            one_noti.dataset.context = dataObj.context;
+            switch(dataObj.context){
+                case 'administration':
+                    one_noti.classList.add('ad');
+                    break;
+                case 'teacher':
+                    one_noti.classList.add('te');
+                    break;
+                case 'system':
+                    one_noti.classList.add('sys');
+            }
+            noti_menu.appendChild(one_noti);
+        });
+        document.querySelector('#header-notification-btn').classList.add('active-notification');
+    }
+
+    
+
+    fetch('../api/header.php?req=notifications')
+    .then(response => response.json())
+    .then(data => populateNotifications(data))
+}
+getNotifications();
 
 document.getElementById('header-notification-btn').onclick = notificationMenuVisisbilityHandler;
-
