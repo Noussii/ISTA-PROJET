@@ -9,7 +9,7 @@ check_general_authentication();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>corner</title>
-    <link rel="stylesheet" href="../styles/index.css">
+    <!-- <link rel="stylesheet" href="../styles/index.css"> -->
     <link rel="stylesheet" href="../styles/feed-page.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -20,7 +20,7 @@ check_general_authentication();
     ?>
 
 <!-- feed-section class is in /style/feed-page.css -->
-    <section class="outer-container">
+    <section class="outer-container" style='padding-top: 40px;'>
         <main class='main-container'>
             <!-- <section class="feed-section">
                 <h1>welcome <?php /*$_SESSION['first_name'];*/?>.</h1>

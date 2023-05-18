@@ -1,3 +1,4 @@
+@import url('./root_styles.css');
 
 .feed-section{
     padding: 3px 10px;
@@ -7,6 +8,7 @@
     flex-direction: column;
     gap: 5px;
     max-width: 600px;
+    width: 100%;
     background-color: white;
 }
 .feed-section > img {

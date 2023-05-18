@@ -6,7 +6,7 @@ if(check_general_authentication()){
         if((int) $_GET['n'] < 30 && (int) $_GET['n'] > 0){
             $dbc = new Dbc();
             $max_num_of_rows = (int)$_GET['n'];
-            $pre_stmt = "select * from article limit $max_num_of_rows";
+            $pre_stmt = "select * from article order by date_time desc limit $max_num_of_rows";
             $stmt = $dbc->connect()->prepare($pre_stmt);
             $stmt->execute();
             $result = $stmt->fetchAll();
