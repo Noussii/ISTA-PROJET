@@ -1,6 +1,6 @@
 <?php 
 include_once '../usefulFunctions.php';
-check_authentication_with_redirection_unauthorized_student('../api/logout.php');
+check_general_authentication();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,20 +14,27 @@ check_authentication_with_redirection_unauthorized_student('../api/logout.php');
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <!-- the following line include the header -->
-    <?php include '../page_components/header_student.php';?>
-    <!-- the following line include the aside section  -->
-    <?php include '../page_components/feed_left_side_student.php'; ?>
+    
+    <?php
+    add_header_and_left_side_after_auth();
+    ?>
 
+<!-- feed-section class is in /style/feed-page.css -->
     <section class="outer-container">
         <main class='main-container'>
-            <section class="feed-section">
-                <h1>welcome <?= $_SESSION['first_name'];?>.</h1>
+            <!-- <section class="feed-section">
+                <h1>welcome <?php /*$_SESSION['first_name'];*/?>.</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates ea consectetur quis rem. Error, quis non! Exercitationem labore facere fugiat, saepe soluta veritatis doloremque, aspernatur numquam voluptatibus commodi adipisci necessitatibus.</p>
-            </section>
-            <!-- feed-section class is in /style/feed-page.css -->
+            </section> -->
         </main>
     </section>
+
     </body>
-<script src='../scripts/feed_page.js'></script>
+    <?php 
+    if($_SESSION['user_type'] == 'student'){
+        echo "<script src='../scripts/feed_page.js'></script>";
+    }else if ($_SESSION['user_type'] == 'student'){
+        echo "<script src='../scripts/feed_page.js'></script>";        
+    }
+    ?>
 </html>

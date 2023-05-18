@@ -19,4 +19,16 @@ function generatePost(contentString, color, img){
     mainContainer.appendChild(container)
     return container;
 }
+
+function generatePosts(json){
+    if(json.empty) return;
+
+    
+}
+
+let articlesData = fetch('../api/articles_A.php?q=latest&n=5')
+.then(res => res.json())
+.then(json => generatePosts(json));
+
+
 generatePost('wtf123 jsgdfjgs gjgfs ', null, '../media/man.png')

@@ -8,7 +8,7 @@
     font-family: monospace;
     --sn-dark-blue: #252525;
     --primary-color: darkblue;
-    --secondary-color: green;
+    --secondary-color: rgb(0, 255, 221);
     --third-color: rgb(167, 167, 167);
 
     --dark-primary-color: rgb(0, 0, 74);

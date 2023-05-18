@@ -14,7 +14,7 @@ function insertEmploiPdf(){
             mainContainer.appendChild(section);
         }
         
-    fetch('../api/class.php?req=emploi')
+    fetch('../api/class_A.php?req=emploi')
     .then(res => res.json())
     .then(json => insertDom(json))
     .catch(err => console.log(err));

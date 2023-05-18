@@ -2,7 +2,7 @@
 include_once '../usefulFunctions.php';
 include_once '../classes/Student.php';
 
-if(check_authentication_with_redirection_unauthorized_student('./unauthorized.php')){
+if(check_general_authentication()){
     $student = new Student($_SESSION['user_id']);
 }
 
@@ -19,8 +19,7 @@ if(check_authentication_with_redirection_unauthorized_student('./unauthorized.ph
     <link rel='stylesheet' href='../styles/profile-page.css'>
 </head>
 <body>
-    <?php include '../page_components/header_student.php';?>
-    <?php include '../page_components/feed_left_side_student.php';?>
+    <?php add_header_and_left_side_after_auth() ;?>
     <section class="outer-container">
         <main class='main-container-reactive'>
             <section>

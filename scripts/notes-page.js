@@ -1,7 +1,7 @@
 const table = document.querySelector('#notes-table > #notes-body');
 
 document.body.onload = function (e) {
-    fetch('../api/class.php?req=all_notes'
+    fetch('../api/class_A.php?req=all_notes'
     ,{method: 'GET', headers: {'Accept': 'application/json'}}
     )
     .then(response => {
