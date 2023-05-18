@@ -1,3 +1,4 @@
+<?php include_once './logic_php_layer/index-page-logic.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,9 +18,9 @@
             <img height="40px" src="../media/logo.png" alt="website_logo">
         </a>
         </div>
-        <nav>
-            <a href="./page/updates.php">Updates</a>
-            <a href="./page/login.php">Login</a>
+        <nav class='header-right-nav'>
+            <a href="./page/updates.php" class='updates-link'></a>
+            <a href="./page/login.php" class='login-link'></a>
         </nav>
     </header>
 
@@ -76,7 +77,7 @@
                         <h5 class="card-title mb-2">Les dernières annonces</h5>
                         <h6 class="card-subtitle mb-2">Restez à jour avec les dernières nouvelles</h6>
                         <div class="mt-auto">
-                            <a href="#" class="btn cc">En savoir plus</a>
+                            <a href="./page/updates.php" class="btn cc">En savoir plus</a>
                         </div>
                     </div>
                 </div>

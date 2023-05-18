@@ -32,7 +32,8 @@ header[class="h-main"]{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 3px solid darkblue;
+    border-bottom: 3px solid lightgray;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1)
 }
 header[class="h-main"] a {
     color: black;

@@ -1,4 +1,8 @@
-<?php include '../logic_php_layer/login-page-logic.php'; ?>
+<?php 
+include_once '../usefulFunctions.php'; 
+check_authentication_with_redirection_logged_in('./feed.php')
+;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,11 +21,11 @@
     <?php include '../page_components/header_public.php'; ?>
     <main>
     <div class="container">
-        <div class="uf-form-signin">
+        <div class="uf-form-signin form-container">
 
             <div class="text-center">
-                <a href="../index.php"><img src="../media/logo.png" alt="" width="100" height="100"></a>
-                <h1 class="text-dark h3">Account Login</h1>
+                <a href="../index.php"><img src="../media/logo.png" alt="" width="88" height="100"></a>
+                <h1 class="text-dark h3 mt-3">Login</h1>
             </div>
             <form class="mt-4" action="../api/authentication.php" method="post">
                 <div class="input-group uf-input-group input-group-lg mb-3">

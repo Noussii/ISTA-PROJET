@@ -1,48 +1,58 @@
-<style>
-.header-right-side-buttons-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: auto;
-    height: 100%;
-}
-.header-notification-menu-button > img{
-    height: 65%;
+<?php
+if(isset($_SESSION['user_type']) && isset($_SESSION['user_id'])){
+    
 }
 
-.header-notification-menu{
-    background: white;
-    height: auto;
-    width: 400px; 
-    position: absolute;
-    right: 0px;
-    top: 45px;
-    border-radius: 0px 0px 10px 10px;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
-    border: 1px solid gray;
-    border-top: none;
-    overflow: hidden;
-    max-width: 100%;
-    /* background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px); /* Main effect */
-}
-.header-one-notification{
-    background-color: transparent;
-    padding: 10px;
-    min-height: 60px;
-    width: 100%;
-    border-bottom: 1px solid gray;
-    box-sizing: border-box;
-    position: relative;
-}
-.active-notification{
-    background-color: var(--ambient-light-color);
-}
-.active-notification::after{
+// new User(12344);
+
+?>
+
+
+<style>
+    .header-right-side-buttons-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: auto;
+        height: 100%;
+    }
+    .header-notification-menu-button > img{
+        height: 65%;
+    }
+    
+    .header-notification-menu{
+        background: white;
+        height: auto;
+        width: 400px; 
+        position: absolute;
+        right: 0px;
+        top: 45px;
+        border-radius: 0px 0px 10px 10px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 5px 5px 5px rgba(0,0,0,0.3);
+        border: 1px solid gray;
+        border-top: none;
+        overflow: hidden;
+        max-width: 100%;
+        /* background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(5px); /* Main effect */
+    }
+    .header-one-notification{
+        background-color: transparent;
+        padding: 10px;
+        min-height: 60px;
+        width: 100%;
+        border-bottom: 1px solid gray;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .active-notification{
+        background-color: var(--ambient-light-color);
+    }
+    .active-notification::after{
     content: '';
     width: 10px;
     height: 10px;
@@ -61,21 +71,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--very-light-gray);
+    background-color: rgba(0,0,0,0.1);
     height: 40px;
     width: 40px;
     border-radius: 50%;
     position: relative;
     border: none;
 }
+.header-notification-menu-button:before{
+    content: '';
+    background-image: url("../media/icons/notification_icon_header.png");
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
 .header-all-button::after {
-  content: "";
-  display: inline-block;
-  height: 20px; /* Change this to your desired height */
-  width: 20px;
-  background-image: url('../media/icons/arrow-down_icon_header.png');
-  background-size: contain;
-  background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 20px; /* Change this to your desired height */
+    width: 20px;
+    background-image: url('../media/icons/arrow-down_icon_header.png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .header-all-button:hover{
@@ -146,7 +165,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 3px solid var(--very-dark-primary-color);
+    border-bottom: 3px solid lightgray;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 .header a {
     color: black;
@@ -164,20 +184,19 @@ body{
 <header class="header">
         <div class="header-logo-container">
             <button class='left-side-visibility-btn' onclick="leftSideVisibilityHandler()">|||</button>
-            <a href="../index.php">
+            <a href="./feed.php">
                 <img height="35px" src="../media/logo.png" alt="website_logo">
             </a>
         </div>
         <div class="header-right-side-buttons-container">
 
-            <button id='header-notification-btn' class="header-notification-menu-button active-notification">
-                <img src="../media/icons/notification_icon_header.png">                
+            <button id='header-notification-btn' class="header-notification-menu-button active-notification">              
             </button>
             <button class="header-all-button">
                 <nav class="header-drop-down-menu">
                     <a class="drop-down-menu-item" href="../page/profile.php">Profile</a>
                     <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
-                    <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
+                    <a class="drop-down-menu-item" href="../index.php?acc=1">ISTA Home page</a>
                     <a class="drop-down-menu-item" href="../page/help.php">Help</a>
                     <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
                 </nav>

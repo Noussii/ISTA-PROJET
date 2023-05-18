@@ -1,0 +1,25 @@
+@import url('./root_styles.css');
+table, th, td{
+    border-collapse: collapse;
+}
+tr:hover{
+    background-color: rgb(229, 229, 229);
+}
+tr{
+    background-color: rgb(249, 249, 249);
+}
+th, td{
+    padding: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+#notes-table {
+    width: 100%;
+    box-sizing: border-box;
+}
+th{
+    background-color: var(--very-dark-primary-color);
+    color: white;
+}

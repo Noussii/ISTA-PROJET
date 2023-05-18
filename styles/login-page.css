@@ -1,3 +1,4 @@
+@import url('./root_styles.css');
 main {
         height: 100vh;
         font-size: 15px;
@@ -7,16 +8,16 @@ main {
 .uf-form-signin {
     position: relative;
     top:50px;
-    max-width: 380px;
+    max-width: 400px;
     padding: 15px;
     margin: 0 auto;
     background-color:white;
     border: 1px solid #ccc;
     border-radius: 2%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    padding: 30px 30px; 
     
 }
-
 .uf-form-signin .text-center {
     margin-bottom: 2rem;
 }
@@ -31,8 +32,47 @@ main {
 .btn-cc{
     background-color:#252525;
 }
-.btn-cc:hover{
-    background-color: #f26522;
+/* form{
+    margin: 50px auto;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    max-width: 95%;
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    border: 1px solid darkblue;
+    border-bottom: 4px solid darkblue;
+    border-top: none;
+} */
+/* form > legend{
+    font-weight: 800;
+    font-size: 18px;
+    margin-bottom: 10px;
+} */
+.form-row{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+input[type="text"], input[type="password"]{
+    height: 40px;
+    width: 80%;
+    border: 1px solid black;
+    box-sizing:border-box;
+    padding-left: 10px;
+    background-color: rgb(255, 255, 255);
+}
+input[type="text"]:focus, input[type="password"]:focus{
+    outline-color: purple;
+}
+input[type="submit"]{
+    width: 80%;
+    padding: 10px 0px;
     color: white;
 }
 small{

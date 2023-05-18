@@ -1,5 +1,6 @@
 <?php 
-include "../logic_php_layer/feed-page-logic.php"; 
+include_once '../usefulFunctions.php';
+check_authentication_with_redirection_unauthorized('../api/logout.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
