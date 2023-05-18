@@ -12,7 +12,7 @@ class Dbc {
 
         $this->servername = 'localhost';
         $this->username = 'root';
-        $this->password = 'wtf123';
+        $this->password = '';
         $this->dbname = 'ista_website_db';
         $this->charset = 'utf8mb4';
         
