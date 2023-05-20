@@ -14,6 +14,7 @@
     transition: 160ms;
     box-shadow: 5px 0px 8px rgba(0,0,0,0.1);
     z-index: 10;
+    transition: 300ms;
 }
 
 .left-side-profile-card{

@@ -19,7 +19,7 @@ check_general_authentication();
         <main class='main-container-reactive'>
             <section>
                 <div class="top-cards-container">
-                    <div target='_blank' href='../api/class_A.php?req=emploi' class="card">
+                    <div target='_blank' class="card chat_card">
                         <h4>Chat</h4>
                     </div>
                     <div class="card">

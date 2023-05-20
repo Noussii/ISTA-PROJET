@@ -2,14 +2,12 @@
 include_once '../usefulFunctions.php';
 include_once '../classes/User.php';
 include_once '../classes/Student.php';
+include_once '../classes/Teacher.php';
 
 
-if(check_authentication_with_redirection_unauthorized('../page/unauthorized.php')){   
-    // Set the content type header
-    header('Content-type: application/pdf');
-
-    // Set the content disposition header to force a download
-    // header('Content-Disposition: attachment; filename="example.pdf"');
-    readfile('../resources/pdf/emploi_du_temps/dev101.pdf');
-    // header('../resources/pdf/emploi_du_temps/dev101.pdf');
+if(check_general_authentication()){   
+    $teacher = new Teacher();
+    $data = $teacher->return_all_data((int)$_SESSION['user_id']);
+    echo json_encode($data);
+    echo $_SESSION['user_id'];
 }

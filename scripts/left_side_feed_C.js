@@ -22,33 +22,10 @@ function leftSideVisibilityHandler(){
         if(leftSide.dataset.visibility == '1'){
             leftSideVisibilityToggle(false);
             console.log('before false')
-            // leftSide.style.with = '0px';
-            // leftSide.style.opacity = '0';
-            // leftSide.style.display = 'none';
-            // outerContainer.style.paddingLeft = '0px';
-            // leftSide.dataset.visibility = 0;
         }else if (leftSide.dataset.visibility == '0'){
             leftSideVisibilityToggle(true);
-            console.log('before true')
-            // leftSide.style.with = '230px';
-            // leftSide.style.opacity = '1';
-            // leftSide.style.display = 'flex';
-            // outerContainer.style.paddingLeft = '230px';
-            // leftSide.dataset.visibility = 1;
+            console.log('before true');
         }
-    // }else {
-        // if(leftSide.dataset.visibility == '1'){
-            // leftSide.style.with = '0px';
-            // leftSide.style.opacity = '0';
-            // leftSide.style.display = 'none';
-            // leftSide.dataset.visibility = 0;
-        // }else if (leftSide.dataset.visibility == '0'){
-            // leftSide.style.with = '230px';
-            // leftSide.style.opacity = '1';
-            // leftSide.style.display = 'flex';
-            // leftSide.dataset.visibility = 1;
-        // }
-    // }
 }
 
 function leftSideVisibilityToggle(bool){

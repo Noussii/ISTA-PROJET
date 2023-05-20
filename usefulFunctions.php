@@ -4,7 +4,7 @@ function check_authentication($user_type){
     if(!isset($_COOKIE['PHPSESSID'])) return false;
     session_start();
     if(!(isset($_SESSION['user_id'], $_SESSION['user_type'])) && $_SESSION['user_type'] ===$user_type) {
-        session_destroy();
+        header('location:../api/logout.php');
         return false;
     };
     return true;
