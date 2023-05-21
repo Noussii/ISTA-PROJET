@@ -28,10 +28,10 @@ function check_general_authentication(){
 function return_user_type(){
     if(!isset($_COOKIE['PHPSESSID'])) return false;
     if(!(isset($_SESSION['user_id'], $_SESSION['user_type']))) {
-        session_destroy();
+        // header('location:../logout.php');
         return false;
     };
-    return $_SESSION['user-type'];
+    return $_SESSION['user_type'];
 }
 
 function check_authentication_with_redirection_logged_in($redirection_link){

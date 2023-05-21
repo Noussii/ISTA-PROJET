@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='../styles/notes.css'>
     <title>corner - notes</title>
+    <link rel="icon" type="image/x-icon" href="../media/fav.ico">
 </head>
 <body>
     <?php include_once '../page_components/header_student.php'; ?>

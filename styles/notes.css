@@ -1,6 +1,7 @@
 @import url('./root_styles.css');
 table, th, td{
     border-collapse: collapse;
+    box-sizing: border-box;
 }
 tr:hover{
     background-color: rgb(229, 229, 229);
@@ -9,17 +10,64 @@ tr{
     background-color: rgb(249, 249, 249);
 }
 th, td{
-    padding: 5px;
-    padding-top: 15px;
-    padding-bottom: 15px;
     text-align: center;
     box-sizing: border-box;
 }
 #notes-table {
-    width: 100%;
     box-sizing: border-box;
+    width: 100%;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 th{
     background-color: var(--very-dark-primary-color);
     color: white;
+    padding: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+select{
+    background-color: rgb(234, 234, 234);
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: auto;
+    padding: 5px 10px;
+}
+select option {
+    height: 30px;
+    width: auto;
+}
+td > input[type='number']{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: transparent;
+    height: 100%;
+    width: 50px;
+    border: none;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 18px;
+}
+input[type='button']{
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    padding: 5px 10px;
+    justify-self: flex-end;
+    position: absolute;
+    right: 15px;
+}
+input[type='button']:hover{
+    cursor: pointer;
+    background-color: var(--sn-dark-blue);
+}
+.teacher_top_section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
 }

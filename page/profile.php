@@ -1,9 +1,17 @@
 <?php 
 include_once '../usefulFunctions.php';
 include_once '../classes/Student.php';
+include_once '../classes/Teacher.php';
 
 if(check_general_authentication()){
-    $student = new Student($_SESSION['user_id']);
+    $user_type = return_user_type();
+    if($user_type == 'student'){
+        $student = new Student($_SESSION['user_id']);
+        $data = $student->return_all_data();
+    }else if($user_type == 'teacher'){
+        $teacher = new Teacher($_SESSION['user_id']);
+        $data = $teacher->return_all_data();
+    }
 }
 
 
@@ -17,12 +25,19 @@ if(check_general_authentication()){
     <title>Document</title>
     <link rel='stylesheet' href='../styles/root_styles.css'>
     <link rel='stylesheet' href='../styles/profile-page.css'>
+    <link rel="icon" type="image/x-icon" href="../media/fav.ico">
 </head>
 <body>
     <?php add_header_and_left_side_after_auth() ;?>
+    <?php 
+        $background_color = 'background-color: white;';
+        if($_SESSION['user_type'] === 'teacher'){
+            $background_color = 'background-color: rgb(180,255,180);';
+        }
+    ?>
     <section class="outer-container">
         <main class='main-container-reactive'>
-            <section>
+            <section style="<?=$background_color?>">
                 <div class="top-section-container">
                     <div class="name-and-img-div">
                         <div class="profile-img-container">
@@ -32,28 +47,27 @@ if(check_general_authentication()){
                         </div>
                         <div class="text-div">
                             <span class="fname"><?=$_SESSION['first_name']?></span>
-                            <span class="lname"><?=$student->get_property_value('last_name'); ?></span>
-                            <span class="lname">nb: <?=$student->get_property_value('number_in_class'); ?></span>
+                            <span class="lname"><?=$data['last_name'];?></span>
+                            <?php
+                                if($_SESSION['user_type'] == 'student') {?>
+                            <span class="lname"><?=$data['nb']?></span>
+                      <?php }?>
                         </div>
                     </div>
 
                     <div class="profile-infos-top">
+                        <?php
+                            foreach($data as $key => $value){
+                                if($key == 'first_name' || $key == 'last_name'){
+                                    continue;
+                                }
+                        ?>
                         <div class="one-line">
-                            <span class="title">Class:</span>
-                            <span class="value"><?=$student->get_property_value('class')['name']; ?></span>
+                            <span class="title"><?=$key?>:</span>
+                            <span class="value"><?=$value?></span>
                         </div>
-                        <div class="one-line">
-                            <span class="title">Email:</span>
-                            <span class="value"><?=$student->get_property_value('email'); ?></span>
-                        </div>
-                        <div class="one-line">
-                            <span class="title">Cin:</span>
-                            <span class="value"><?=$student->get_property_value('national_student_id'); ?></span>
-                        </div>
-                        <div class="one-line">
-                            <span class="title">Phone:</span>
-                            <span class="value"><?=$student->get_property_value('phone_number'); ?></span>
-                        </div>
+
+                  <?php } ?>
                     </div>
                 </div>
             </section>

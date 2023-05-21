@@ -6,8 +6,9 @@ include_once '../classes/Teacher.php';
 
 
 if(check_general_authentication()){   
-    $teacher = new Teacher();
-    $data = $teacher->return_all_data((int)$_SESSION['user_id']);
+    $teacher = new Teacher($_SESSION['user_id']);
+    $data = $teacher->get_students_notes_from_subject_id(2);
     echo json_encode($data);
-    echo $_SESSION['user_id'];
 }
+
+echo $_SESSION['user_id'];

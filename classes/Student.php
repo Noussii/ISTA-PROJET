@@ -74,6 +74,20 @@ class Student extends User{
         }
     }
 
+    public function return_all_data(){
+        try{
+            $sql = 'select first_name, last_name, email, national_student_id as NSID, numberInClass as nb, phone_number from student where student_id = ?;';
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute([$this->id]);
+            $result = $stmt->fetch();
+            if($result){
+                return $result;
+            }else return 'no data';
+        }catch(PDOException $e){
+            return $e;
+        }
+    }
+
     public function get_all_subjects_notes(){
         try{
             if($this->id){

@@ -10,6 +10,8 @@ check_general_authentication();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/class-page.css" >
     <title>corner - class</title>
+    <link rel="icon" type="image/x-icon" href="../media/fav.ico">
+
 </head>
 <body>
     <?php 
