@@ -12,6 +12,7 @@ tr{
 th, td{
     text-align: center;
     box-sizing: border-box;
+    height: 45px;
 }
 #notes-table {
     box-sizing: border-box;

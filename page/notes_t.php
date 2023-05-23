@@ -56,8 +56,11 @@ check_general_authentication();
     <tbody id='notes-table-body'>
         
     </tbody>
-</table>
+    </table>
 
+            </section>
+            <section>
+                <h1>confirme changes</h1>
             </section>
         </main>
     </section>
