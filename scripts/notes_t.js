@@ -23,6 +23,7 @@ function populateTable(data){
     data.forEach( obj => { 
         let fullname = `${obj.first_name} ${obj.last_name}`;
         let tr = document.createElement('tr');
+        tr.dataset.value = obj['student_id'];
         for(const [objKey, objValue] of Object.entries(obj)){
             if(objKey === 'student_id' || objKey === 'first_name') continue;
             let td = document.createElement('td');
@@ -33,11 +34,14 @@ function populateTable(data){
             span.className = 'edit-icon'; 
 
             if(objKey === 'last_name'){
-                td.innerText = fullname;     
+                td.innerText = fullname;  
+                td.dataset.value = 'full_name';   
                 tr.appendChild(td);
                 continue;
             }
             inp.setAttribute('type', 'number');
+            inp.setAttribute('max', 20);
+            inp.setAttribute('min', 0);
             inp.value = objValue;
             td.append(inp, span);
             tr.appendChild(td);
@@ -72,9 +76,25 @@ top_filter_btn.onclick = function (e){
 function collect_notes_changes_to_json(){
     let table_body = document.querySelector('#notes-table-body');
     let table_rows = Array.from(table_body.children);
+    global_notes_data = [];
+
     table_rows.forEach(row => {
-        console.log(row.children);
+        let obj_for_curr_row = {};
+        let rows_arr = Array.from(row.children);
+        rows_arr.forEach(single_td => {
+            if(single_td.dataset.value === 'full_name') {
+                obj_for_curr_row['student_id'] = row.dataset.value;
+                // console.log('row value: ', row.dataset.value)
+                return;
+            };
+            let inp = single_td.firstChild;
+            obj_for_curr_row[single_td.dataset.value] = inp.value;
+        });
+        obj_for_curr_row['subject_id'] = module_select.value;
+        global_notes_data.push(obj_for_curr_row);
     })
+    // console.log('data dd: ', global_notes_data);
+    return global_notes_data;
 }
 
 
@@ -85,9 +105,12 @@ document.querySelector('input[value="submit notes"]').onclick = function (e){
         notes_dialog.close();
     }
     document.querySelector('#confirme_notes_modal_btn').onclick = function (e){
-        fetch('../api/notes.php?q=notes&mod=update')
+        // window.location = '../api/notes.php?q=notes&mod=update&v='+JSON.stringify(collect_notes_changes_to_json());
+        fetch('../api/notes.php?q=notes&mod=update&v='+JSON.stringify(collect_notes_changes_to_json()), {method: 'POST'})
+        .then(response => response.text())
+        .then(data => console.log(data))
         notes_dialog.close();
-        console.log(global_notes_data);
-        console.log(collect_notes_changes_to_json())
+        // console.log(global_notes_data);
+        // console.log(collect_notes_changes_to_json())
     }
 }

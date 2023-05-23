@@ -1,5 +1,6 @@
 <?php
 require_once 'User.php';
+require_once 'Notification.php';
 
 
 class Teacher extends User{
@@ -68,5 +69,24 @@ class Teacher extends User{
         }catch(PDOException $e){
             return $e;
         }
+    }
+    public function set_students_notes_from_json($json_arr){
+        $success = false;
+        try{
+            foreach ($json_arr as $idx => $obj_arr) {
+                $sql = 'update note set controle_1 = ?, controle_2 = ?, controle_3 = ?, EFM = ?  where student_id = ? and subject_id = ?;';
+                $stmt = $this->connect()->prepare($sql);
+                $stmt->execute([$obj_arr['controle_1'], $obj_arr['controle_2'], $obj_arr['controle_3'], $obj_arr['EFM'], $obj_arr['student_id'], $obj_arr['subject_id']]);
+                $success = true;
+                // construct($recepient_id, $recepient_type, $context, $message);
+                $teacher_name = $this->return_all_data()['first_name'];
+                $noti = new Notification($obj_arr['student_id'], 'student', 'teacher', "teacher $teacher_name has updated your marks", null);
+                $noti->send();
+            }
+            }catch(RuntimeException $e){
+            header('location:../api/test.php?err='.$e->getMessage());
+            echo $e->getMessage();
+        }
+        return $success;
     }
 }

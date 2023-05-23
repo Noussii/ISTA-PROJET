@@ -64,19 +64,19 @@ check_general_authentication();
     </tbody>
     </table>
     </section>
-    <dialog data-modal id='notes_confirmation_dialog'>
-        <h1>are you sure you want to update students notes.</h1>
-        <p>these changes will be shown to students as their new marks</p>
-        <div class='buttons-div'>
-            <button id='close_notes_modal_btn'>cancel</button>
-            <button id='confirme_notes_modal_btn'>confirme</button>
-        </div>
-    </dialog>
-            <section>
-                <input class='submit-notes' type="submit" value="submit notes">
-            </section>
-        </main>
+    <section>
+        <input class='submit-notes' type="submit" value="submit notes">
     </section>
+</main>
+</section>
+<dialog data-modal id='notes_confirmation_dialog'>
+    <h1>are you sure you want to update students notes.</h1>
+    <p>these changes will be shown to students as their new marks</p>
+    <div class='buttons-div'>
+        <button id='close_notes_modal_btn'>cancel</button>
+        <button id='confirme_notes_modal_btn'>confirme</button>
+    </div>
+</dialog>
     <script src="../scripts/notes_t.js"></script>
 </body>
 </html>

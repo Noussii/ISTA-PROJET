@@ -8,7 +8,11 @@ include_once '../classes/Teacher.php';
 if(check_general_authentication()){   
     $teacher = new Teacher($_SESSION['user_id']);
     $data = $teacher->get_students_notes_from_subject_id(1);
-    echo json_encode($data);
+    // echo json_encode($data);
+    if(isset($_GET['v'])){
+        echo $_GET['v'];
+    }
 }
+
 
 echo $_SESSION['user_id'];

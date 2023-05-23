@@ -18,10 +18,15 @@ if($user_type == 'teacher'){
         echo json_encode($notes);
     }
     if(isset($_GET['q'], $_GET['mod'], $_GET['v']) && $_GET['q'] == 'notes' && $_GET['mod'] == 'update'){
-        $data = json_decode($_GET['v']);
-        echo print_r($data);
+        $data = json_decode($_GET['v'], true);
+        if($teacher->set_students_notes_from_json($data)){
+            header('Content-Type: application/json');
+            echo json_encode(["success" => true]);
+        }else{
+            header('Content-Type: application/json');
+            echo json_encode(["success" => false]);
+        }
     }
-
 }
 
 
