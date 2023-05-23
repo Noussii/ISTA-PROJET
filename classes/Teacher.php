@@ -57,7 +57,7 @@ class Teacher extends User{
     }
     public function get_students_notes_from_subject_id($subject_id){
         try{
-            $sql = 'select student.student_id, student.first_name, note.controle_1, note.controle_2, note.controle_3, note.EFM from note join subject on note.subject_id = subject.subject_id join student on student.student_id = note.student_id
+            $sql = 'select student.student_id, student.first_name, student.last_name, note.controle_1, note.controle_2, note.controle_3, note.EFM from note join subject on note.subject_id = subject.subject_id join student on student.student_id = note.student_id
             where subject.subject_id = ?;';
             $stmt = $this->connect()->prepare($sql);
             $stmt->execute([$subject_id]);

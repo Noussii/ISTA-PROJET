@@ -17,6 +17,10 @@ if($user_type == 'teacher'){
         $notes = $teacher->get_students_notes_from_subject_id((int)$_GET['subj']);
         echo json_encode($notes);
     }
+    if(isset($_GET['q'], $_GET['mod'], $_GET['v']) && $_GET['q'] == 'notes' && $_GET['mod'] == 'update'){
+        $data = json_decode($_GET['v']);
+        echo print_r($data);
+    }
 
 }
 

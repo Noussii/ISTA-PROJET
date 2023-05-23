@@ -17,21 +17,22 @@ function insert_module_select(json){
 
 function populateTable(data){
     let table = document.querySelector('#notes-table-body');
-    console.log(data)
     while(table.lastChild){
         table.removeChild(table.lastChild);
     }
-    data.forEach((obj, idx) => { 
+    data.forEach( obj => { 
+        let fullname = `${obj.first_name} ${obj.last_name}`;
         let tr = document.createElement('tr');
         for(const [objKey, objValue] of Object.entries(obj)){
-            if(objKey === 'student_id') continue;
+            if(objKey === 'student_id' || objKey === 'first_name') continue;
             let td = document.createElement('td');
             let span = document.createElement('span');
             let inp = document.createElement('input');
             inp.className = 'note_inp';
-            span.className = 'edit-icon';
-            if(objKey === 'first_name'){
-                td.innerText = objValue;     
+            span.className = 'edit-icon'; 
+
+            if(objKey === 'last_name'){
+                td.innerText = fullname;     
                 tr.appendChild(td);
                 continue;
             }
@@ -62,13 +63,21 @@ top_filter_btn.onclick = function (e){
     if(!module_select.value) return;
     fetch('../api/notes.php?q=notes&subj='+module_select.value)
     .then(res => res.json())
-    .then(data => populateTable(data));
+    .then(data => {
+        populateTable(data);
+        global_notes_data = data;
+        console.log(global_notes_data);
+    });
 }
 
 let notes_dialog = document.querySelector('#notes_confirmation_dialog');
 document.querySelector('input[value="submit notes"]').onclick = function (e){
     notes_dialog.showModal();
     document.querySelector('#close_notes_modal_btn').onclick = function(e){
+        notes_dialog.close();
+    }
+    document.querySelector('#confirme_notes_modal_btn').onclick = function (e){
+        fetch('../api/notes.php?q=notes&mod=update')
         notes_dialog.close();
     }
 }
