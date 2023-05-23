@@ -61,3 +61,13 @@ top_filter_btn.onclick = function (e){
     .then(res => res.json())
     .then(data => populateTable(data));
 }
+
+
+
+let notes_dialog = document.querySelector('#notes_confirmation_dialog');
+document.querySelector('input[value="submit notes"]').onclick = function (e){
+    notes_dialog.showModal();
+    document.querySelector('#close_notes_modal_btn').onclick = function(e){
+        notes_dialog.close();
+    }
+}

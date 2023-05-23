@@ -24,24 +24,30 @@ check_general_authentication();
 <section class="outer-container">
     <main class="main-container-reactive">
     <section class='teacher_top_section'>
-        <label for="classes_select">class: </label>
-        <select name="classes" id="classes_select">
-        <?php
+        <div class='class-module-div'>
+        <div>
+            <label for="classes_select">class: </label>
+            <select name="classes" id="classes_select">
+                <?php
         $teacher = new Teacher($_SESSION['user_id']);
         $classes = $teacher->get_my_classes();
         // echo var_dump($classes);
         foreach($classes as $idx => $class_arr){
-        ?>
+            ?>
             <option value="<?=$class_arr['class_id']?>"><?=$class_arr['name']?></option>
-  <?php }?>
+            <?php }?>
         </select>
-        <label for="module">module</label>
-        <select name="module" id="module">
-        </select>
-        <input type="button" value="filter" id='top_filter_btn'>
-    </section>
-        
-    <section>
+        </div>
+        <div>
+            <label for="module">module</label>
+            <select name="module" id="module">
+            </select>
+        </div>
+        </div>
+                <input type="button" value="filter" id='top_filter_btn'>
+            </section>
+            
+            <section>
         <h1>manipulate students marks:</h1>
         <table id='notes-table' border='1'>
     <thead>
@@ -57,10 +63,17 @@ check_general_authentication();
         
     </tbody>
     </table>
-
-            </section>
+    </section>
+    <dialog data-modal id='notes_confirmation_dialog'>
+        <h1>are you sure you want to update students notes.</h1>
+        <p>these changes will be shown to students as their new marks</p>
+        <div class='buttons-div'>
+            <button id='close_notes_modal_btn'>cancel</button>
+            <button id='confirme_notes_modal_btn'>confirme</button>
+        </div>
+    </dialog>
             <section>
-                <h1>confirme changes</h1>
+                <input class='submit-notes' type="submit" value="submit notes">
             </section>
         </main>
     </section>
