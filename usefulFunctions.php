@@ -44,6 +44,7 @@ function check_authentication_with_redirection_logged_in($redirection_link){
         header('location:../api/logout.php');
         return false;
     };
+    header('location:./feed.php');
     return true;
 }
 
