@@ -28,6 +28,7 @@ function populateTable(data){
             let td = document.createElement('td');
             let span = document.createElement('span');
             let inp = document.createElement('input');
+            td.dataset.value = objKey;
             inp.className = 'note_inp';
             span.className = 'edit-icon'; 
 
@@ -59,16 +60,23 @@ classes_select.onclick = function (e){
 }
 
 top_filter_btn.onclick = function (e){
-    console.log(classes_select.value);
     if(!module_select.value) return;
     fetch('../api/notes.php?q=notes&subj='+module_select.value)
     .then(res => res.json())
     .then(data => {
         populateTable(data);
         global_notes_data = data;
-        console.log(global_notes_data);
     });
 }
+
+function collect_notes_changes_to_json(){
+    let table_body = document.querySelector('#notes-table-body');
+    let table_rows = Array.from(table_body.children);
+    table_rows.forEach(row => {
+        console.log(row.children);
+    })
+}
+
 
 let notes_dialog = document.querySelector('#notes_confirmation_dialog');
 document.querySelector('input[value="submit notes"]').onclick = function (e){
@@ -79,5 +87,7 @@ document.querySelector('input[value="submit notes"]').onclick = function (e){
     document.querySelector('#confirme_notes_modal_btn').onclick = function (e){
         fetch('../api/notes.php?q=notes&mod=update')
         notes_dialog.close();
+        console.log(global_notes_data);
+        console.log(collect_notes_changes_to_json())
     }
 }
