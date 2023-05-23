@@ -6,8 +6,9 @@
 
 :root{
     font-family: monospace;
+    --sn-dark-blue: #252525;
     --primary-color: darkblue;
-    --secondary-color: green;
+    --secondary-color: rgb(0, 255, 221);
     --third-color: rgb(167, 167, 167);
 
     --dark-primary-color: rgb(0, 0, 74);
@@ -48,6 +49,7 @@ body{
 a {
     text-decoration: none;
     font-weight: 900;
+    color: black;
 }
 
 .outer-container-reactive{
@@ -61,11 +63,19 @@ a {
 }
 
 .main-container-reactive{
+    max-width: 1000px;
     width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* background-color: blue; */
+}
+.main-container{
+    max-width: 1000px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-container-reactive > section{
@@ -74,7 +84,7 @@ a {
     width: 100%;
     border-radius: 10px;
     box-sizing: border-box;
-    background-color: red;
+    /* background-color: red; */
     box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
 }
 .outer-container{
@@ -86,14 +96,19 @@ a {
 
 .main-container > section{
     background-color: white;
-    /* padding: 20px 20px; */
-    margin-top: 10px;
-    margin-bottom: 15px;
+    padding: 5px 20px;
     box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: 15px;
+    max-width: 600px;
+    width: 100%;
+}
+section > img{
+    padding-bottom: 20px;
 }
 .main-container-reactive > section{
     background-color: white;
-    padding:5px 20px 20px 20px;
+    padding:20px 20px 20px 20px;
     margin-bottom: 15px;
     box-sizing: border-box;
 }

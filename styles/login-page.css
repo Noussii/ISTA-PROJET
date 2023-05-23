@@ -1,33 +1,38 @@
-body{
-    background-color: white !important;
+@import url('./root_styles.css');
+main {
+        height: 100vh;
+        font-size: 15px;
+        background-color: #E6E6E6;
 }
-.alert-message{
-    background-color: rgb(150, 32, 32);
-    height: 60px;
-    padding-left: 30px;
-    padding-top: 10px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 50px;
-    display: none;
+
+.uf-form-signin {
+    position: relative;
+    top:50px;
+    max-width: 400px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color:white;
+    border: 1px solid #ccc;
+    border-radius: 2%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+    padding: 30px 30px; 
+    
 }
-.alert-message > span{
-    color: white;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0px 20px;
+.uf-form-signin .text-center {
+    margin-bottom: 2rem;
 }
-.alert-message > span.err-title{
-    background-color: rgba(0, 0, 0, 0.103);
+
+.uf-form-signin .uf-input-group {
+    margin-bottom: 1.5rem;
 }
-.login-title{
-    text-align: center;
-    padding-top: 20px;
+
+.uf-form-signin .form-control {
+    position: relative;}
+    
+.btn-cc{
+    background-color:#252525;
 }
-form{
+/* form{
     margin: 50px auto;
     margin-top: 50px;
     padding-top: 50px;
@@ -43,21 +48,21 @@ form{
     border: 1px solid darkblue;
     border-bottom: 4px solid darkblue;
     border-top: none;
-}
-form > legend{
+} */
+/* form > legend{
     font-weight: 800;
     font-size: 18px;
     margin-bottom: 10px;
-}
+} */
 .form-row{
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
 }
 input[type="text"], input[type="password"]{
     height: 40px;
     width: 80%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     box-sizing:border-box;
     padding-left: 10px;
     background-color: rgb(255, 255, 255);
@@ -69,10 +74,7 @@ input[type="submit"]{
     width: 80%;
     padding: 10px 0px;
     color: white;
-    background-color: green;
-    border: none;
 }
-input[type="submit"]:hover{
-    background-color: rgb(0, 92, 0);
-    cursor: pointer;
+small{
+    font-size:15px
 }

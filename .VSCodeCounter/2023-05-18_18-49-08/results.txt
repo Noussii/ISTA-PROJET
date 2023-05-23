@@ -1,0 +1,104 @@
+Date : 2023-05-18 18:49:08
+Directory : c:\Apache24\ISTA-PROJET
+Total : 63 files,  3831 codes, 386 comments, 499 blanks, all 4716 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| PHP        |         36 |      1,752 |         31 |        201 |      1,984 |
+| SQL        |          8 |      1,178 |        260 |        199 |      1,637 |
+| CSS        |          9 |        606 |         63 |         39 |        708 |
+| JavaScript |          8 |        277 |         32 |         51 |        360 |
+| Markdown   |          1 |         12 |          0 |          8 |         20 |
+| JSON       |          1 |          6 |          0 |          1 |          7 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                               | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                  |         63 |      3,831 |        386 |        499 |      4,716 |
+| . (Files)                                                          |          4 |        204 |          2 |         28 |        234 |
+| api                                                                |          6 |         96 |          6 |         13 |        115 |
+| classes                                                            |          3 |        191 |          3 |         20 |        214 |
+| controllers                                                        |          1 |         52 |          0 |         17 |         69 |
+| general_db_files                                                   |          4 |        552 |        129 |         96 |        777 |
+| logic_php_layer                                                    |          3 |         20 |          0 |          3 |         23 |
+| page                                                               |         14 |        499 |          3 |         42 |        544 |
+| page_components                                                    |          6 |        690 |         17 |         83 |        790 |
+| routes                                                             |          1 |         18 |          0 |          4 |         22 |
+| scripts                                                            |          8 |        277 |         32 |         51 |        360 |
+| styles                                                             |          9 |        606 |         63 |         39 |        708 |
+| z_general_db_files                                                 |          4 |        626 |        131 |        103 |        860 |
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                           | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Apache24\ISTA-PROJET\README.md                                  | Markdown   |         12 |          0 |          8 |         20 |
+| c:\Apache24\ISTA-PROJET\api\articles_A.php                         | PHP        |         22 |          0 |          1 |         23 |
+| c:\Apache24\ISTA-PROJET\api\authentication.php                     | PHP        |         22 |          2 |          5 |         29 |
+| c:\Apache24\ISTA-PROJET\api\class_A.php                            | PHP        |         17 |          0 |          3 |         20 |
+| c:\Apache24\ISTA-PROJET\api\header.php                             | PHP        |         15 |          0 |          0 |         15 |
+| c:\Apache24\ISTA-PROJET\api\logout.php                             | PHP        |         12 |          0 |          1 |         13 |
+| c:\Apache24\ISTA-PROJET\api\test.php                               | PHP        |          8 |          4 |          3 |         15 |
+| c:\Apache24\ISTA-PROJET\classes\Dbc.php                            | PHP        |         26 |          0 |          5 |         31 |
+| c:\Apache24\ISTA-PROJET\classes\Student.php                        | PHP        |        137 |          0 |         13 |        150 |
+| c:\Apache24\ISTA-PROJET\classes\User.php                           | PHP        |         28 |          3 |          2 |         33 |
+| c:\Apache24\ISTA-PROJET\config.json                                | JSON       |          6 |          0 |          1 |          7 |
+| c:\Apache24\ISTA-PROJET\controllers\login.contr.php                | PHP        |         52 |          0 |         17 |         69 |
+| c:\Apache24\ISTA-PROJET\general_db_files\dummyDataForTesting.sql   | SQL        |         42 |          0 |         13 |         55 |
+| c:\Apache24\ISTA-PROJET\general_db_files\queries.sql               | SQL        |          0 |          0 |          1 |          1 |
+| c:\Apache24\ISTA-PROJET\general_db_files\schema.sql                | SQL        |        228 |         62 |         39 |        329 |
+| c:\Apache24\ISTA-PROJET\general_db_files\shema2.sql                | SQL        |        282 |         67 |         43 |        392 |
+| c:\Apache24\ISTA-PROJET\index.php                                  | PHP        |        121 |          0 |          9 |        130 |
+| c:\Apache24\ISTA-PROJET\logic_php_layer\feed-page-logic.php        | PHP        |          7 |          0 |          0 |          7 |
+| c:\Apache24\ISTA-PROJET\logic_php_layer\index-page-logic.php       | PHP        |         13 |          0 |          2 |         15 |
+| c:\Apache24\ISTA-PROJET\logic_php_layer\login-page-logic.php       | PHP        |          0 |          0 |          1 |          1 |
+| c:\Apache24\ISTA-PROJET\page\CVs.php                               | PHP        |          0 |          0 |          2 |          2 |
+| c:\Apache24\ISTA-PROJET\page\about.php                             | PHP        |          0 |          0 |          1 |          1 |
+| c:\Apache24\ISTA-PROJET\page\article.php                           | PHP        |         15 |          0 |          1 |         16 |
+| c:\Apache24\ISTA-PROJET\page\class.php                             | PHP        |         77 |          0 |          3 |         80 |
+| c:\Apache24\ISTA-PROJET\page\class_t.php                           | PHP        |         77 |          0 |          3 |         80 |
+| c:\Apache24\ISTA-PROJET\page\feed.php                              | PHP        |         37 |          0 |          4 |         41 |
+| c:\Apache24\ISTA-PROJET\page\login.php                             | PHP        |         63 |          0 |          6 |         69 |
+| c:\Apache24\ISTA-PROJET\page\newsLetter.php                        | PHP        |          0 |          0 |          2 |          2 |
+| c:\Apache24\ISTA-PROJET\page\notes.php                             | PHP        |         36 |          0 |          2 |         38 |
+| c:\Apache24\ISTA-PROJET\page\notes_t.php                           | PHP        |         40 |          0 |          4 |         44 |
+| c:\Apache24\ISTA-PROJET\page\profile.php                           | PHP        |         62 |          0 |          5 |         67 |
+| c:\Apache24\ISTA-PROJET\page\test_page.php                         | PHP        |         47 |          3 |          7 |         57 |
+| c:\Apache24\ISTA-PROJET\page\unauthorized.php                      | PHP        |         27 |          0 |          1 |         28 |
+| c:\Apache24\ISTA-PROJET\page\updates.php                           | PHP        |         18 |          0 |          1 |         19 |
+| c:\Apache24\ISTA-PROJET\page_components\feed_left_side_student.php | PHP        |         91 |          1 |         23 |        115 |
+| c:\Apache24\ISTA-PROJET\page_components\feed_left_side_teacher.php | PHP        |         91 |          1 |         23 |        115 |
+| c:\Apache24\ISTA-PROJET\page_components\header_public.php          | PHP        |         78 |          1 |          1 |         80 |
+| c:\Apache24\ISTA-PROJET\page_components\header_student.php         | PHP        |        203 |          7 |         18 |        228 |
+| c:\Apache24\ISTA-PROJET\page_components\header_teacher.php         | PHP        |        201 |          6 |         15 |        222 |
+| c:\Apache24\ISTA-PROJET\page_components\slideshow.php              | PHP        |         26 |          1 |          3 |         30 |
+| c:\Apache24\ISTA-PROJET\routes\Router.php                          | PHP        |         18 |          0 |          4 |         22 |
+| c:\Apache24\ISTA-PROJET\scripts\class_page.js                      | JavaScript |         36 |          0 |          9 |         45 |
+| c:\Apache24\ISTA-PROJET\scripts\feed_page.js                       | JavaScript |         33 |          0 |         12 |         45 |
+| c:\Apache24\ISTA-PROJET\scripts\header_student_C.js                | JavaScript |         73 |          4 |         10 |         87 |
+| c:\Apache24\ISTA-PROJET\scripts\index.js                           | JavaScript |          0 |          0 |          1 |          1 |
+| c:\Apache24\ISTA-PROJET\scripts\left_side_feed_C.js                | JavaScript |         71 |         24 |          5 |        100 |
+| c:\Apache24\ISTA-PROJET\scripts\login_page.js                      | JavaScript |         16 |          0 |          4 |         20 |
+| c:\Apache24\ISTA-PROJET\scripts\notes-page.js                      | JavaScript |         25 |          0 |          7 |         32 |
+| c:\Apache24\ISTA-PROJET\scripts\slideshow_C.js                     | JavaScript |         23 |          4 |          3 |         30 |
+| c:\Apache24\ISTA-PROJET\styles\class-page.css                      | CSS        |         78 |          5 |          4 |         87 |
+| c:\Apache24\ISTA-PROJET\styles\feed-page.css                       | CSS        |         20 |          0 |          1 |         21 |
+| c:\Apache24\ISTA-PROJET\styles\index.css                           | CSS        |        268 |         16 |         10 |        294 |
+| c:\Apache24\ISTA-PROJET\styles\login-page.css                      | CSS        |         53 |         22 |          6 |         81 |
+| c:\Apache24\ISTA-PROJET\styles\notes.css                           | CSS        |         25 |          0 |          0 |         25 |
+| c:\Apache24\ISTA-PROJET\styles\profile-page.css                    | CSS        |         69 |          4 |          2 |         75 |
+| c:\Apache24\ISTA-PROJET\styles\root_styles.css                     | CSS        |         88 |         14 |         14 |        116 |
+| c:\Apache24\ISTA-PROJET\styles\slideshow_public.css                | CSS        |          4 |          2 |          2 |          8 |
+| c:\Apache24\ISTA-PROJET\styles\updates-page.css                    | CSS        |          1 |          0 |          0 |          1 |
+| c:\Apache24\ISTA-PROJET\usefulFunctions.php                        | PHP        |         65 |          2 |         10 |         77 |
+| c:\Apache24\ISTA-PROJET\z_general_db_files\dummyDataForTesting.sql | SQL        |         72 |          0 |         18 |         90 |
+| c:\Apache24\ISTA-PROJET\z_general_db_files\queries.sql             | SQL        |          0 |          0 |          1 |          1 |
+| c:\Apache24\ISTA-PROJET\z_general_db_files\schema.sql              | SQL        |        277 |         64 |         41 |        382 |
+| c:\Apache24\ISTA-PROJET\z_general_db_files\schema_new.sql          | SQL        |        277 |         67 |         43 |        387 |
+| Total                                                              |            |      3,831 |        386 |        499 |      4,716 |
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+

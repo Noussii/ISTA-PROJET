@@ -7,6 +7,8 @@
     <title>article</title>
     <link rel="stylesheet" href="../styles/root_styles.css">
     <link rel="stylesheet" href="../styles/article-page.css">
+    <link rel="icon" type="image/x-icon" href="../media/fav.ico">
+
 </head>
 <body>
     <?php include_once "../page_components/header_public.php" ?>
