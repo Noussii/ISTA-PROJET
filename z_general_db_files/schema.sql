@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`keywords` (
   `keyword` VARCHAR(100) NOT NULL,
   `type` VARCHAR(45) NULL,
   PRIMARY KEY (`keyword`),
-  UNIQUE INDEX `keyword_UNIQUE` (`keyword` ASC) VISIBLE)
+  UNIQUE INDEX `keyword_UNIQUE` (`keyword` ASC) )
 ENGINE = InnoDB;
 
 
@@ -41,8 +41,8 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`article` (
   `resources` INT NULL,
   `is_super` INT NOT NULL DEFAULT 0,
   PRIMARY KEY (`article_id`),
-  UNIQUE INDEX `title_UNIQUE` (`title` ASC) VISIBLE,
-  INDEX `fk_article_keywords_idx` (`keywords` ASC) VISIBLE,
+  UNIQUE INDEX `title_UNIQUE` (`title` ASC) ,
+  INDEX `fk_article_keywords_idx` (`keywords` ASC) ,
   CONSTRAINT `fk_article_keywords`
     FOREIGN KEY (`keywords`)
     REFERENCES `ista_website_db`.`keywords` (`keyword`)
@@ -60,9 +60,9 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`article_resources` (
   `path` VARCHAR(500) NOT NULL DEFAULT 0,
   `article_id` INT NULL,
   PRIMARY KEY (`resource_id`),
-  UNIQUE INDEX `path_UNIQUE` (`path` ASC) VISIBLE,
-  UNIQUE INDEX `resource_id_UNIQUE` (`resource_id` ASC) VISIBLE,
-  INDEX `fk_resources_article_idx` (`article_id` ASC) VISIBLE,
+  UNIQUE INDEX `path_UNIQUE` (`path` ASC) ,
+  UNIQUE INDEX `resource_id_UNIQUE` (`resource_id` ASC) ,
+  INDEX `fk_resources_article_idx` (`article_id` ASC) ,
   CONSTRAINT `fk_resources_article`
     FOREIGN KEY (`article_id`)
     REFERENCES `ista_website_db`.`article` (`article_id`)
@@ -102,12 +102,12 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`student` (
   `contact_email` VARCHAR(100) NULL,
   `class` INT NOT NULL,
   PRIMARY KEY (`student_id`),
-  UNIQUE INDEX `user_id_UNIQUE` (`student_id` ASC) VISIBLE,
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
-  UNIQUE INDEX `numberInClass_UNIQUE` (`numberInClass` ASC) VISIBLE,
-  UNIQUE INDEX `national_student_id_UNIQUE` (`national_student_id` ASC) VISIBLE,
-  UNIQUE INDEX `photo_path_UNIQUE` (`photo_path` ASC) VISIBLE,
-  INDEX `fk_student_class_idx` (`class` ASC) VISIBLE,
+  UNIQUE INDEX `user_id_UNIQUE` (`student_id` ASC) ,
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) ,
+  UNIQUE INDEX `numberInClass_UNIQUE` (`numberInClass` ASC) ,
+  UNIQUE INDEX `national_student_id_UNIQUE` (`national_student_id` ASC) ,
+  UNIQUE INDEX `photo_path_UNIQUE` (`photo_path` ASC) ,
+  INDEX `fk_student_class_idx` (`class` ASC) ,
   CONSTRAINT `fk_student_class`
     FOREIGN KEY (`class`)
     REFERENCES `ista_website_db`.`class` (`class_id`)
@@ -126,9 +126,9 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`super_user` (
   `super_user_privelage` VARCHAR(45) NOT NULL,
   `super_user_legacy` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`super_user_id`),
-  UNIQUE INDEX `super_user_id_UNIQUE` (`super_user_id` ASC) VISIBLE,
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
-  UNIQUE INDEX `super_user_legacy_UNIQUE` (`super_user_legacy` ASC) VISIBLE)
+  UNIQUE INDEX `super_user_id_UNIQUE` (`super_user_id` ASC) ,
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) ,
+  UNIQUE INDEX `super_user_legacy_UNIQUE` (`super_user_legacy` ASC) )
 ENGINE = InnoDB;
 
 
@@ -145,10 +145,10 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`teacher` (
   `email` VARCHAR(100) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`teacher_id`),
-  UNIQUE INDEX `photo_path_UNIQUE` (`photo_path` ASC) VISIBLE,
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
-  UNIQUE INDEX `contact_email_UNIQUE` (`contact_email` ASC) VISIBLE,
-  UNIQUE INDEX `phone_number_UNIQUE` (`phone_number` ASC) VISIBLE)
+  UNIQUE INDEX `photo_path_UNIQUE` (`photo_path` ASC) ,
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) ,
+  UNIQUE INDEX `contact_email_UNIQUE` (`contact_email` ASC) ,
+  UNIQUE INDEX `phone_number_UNIQUE` (`phone_number` ASC) )
 ENGINE = InnoDB;
 
 
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`article_pool` (
   `article_id` INT NOT NULL,
   `publisher_id` INT NULL,
   `publisher_type` VARCHAR(45) NOT NULL,
-  INDEX `fk_article_pool_article_idx` (`article_id` ASC) VISIBLE,
+  INDEX `fk_article_pool_article_idx` (`article_id` ASC) ,
   CONSTRAINT `fk_article_pool_article`
     FOREIGN KEY (`article_id`)
     REFERENCES `ista_website_db`.`article` (`article_id`)
@@ -176,7 +176,7 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`subject` (
   `subject_name` VARCHAR(100) NOT NULL,
   `class_id` INT NOT NULL,
   `teacher_id` INT NOT NULL,
-  INDEX `fk_subject_teacher_idx` (`teacher_id` ASC) VISIBLE,
+  INDEX `fk_subject_teacher_idx` (`teacher_id` ASC) ,
   PRIMARY KEY (`subject_id`),
   CONSTRAINT `fk_subject_class`
     FOREIGN KEY (`class_id`)
@@ -202,8 +202,8 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`student_resources` (
   `student_id` INT NULL,
   `notifications` INT NULL,
   PRIMARY KEY (`resource_id`),
-  UNIQUE INDEX `resource_id_UNIQUE` (`resource_id` ASC) VISIBLE,
-  INDEX `student_resources_student_idx` (`student_id` ASC) VISIBLE,
+  UNIQUE INDEX `resource_id_UNIQUE` (`resource_id` ASC) ,
+  INDEX `student_resources_student_idx` (`student_id` ASC) ,
   CONSTRAINT `student_resources_student`
     FOREIGN KEY (`student_id`)
     REFERENCES `ista_website_db`.`student` (`student_id`)
@@ -222,8 +222,8 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`note` (
   `controle_2` INT NULL,
   `controle_3` INT NULL,
   `EFM` INT NULL,
-  INDEX `note_subject_idx` (`subject_id` ASC) VISIBLE,
-  INDEX `note_student_idx` (`student_id` ASC) VISIBLE,
+  INDEX `note_subject_idx` (`subject_id` ASC) ,
+  INDEX `note_student_idx` (`student_id` ASC) ,
   CONSTRAINT `note_subject`
     FOREIGN KEY (`subject_id`)
     REFERENCES `ista_website_db`.`subject` (`subject_id`)
@@ -276,7 +276,7 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`message` (
   `seen` TINYINT NOT NULL DEFAULT 0,
   `conversation_id` INT NOT NULL,
   PRIMARY KEY (`message_id`),
-  INDEX `fk_message_conversation_idx` (`conversation_id` ASC) VISIBLE,
+  INDEX `fk_message_conversation_idx` (`conversation_id` ASC) ,
   CONSTRAINT `fk_message_conversation`
     FOREIGN KEY (`conversation_id`)
     REFERENCES `ista_website_db`.`conversation` (`conversation_id`)
@@ -309,7 +309,7 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`administration` (
   `last_name` VARCHAR(45) NOT NULL,
   `contact_email` VARCHAR(100) NULL,
   PRIMARY KEY (`administration_id`),
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE)
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) )
 ENGINE = InnoDB;
 
 
@@ -337,12 +337,12 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`homework` (
   `resource2_id` INT NULL,
   `resource3_id` INT NULL,
   PRIMARY KEY (`homework_id`),
-  INDEX `fk_homework_teacher_idx` (`teacher_id` ASC) VISIBLE,
-  INDEX `fk_homework_subject_idx` (`subject_id` ASC) VISIBLE,
-  INDEX `fk_homework_class_idx` (`class_id` ASC) VISIBLE,
-  INDEX `fk_homework_resource1_idx` (`resource1_id` ASC) VISIBLE,
-  INDEX `fk_homework_resource2_idx` (`resource2_id` ASC) VISIBLE,
-  INDEX `fk_homework_resource3_idx` (`resource3_id` ASC) VISIBLE,
+  INDEX `fk_homework_teacher_idx` (`teacher_id` ASC) ,
+  INDEX `fk_homework_subject_idx` (`subject_id` ASC) ,
+  INDEX `fk_homework_class_idx` (`class_id` ASC) ,
+  INDEX `fk_homework_resource1_idx` (`resource1_id` ASC) ,
+  INDEX `fk_homework_resource2_idx` (`resource2_id` ASC) ,
+  INDEX `fk_homework_resource3_idx` (`resource3_id` ASC) ,
   CONSTRAINT `fk_homework_teacher`
     FOREIGN KEY (`teacher_id`)
     REFERENCES `ista_website_db`.`teacher` (`teacher_id`)
