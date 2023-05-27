@@ -1,6 +1,10 @@
 <?php
 include_once '../usefulFunctions.php';
 check_general_authentication();
+if(return_user_type() !== 'teacher') {
+    header('location:./unauthorized.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

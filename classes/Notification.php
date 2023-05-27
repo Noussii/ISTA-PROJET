@@ -35,4 +35,20 @@ class Notification extends Dbc{
         }
         return $success;
     }
+
+    public static function get_all_notifications($recepient_id ,$recepient_type){
+        try{
+            $pre_stmt = "select * from notification where recepient = ? and user_type = ?;";
+            $stmt = new Dbc();
+            $stmt = $stmt->connect()->prepare($pre_stmt);
+            $stmt->execute([$recepient_id, $recepient_type]);
+            $result = $stmt->fetchAll();
+            if(count($result) > 0){
+                return $result;
+            }
+        }catch (PDOException $e){
+            $success = false;
+            echo $e->getMessage();
+        }
+    }
 }

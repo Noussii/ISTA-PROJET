@@ -49,6 +49,7 @@ check_general_authentication();
             
             <section>
         <h1>manipulate students marks:</h1>
+        
         <table id='notes-table' border='1'>
     <thead>
         <tr>
@@ -62,6 +63,7 @@ check_general_authentication();
     <tbody id='notes-table-body'>
         
     </tbody>
+
     </table>
     </section>
     <section>
