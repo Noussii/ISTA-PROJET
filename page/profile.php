@@ -72,7 +72,7 @@ if(check_general_authentication()){
                 </div>
             </section>
             <section>
-                <p>just a test</p>
+                <p> <b>Check your data :</b> <br><br> if something wrong please contact you local administration.</p>
             </section>
         </main>
     </section>

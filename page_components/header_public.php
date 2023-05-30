@@ -1,6 +1,6 @@
 <header class="h-main">
 <div class="header-logo-container">
-        <a href="../index.php">
+        <a href="../index.php?acc=1">
             <img height="40px" src="../media/logo.png" alt="website_logo">
         </a>
         </div>

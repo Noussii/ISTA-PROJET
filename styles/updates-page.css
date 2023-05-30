@@ -1,1 +1,114 @@
 @import url('../styles/slideshow_public.css');
+
+
+
+/* cards section */
+.card {
+    /* background-color: blue; */
+    height: 100%;
+    padding-bottom: 50px;
+    background-color: rgb(237, 239, 244);
+}
+.card-title {
+  font-size: 24px;
+}
+.card-subtitle {
+  font-size: 16px;
+  color: #999;
+}
+/* colors of cards section*/
+.cc{
+    background-color: #252525;
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    width: 95%;
+    bottom: 10px;
+    left: calc(2.5%);
+}
+.cc:hover{
+    background-color: #f26522;
+    color: white;
+    font-weight: bolder;
+}
+/* CSS of the slide-show section*/
+.banner_taital {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 4vw;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 300ms;
+    background-color: rgba(0, 0, 29, 0.608);
+    backdrop-filter: blur(5px);
+    min-height: 100px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border-bottom: 2px solid rgb(224, 224, 224);
+}
+.banner_taital:hover{
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 28, 0);
+    border-radius: 10px;
+    box-shadow: 0px 10px 0px rgb(255, 255, 255);
+}
+  .carousel-caption {
+    padding: 0px !important;
+    display: flex !important; 
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+  .custom-slideshow-container-class{
+    /* height: 410px;
+    width: 100%; */
+  }
+.custom-slideshow-container-class .slideshow-img-container{
+    height: 410px;
+    width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slideshow-img-container img{
+    width: 100%;
+}
+.carousel-item{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 410px;
+    width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+
+  .invisible-clickable-slideshow-link-layer{
+    /* background-color: rgba(255, 0, 0, 0.275); */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: 200ms;
+    background: linear-gradient(transparent, transparent, rgb(0, 0, 20));
+  }
+  .invisible-clickable-slideshow-link-layer:hover{
+    /* background-color: rgba(0, 0, 0, 0.352); */
+    opacity: 0;
+    cursor: pointer;
+  }

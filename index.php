@@ -14,7 +14,7 @@
     <body>
     <header class="h-main">
         <div class="header-logo-container">
-        <a href="../index.php">
+        <a href="../index.php?acc=1">
             <img height="40px" src="../media/logo.png" alt="website_logo">
         </a>
         </div>
@@ -38,15 +38,6 @@
     <div class="carousel-item">
         <div class="slideshow-img-container">
             <img src="/media/slider-2.jpg" class="slideshow-img">
-        </div>
-        <div class="carousel-caption d-none d-md-block">
-            <h2 class="text-center banner_taital">Official Site ISTA LAZARET</h2>
-        </div>
-        <a href="./page/article.php?title=test-article&date=2023-05-12" class="invisible-clickable-slideshow-link-layer"></a>
-    </div>
-    <div class="carousel-item">
-        <div class="slideshow-img-container">
-            <img src="/media/slider-3.jpg" class="slideshow-img">
         </div>
         <div class="carousel-caption d-none d-md-block">
             <h2 class="text-center banner_taital">Official Site ISTA LAZARET</h2>
