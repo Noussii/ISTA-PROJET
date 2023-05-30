@@ -21,9 +21,9 @@ function populate_slide_show(json) {
             <img src="/media/slider-2.jpg" class="slideshow-img">
           </div>
           <div class="carousel-caption d-none d-md-block">
-            <h2 class="text-center banner_taital" data-article="${article.article_id}">${article.title}</h2>
+            <h2 class="text-center banner_taital">${article.title}</h2>
           </div>
-          <a href="./page/article.php?title=test-article&date=${article.date_time}" class="invisible-clickable-slideshow-link-layer"></a>
+          <a href="./page/article.php?title=${article.title}&ref${article.article_id}" class="invisible-clickable-slideshow-link-layer"></a>
         </div>`;
       carousel_inner.innerHTML += html;
     });

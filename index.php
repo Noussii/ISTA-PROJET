@@ -33,7 +33,7 @@
         <div class="carousel-caption d-none d-md-block">
             <h2 class="text-center banner_taital">Official Site ISTA LAZARET</h2>
         </div>
-        <a href="./page/article.php?title=test-article&date=2023-05-12" class="invisible-clickable-slideshow-link-layer"></a>
+        <a href="./page/article.php?q=sing&ref=11" class="invisible-clickable-slideshow-link-layer"></a>
     </div>
     <div class="carousel-item">
         <div class="slideshow-img-container">
