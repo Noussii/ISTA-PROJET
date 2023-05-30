@@ -1,7 +1,7 @@
 <header class="h-main">
 <div class="header-logo-container">
         <a href="../index.php">
-            <img height="40px" src="../media/logo.png" alt="website_logo">
+            <img height="40px" width="35px" src="../media/logo.png" alt="website_logo">
         </a>
         </div>
         <nav class='header-right-nav'>

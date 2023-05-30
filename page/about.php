@@ -1,6 +1,3 @@
-<?php include '../page_components/header_public.php';?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +9,7 @@
     <link rel="stylesheet" href="../styles/about.css">
 </head>
 <body>
+    <?php include '../page_components/header_public.php';?>
     <main class="contaier-fluid">
         <section class="image-container"> 
             <img src="../media/Slider-Education.jpg" alt="image not found"  id="img-main" class="-webkit-tap-highlight-color:transparent">
