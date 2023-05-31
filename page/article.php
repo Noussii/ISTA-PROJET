@@ -19,13 +19,23 @@
     <div class='article-page-outer-container'>
         <div class='article-page-nested-outer-container'> 
             <aside id='left-side-articles-container'>
-                
+                <div id='left-side-articles-inner-container'>
+                    <h4 style='margin-top: 10px; text-align: center;'>Latest:</h4>
+                </div>
             </aside>
                 <main class='article-page-inner-conainer'>
+                    <div class="publisher">
+                        <span class='img-span'>
+                            img
+                        </span>
+                        <span class='txt-span'>
+                            text
+                        </span>
+                    </div>
                     <article id='article'>
                         <h1 id='article-title'>Title</h1>
                         <div class='img-container'>
-
+                            <img id='key-img' src="../media/default_article_img.jpg" alt="default-img">
                         </div>
                         <p id='article-body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellendus adipisci dolorem consequuntur, cumque ut numquam facere vel facilis ea ducimus esse, odio omnis tempore velit accusantium assumenda beatae sapiente.</p>
                     </article>
