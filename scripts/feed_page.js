@@ -1,7 +1,17 @@
-function generatePost(contentString, color, img, title){
+function generatePost(contentString, color, img, title, ref){
+    if(contentString.length > 200){
+        contentString = contentString.slice(0, 200)+'...';
+        console.log('here')
+
+    }
     let mainContainer = document.querySelector('.main-container')
     let container = document.createElement('section');
     let content = document.createElement('p');
+    let link = document.createElement('a');
+    link.href = '../page/article.php?ref='+ref;
+    link.innerText = 'Read more.';
+    link.style.color = 'blue';
+    link.style.paddingLeft = '10px';
 
     if(title){
         let title_h3 = document.createElement('h3');
@@ -12,6 +22,7 @@ function generatePost(contentString, color, img, title){
     container.className = 'feed-section';
     color ? container.style.backgroundColor = color : false;
     content.innerText = contentString;
+    content.appendChild(link);
     container.appendChild(content);
     
     
@@ -31,8 +42,8 @@ function generatePosts(json){
     if(json.length > 0){
         json.forEach((dataObj, idx) => {
             if(idx == 0){
-                generatePost(dataObj.body, null, '../media/ista.jpg', dataObj.title);
-            }else generatePost(dataObj.body, null, null, dataObj.title);
+                generatePost(dataObj.body, null, '../media/ista.jpg', dataObj.title, dataObj.article_id);
+            }else generatePost(dataObj.body, null, null, dataObj.title, dataObj.article_id);
         });
     }
 }
