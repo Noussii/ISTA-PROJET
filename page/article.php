@@ -17,20 +17,23 @@
         <img src="../media/default_article_img.jpg" alt="">
     </div>
     <div class='article-page-outer-container'>
-        <div class='article-page-nested-outer-container'>
-            
+        <div class='article-page-nested-outer-container'> 
             <aside id='left-side-articles-container'>
                 
-                </aside>
+            </aside>
                 <main class='article-page-inner-conainer'>
                     <article id='article'>
                         <h1 id='article-title'>Title</h1>
+                        <div class='img-container'>
+
+                        </div>
                         <p id='article-body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellendus adipisci dolorem consequuntur, cumque ut numquam facere vel facilis ea ducimus esse, odio omnis tempore velit accusantium assumenda beatae sapiente.</p>
                     </article>
                 </main>
         </div>
     </div>
 
+    <script src='../scripts/article_page.js'></script>
     <?php include_once '../page_components/footer_public.php'; ?>
 </body>
 </html>
