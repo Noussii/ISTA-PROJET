@@ -9,6 +9,7 @@ check_general_authentication();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/create_article_ad_page.css" >
+    <link rel='stylesheet' href='../styles/bootstrap/css/bootstrap.min.css'>
     <title>corner - class</title>
     <link rel="icon" type="image/x-icon" href="../media/fav.ico">
 
@@ -20,15 +21,18 @@ check_general_authentication();
     <section class='outer-container'>
         <main class='main-container-reactive'>
             <section>
-                <form action="../api/create_article_A.php" method='post'>
+                <form action="../api/create_article_A.php" method='post' enctype="multipart/form-data">
 
                     <div class="form-row" style='justify-content: left; gap: 20px'>
-                        <label for="title_inp"><h3>Title:</h3></label>
-                        <input id='title_inp' name='title_inp' type="text" placeholder='Enter title' required>
+                        <label for="title"><h3>Title:</h3></label>
+                        <input id='title' name='title' type="text" placeholder='Enter title' required>
                     </div>
                     <div class="upload-img">
                         <h3>upload img:</h3>
-                        <input type="file" name="key_img" id="key_img" accept='.png, .jpeg, .jpg'>
+                        <input onchange="updatePreview(this, 'image-preview')" class='form-control-file is-invalid'  type="file" name="key_img" id="key_img" accept='.png, .jpeg, .jpg'>
+                        <div id='image-preview-container'>
+                            <img id='image-preview'/>
+                        </div>
                     </div>
                     
                     <div class="article-body">
@@ -38,7 +42,7 @@ check_general_authentication();
                     
                     <div class="resources">
                         <h3>resources:</h3>
-                        <input type="file" name="resources" id="resources">
+                        <input type="file" name="resources" id="resources" multiple>
                     </div>
                     <input type="submit" value="publish">
                 </form>

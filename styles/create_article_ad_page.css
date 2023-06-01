@@ -48,3 +48,17 @@ textarea{
     padding: 5px;
     box-sizing: border-box;
 }
+#image-preview-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+#image-preview{
+    /* background-color: rgb(231, 231, 231); */
+    border-radius: 10px;
+    height: 100%;
+    width: auto;
+    max-height: 300px;
+    display: block;
+
+}

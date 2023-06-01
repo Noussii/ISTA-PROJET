@@ -2,6 +2,30 @@
 require_once 'Dbc.php';
 
 class Article {
+
+    public static function create_new_article(int $publisher_id, string $publisher_type, string $title, string $body, string $img_name, $resources_arr){
+        $dbc = new Dbc();
+        $success = false;
+        if(!$resources_arr){
+
+            try{
+                $pre_stmt = "insert into article (publisher_id, user_type, title, body, date_time, key_img_path, keywords) values (? , ? , ? , ? , ? , ? , ? );";
+                $stmt = $dbc->connect()->prepare($pre_stmt);
+                
+                if($img_name){
+                    $img_path = "/resources/img/articles/".$img_name;
+                }else{
+                    $img_path = "/resources/img/articles/default_article_img.jpg";
+                }
+                $success = $stmt->execute([$publisher_id, $publisher_type, $title, $body, date("Y-m-d H:i:s"), $img_path, 'general,' ]);
+                
+            }catch(PDOException $e){
+                return $e->getMessage();
+            }
+
+            return $success;
+        }
+    }
     
     public static function get_latest_articles_with_range(int $max_num_of_rows){
         $dbc = new Dbc();
