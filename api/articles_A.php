@@ -34,10 +34,11 @@ if(check_general_authentication()){
             }
 
 
+     
+    }
 
-            if(isset($_GET['publisher']) && (int) $_GET['publisher'] == 1){
-                echo json_encode(Article::get_publisher_data((int) $_GET['ref']));
-            }
+    if(isset($_GET['ref'], $_GET['q']) && $_GET['q'] == 'publisher'){
+        echo json_encode(Article::get_publisher_data((int) $_GET['ref']));
     }
 }
 
