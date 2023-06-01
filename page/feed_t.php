@@ -6,7 +6,7 @@ switch(return_user_type()){
         header('location:./feed_ad.php');
         exit();
         break;
-    case 'teacher' :
+    case 'student' :
         header('location:./feed_t.php');
         exit();
         break;
@@ -40,11 +40,5 @@ switch(return_user_type()){
     </section>
 
     </body>
-    <?php 
-    if($_SESSION['user_type'] == 'student'){
-        echo "<script src='../scripts/feed_page.js'></script>";
-    }else if ($_SESSION['user_type'] == 'student'){
-        echo "<script src='../scripts/feed_page.js'></script>";        
-    }
-    ?>
+    <script src="../scripts/feed_page_t.js"></script>
 </html>

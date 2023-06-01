@@ -1,7 +1,7 @@
 {
     "servername": "localhost",
     "username": "root",
-    "password": "",
+    "password": "wtf123",
     "dbname": "ista_website_db",
     "domain" : "http://localhost:5555"
 }

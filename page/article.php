@@ -29,7 +29,8 @@
                             img
                         </span>
                         <span class='txt-span'>
-                            text
+                            <h5>hello</h5>
+                            <h5>hel</h5>
                         </span>
                     </div>
                     <article id='article'>

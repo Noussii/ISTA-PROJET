@@ -1,7 +1,10 @@
+let global_data = {};
+
 function get_article(){
     let par = new URLSearchParams(window.location.search).get('ref');
     console.log(par)
     if(Number(par) > 0){
+        global_data.article_id = par;
         fetch('../api/articles_A.php?q=sing&ref='+par)
         .then(res => res.json())
         .then(data => populate_artilce(data))
@@ -50,9 +53,28 @@ function get_sidebar_articles(){
     .catch(err => console.log(err))
 }
 
+function get_publisher_data(){
 
+    function populate_publisher_data(json){
+        let circle = document.querySelector('.publisher > .img-span');
+        let txt = document.querySelector('.publisher > .txt-span');
+
+        circle.innerText = json.first_name;
+        txt.children[0].innerText = json.first_name;
+        txt.children[1].innerText = json.last_name;
+    }
+
+
+    if(global_data.article_id){
+        fetch('../api/articles_A.php?q=publisher&ref='+global_data.article_id)
+        .then(res => res.json())
+        .then(data => populate_publisher_data(data))
+        .catch(err => err);
+    }
+}
 
 
 
 get_sidebar_articles();
 get_article();
+get_publisher_data();
