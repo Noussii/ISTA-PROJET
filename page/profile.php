@@ -8,12 +8,12 @@ if(check_general_authentication()){
     if($user_type == 'student'){
         $student = new Student($_SESSION['user_id']);
         $data = $student->return_all_data();
+        $data['class'] = $student->get_property_value('class')['name'];
     }else if($user_type == 'teacher'){
         $teacher = new Teacher($_SESSION['user_id']);
         $data = $teacher->return_all_data();
     }
 }
-
 
 ?>
 <!DOCTYPE html>
@@ -72,7 +72,7 @@ if(check_general_authentication()){
                 </div>
             </section>
             <section>
-                <p>just a test</p>
+                <p> <b>Check your data :</b> <br><br> if something wrong please contact you local administration.</p>
             </section>
         </main>
     </section>

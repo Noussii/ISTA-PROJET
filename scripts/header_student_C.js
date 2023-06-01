@@ -46,6 +46,7 @@ document.addEventListener('touchstart', function (e){
 
 
 function getNotifications(){
+
     function populateNotifications(json){
         let noti_menu = document.querySelector('.header-notification-menu');
         
@@ -71,12 +72,10 @@ function getNotifications(){
                 case 'system':
                     one_noti.classList.add('sys');
             }
-            noti_menu.appendChild(one_noti);
+            noti_menu.insertAdjacentElement('afterbegin',one_noti);
         });
         document.querySelector('#header-notification-btn').classList.add('active-notification');
     }
-
-    
 
     fetch('../api/header.php?req=notifications')
     .then(response => response.json())

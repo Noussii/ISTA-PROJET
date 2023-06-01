@@ -62,7 +62,7 @@ main {
 input[type="text"], input[type="password"]{
     height: 40px;
     width: 80%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     box-sizing:border-box;
     padding-left: 10px;
     background-color: rgb(255, 255, 255);

@@ -44,6 +44,7 @@ function check_authentication_with_redirection_logged_in($redirection_link){
         header('location:../api/logout.php');
         return false;
     };
+    header('location:./feed.php');
     return true;
 }
 
@@ -69,6 +70,10 @@ function add_header_and_left_side_after_auth(){
         include '../page_components/header_teacher.php';
         include '../page_components/feed_left_side_teacher.php';
     }  
+    else if ($_SESSION['user_type'] === 'administration'){
+        include '../page_components/header_teacher.php';
+        include '../page_components/feed_left_side_administration.php';
+    }
 
     
     // echo '<br><br><br><h1 style="text-align:center;">'.$_SESSION['user_type'].'<h1><br><br><br>';
