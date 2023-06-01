@@ -4,7 +4,7 @@ table, th, td{
     box-sizing: border-box;
 }
 tr:hover{
-    background-color: rgb(229, 229, 229);
+    background-color: rgb(203, 227, 255);
 }
 tr{
     background-color: rgb(249, 249, 249);
@@ -40,15 +40,16 @@ select option {
     width: auto;
 }
 td > input[type='number']{
-    padding-top: 15px;
-    padding-bottom: 15px;
     background-color: transparent;
     height: 100%;
-    width: 50px;
+    width: 100%;
     border: none;
     box-sizing: border-box;
     text-align: center;
     font-size: 18px;
+}
+td > input[type='number']:hover{
+    background-color: white;
 }
 input[type='button']{
     background: blue;
@@ -58,8 +59,8 @@ input[type='button']{
     height: 35px;
     padding: 5px 10px;
     justify-self: flex-end;
-    position: absolute;
     right: 15px;
+    flex: 1 1 100px;
 }
 input[type='button']:hover{
     cursor: pointer;
@@ -69,6 +70,88 @@ input[type='button']:hover{
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
+}
+.class-module-div{
+    flex: 4 1 300px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.class-module-div > div{
+    background-color: rgb(234, 234, 234);
+    padding: 3px 10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.submit-notes{
+    background-color: rgb(0, 201, 23);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+.submit-notes:hover{
+    cursor: pointer;
+    background-color: rgb(0, 175, 20);
+}
+#notes_confirmation_dialog{
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.463);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    
+    max-width: 300px;
+    text-align: center;
+}
+#notes_confirmation_dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.286);
+}
+#notes_confirmation_dialog .buttons-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.buttons-div button{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+}
+
+#confirme_notes_modal_btn{
+    background-color: red;
+}
+
+.buttons-div #confirme_notes_modal_btn:hover{
+    background-color: var(--sn-dark-blue);
+    cursor: pointer;
+}
+
+.buttons-div button:hover{
+    background-color: var(--sn-dark-blue);
+    cursor: pointer;
+}
+td {
+    position: relative;
+    width: 50px;
+}
+td .edit-icon{
+    background-image: url('../media/icons/edit_icon.png');
+    background-position: center;
+    background-size: cover;
+    /* background-color: red; */
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: calc(50% + 25px);
+    top: calc(50% - 10px);
+    opacity: 0.7;
 }

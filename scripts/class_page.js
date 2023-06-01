@@ -56,7 +56,7 @@ function TempEmploiInsertion(){
             <h4>Emploi</h4>
         </div>
         <div class="card ">
-            <h4>Emploi</h4>
+            <h4>Anouncement</h4>
         </div>
         </div>
         </section>
@@ -81,7 +81,7 @@ function TempMessengerInsertion(){
             <h4>Emploi</h4>
         </div>
         <div class="card ">
-            <h4>Emploi</h4>
+            <h4>Anouncement</h4>
         </div>
         </div>
         </section>

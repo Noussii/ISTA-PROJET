@@ -1,6 +1,10 @@
 <?php
 include_once '../usefulFunctions.php';
 check_general_authentication();
+if(return_user_type() !== 'student') {
+    header('location:./unauthorized.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +35,7 @@ check_general_authentication();
                         <h4>Emploi</h4>
                     </div>
                     <div class="card ">
-                        <h4>Emploi</h4>
+                        <h4>Anouncement</h4>
                     </div>
                 </div>
             </section>

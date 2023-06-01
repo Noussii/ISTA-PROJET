@@ -150,7 +150,7 @@ if(isset($_SESSION['user_type']) && isset($_SESSION['user_id'])){
     color: black;
 }
 .drop-down-menu-item:hover{
-    background-color: var(--dark-primary-color);
+    background-color: lightgray;
 }
 .header-logo-container{
     /* background-color: red; */
@@ -198,6 +198,7 @@ body{
 
 
 
+
 <header class="header">
         <div class="header-logo-container">
             <button class='left-side-visibility-btn' onclick="leftSideVisibilityHandler()">|||</button>
@@ -211,10 +212,9 @@ body{
             </button>
             <button class="header-all-button">
                 <nav class="header-drop-down-menu">
-                    <a class="drop-down-menu-item" href="../page/profile.php">Profile</a>
-                    <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
                     <a class="drop-down-menu-item" href="../index.php?acc=1">ISTA Home page</a>
-                    <a class="drop-down-menu-item" href="../page/help.php">Help</a>
+                    <a class="drop-down-menu-item" href="../page/profile.php">Profile</a>
+                    <a class="drop-down-menu-item" href="#">Help</a>
                     <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
                 </nav>
             </button>
