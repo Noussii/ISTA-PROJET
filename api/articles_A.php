@@ -32,14 +32,8 @@ if(check_general_authentication()){
                 echo json_encode(['empty' => true]);
                 exit();
             }
-
-
-     
     }
-
     if(isset($_GET['ref'], $_GET['q']) && $_GET['q'] == 'publisher'){
         echo json_encode(Article::get_publisher_data((int) $_GET['ref']));
     }
 }
-
-
