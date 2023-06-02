@@ -14,7 +14,7 @@
 <body>
     <?php include_once "../page_components/header_public.php" ?>
     <div class='article-page-top-img-container'>
-        <img src="../media/default_article_img.jpg" alt="">
+        <img id='blurred-top-img' src="../media/default_article_img.jpg" alt="">
     </div>
     <div class='article-page-outer-container'>
         <div class='article-page-nested-outer-container'> 
@@ -29,8 +29,12 @@
                             img
                         </span>
                         <span class='txt-span'>
-                            <h5>hello</h5>
-                            <h5>hel</h5>
+                            <h5>fname</h5>
+                            <h5>lname</h5>
+                        </span>
+                        <span class='txt-right-span'>
+                            <h6>datetime</h6>
+                            <h6>administration</h6>
                         </span>
                     </div>
                     <article id='article'>

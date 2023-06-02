@@ -89,8 +89,9 @@ a.normal-link:hover{
     cursor: pointer;
 }
 .left-side-one-article > .title{
-    text-align: center;
     font-weight: 900;
+    font-size: 16px;
+    overflow-x: hidden;
 }
 .left-side-one-article > .date{
     color: gray;
@@ -146,6 +147,7 @@ a.normal-link:hover{
     padding: 10px;
     box-sizing: border-box;
     display: flex;
+    justify-content: left;
     align-items: center;
     gap: 20px;
 }
@@ -159,4 +161,9 @@ a.normal-link:hover{
     align-items: center;
     color: white;
     font-weight: 900;
+}
+
+.publisher .txt-right-span{
+    margin-left: auto;
+    text-align: right;
 }

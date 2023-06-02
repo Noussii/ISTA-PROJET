@@ -12,14 +12,21 @@ function get_article(){
     }
 }
 function populate_artilce(json){
-    console.log(json)
+    
+    
+    global_data.date_time = json.date_time;
+    global_data.user_type = json.user_type;
+
     const title = document.querySelector('#article-title');
     const article_body = document.querySelector('#article-body');
     const key_img = document.querySelector('#key-img');
+    const blurred_top_img = document.querySelector('#blurred-top-img');
     if(json.title && json.body && json.key_img_path){
+        
         title.innerText = json.title;
         article_body.innerText = json.body;
         key_img.setAttribute('src', json.key_img_path);
+        blurred_top_img.setAttribute('src', json.key_img_path);
     }
 }
 function populate_side_bar(json){
@@ -30,11 +37,17 @@ function populate_side_bar(json){
         let date = document.createElement('span');
 
         container.classList.add('left-side-one-article', 'normal-link');
+        
+        let normalized_title = article.title;
+        if(normalized_title.length > 22){
+            normalized_title = normalized_title.slice(0, 22)+'..';
+        }
         container.href = './article.php?title='+article.title+'&ref='+article.article_id;
         title.className = 'title';
+        title.title = article.title;
         date.className = 'date';
         
-        title.textContent = article.title;
+        title.textContent = normalized_title;
         date.textContent = article.date_time.slice(0,10);
 
         if(article.user_type === 'administration'){
@@ -56,13 +69,18 @@ function get_sidebar_articles(){
 function get_publisher_data(){
 
     function populate_publisher_data(json){
+        console.log('publisher data : =======\n', global_data);
         let circle = document.querySelector('.publisher > .img-span');
         let txt = document.querySelector('.publisher > .txt-span');
+        let right_far_right_txt = document.querySelector('.publisher > .txt-right-span');
+        right_far_right_txt.children[0].innerText = global_data.date_time.slice(0,10);
+        right_far_right_txt.children[1].innerText = global_data.user_type;
 
         circle.innerText = json.first_name;
         txt.children[0].innerText = json.first_name;
         txt.children[1].innerText = json.last_name;
     }
+
 
 
     if(global_data.article_id){
@@ -72,8 +90,6 @@ function get_publisher_data(){
         .catch(err => err);
     }
 }
-
-
 
 get_sidebar_articles();
 get_article();

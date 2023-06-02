@@ -27,7 +27,11 @@ if(check_general_authentication()){
                     //create_new_article(int $publisher_id, int $publisher_type, $title, $body, $resources_arr);
                     // img_name comes from the lines above after checking for errors. 
                     $sucess = Article::create_new_article((int) $_SESSION['user_id'], $_SESSION['user_type'], $title, $body, $img_name, null);
-                    echo $sucess;
+                    if($sucess){
+                        header('location:../page/create_article_ad.php?success=created');
+                    }else{
+                        header('location:../page/create_article_ad.php?success=something wrong');
+                    }
                 }
             }
         }
