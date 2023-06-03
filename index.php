@@ -44,8 +44,6 @@
         </div>
         <a href="./page/article.php?title=test-article&date=2023-05-12" class="invisible-clickable-slideshow-link-layer"></a>
     </div>
-<<<<<<< Updated upstream
-=======
     <div class="carousel-item">
         <div class="slideshow-img-container">
             <img src="/media/slider-Education.jpg" class="slideshow-img">
@@ -55,7 +53,6 @@
         </div>
         <a href="./page/article.php?title=test-article&date=2023-05-12" class="invisible-clickable-slideshow-link-layer"></a>
     </div>
->>>>>>> Stashed changes
   </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -113,14 +110,19 @@
     </div>
         <a class="go-to-main-btn" href="#main-content">▼</a>
 
-        <section id="latest-articles">
-  <div class="container">
-    <h2 class="text-center mb-5 fw-bold">Latest Articles</h2>
-    <div class="row" id="articles-container">
-      <!-- Articles will be added here dynamically(js) -->
+    <!-- Latest Articles Section -->
+<section id="latest-articles">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Latest Articles</h2>
+      <div class="row" id="articles-container">
+        <!-- Articles seront ajoutés ici dynamiquement via JavaScript -->
+      </div>
     </div>
-  </div>
 </section>
+
+
+<!-- Archive Section -->
+
 
         <!-- FAQ section -->
         <section id="faq">
@@ -211,6 +213,31 @@
 
     <script src="/scripts/index.js"></script>
     <script src="./styles/bootstrap/js/bootstrap.min.js"></script>
+<script>const articlesContainer = document.getElementById('articles-container');
 
+fetch('./api/articles_A.php?q=latest&n=5')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(article => {
+      const articleElement = document.createElement('div');
+      articleElement.classList.add('col-md-6', 'col-lg-4');
+      articleElement.innerHTML = `
+        <div class="article">
+          <h3>${article.title}</h3>
+          <p>${article.description}</p>
+        </div>
+      `;
+      articlesContainer.appendChild(articleElement);
+    });
+  })
+  .catch(error => console.error(error));
+
+//********************** */
+
+
+
+//************************** */
+
+</script>
 </body>
 </html>
