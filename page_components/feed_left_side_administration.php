@@ -100,8 +100,8 @@
         <a href='../page/class_ad.php' class="left-side-button">
         <img src="../media/icons/class_icon_feed.png"> <span>Class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
-        <a href='../index.php' class="left-side-button">
-        <img src="../media/icons/newsLetter_icon_feed.png"> <span>Newsletter</span>
+        <a href='../page/create_article_ad.php' class="left-side-button">
+        <img src="../media/icons/newsLetter_icon_feed.png"> <span>Article&nbsp;&nbsp;&nbsp;</span>
         </a>
     </aside>
 

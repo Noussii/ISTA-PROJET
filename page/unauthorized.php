@@ -22,7 +22,7 @@
     <?php include_once '../page_components/header_public.php'; ?>
     <img src="../media/unauthorized_design.jpg" alt="error 401">
     <h1>unauthorized access</h1>
-    <a href="../index.php">Go back to home page.</a>
+    <a href="../index.php?acc=1">Go back to home page.</a>
     
 </body>
 </html>

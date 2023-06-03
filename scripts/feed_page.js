@@ -39,11 +39,12 @@ function generatePost(contentString, color, img, title, ref){
 function generatePosts(json){
     if(json.empty) return;
 
+    console.log(json)
     if(json.length > 0){
         json.forEach((dataObj, idx) => {
             if(idx == 0){
-                generatePost(dataObj.body, null, '../media/ista.jpg', dataObj.title, dataObj.article_id);
-            }else generatePost(dataObj.body, null, null, dataObj.title, dataObj.article_id);
+                generatePost(dataObj.body, null,dataObj.key_img_path, dataObj.title, dataObj.article_id);
+            }else generatePost(dataObj.body, null, dataObj.key_img_path, dataObj.title, dataObj.article_id);
         });
     }
 }
