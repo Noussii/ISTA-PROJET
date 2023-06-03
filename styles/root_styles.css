@@ -42,6 +42,16 @@
     */
 }
 
+.clr-green{
+    background-color: rgb(223, 255, 223) !important;
+}
+.clr-blue{
+    background-color: rgb(218, 218, 255) !important;
+}
+.clr-red{
+    background-color: rgb(241, 202, 202) !important;
+}
+
 body{
     background-color: var(--very-light-gray);
     height: 100%;
@@ -115,4 +125,21 @@ section > img{
 
 .no-padding{
     padding:0px;
+}
+
+dialog:focus{
+    outline: none;
+    animation-name: dialog_appear;
+    animation-duration: 1s;
+}
+
+@keyframes dialog_appear{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        
+    }
 }

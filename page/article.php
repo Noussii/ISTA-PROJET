@@ -7,11 +7,48 @@
     <title>article</title>
     <link rel="stylesheet" href="../styles/root_styles.css">
     <link rel="stylesheet" href="../styles/article-page.css">
+    <link rel="stylesheet" href="../styles/bootstrap/css/bootstrap.min.css">
     <link rel="icon" type="image/x-icon" href="../media/fav.ico">
 
 </head>
 <body>
     <?php include_once "../page_components/header_public.php" ?>
-    <h1>hello article</h1>
+    <div class='article-page-top-img-container'>
+        <img id='blurred-top-img' src="../media/default_article_img.jpg" alt="">
+    </div>
+    <div class='article-page-outer-container'>
+        <div class='article-page-nested-outer-container'> 
+            <aside id='left-side-articles-container'>
+                <div id='left-side-articles-inner-container'>
+                    <h4 style='margin-top: 10px; text-align: center;'>Latest:</h4>
+                </div>
+            </aside>
+                <main class='article-page-inner-conainer'>
+                    <div class="publisher">
+                        <span class='img-span'>
+                            img
+                        </span>
+                        <span class='txt-span'>
+                            <h5>fname</h5>
+                            <h5>lname</h5>
+                        </span>
+                        <span class='txt-right-span'>
+                            <h6>datetime</h6>
+                            <h6>administration</h6>
+                        </span>
+                    </div>
+                    <article id='article'>
+                        <h1 id='article-title'>Title</h1>
+                        <div class='img-container'>
+                            <img id='key-img' src="../media/default_article_img.jpg" alt="default-img">
+                        </div>
+                        <p id='article-body'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam repellendus adipisci dolorem consequuntur, cumque ut numquam facere vel facilis ea ducimus esse, odio omnis tempore velit accusantium assumenda beatae sapiente.</p>
+                    </article>
+                </main>
+        </div>
+    </div>
+
+    <script src='../scripts/article_page.js'></script>
+    <?php include_once '../page_components/footer_public.php'; ?>
 </body>
 </html>

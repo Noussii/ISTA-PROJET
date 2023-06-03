@@ -1,6 +1,16 @@
 <?php 
 include_once '../usefulFunctions.php';
 check_general_authentication();
+switch(return_user_type()){
+    case 'administration' :
+        header('location:./feed_ad.php');
+        exit();
+        break;
+    case 'teacher' :
+        header('location:./feed_t.php');
+        exit();
+        break;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +21,6 @@ check_general_authentication();
     <title>corner</title>
     <!-- <link rel="stylesheet" href="../styles/index.css"> -->
     <link rel="stylesheet" href="../styles/feed-page.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="icon" type="image/x-icon" href="../media/fav.ico">
 </head>
 <body>

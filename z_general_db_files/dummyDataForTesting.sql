@@ -5,20 +5,19 @@ VALUES
     ('{"monday": {"8:00-10:00": "English", "10:00-12:00": "Science"}, "tuesday": {"8:00-10:00": "French", "10:00-12:00": "Math"}}', '2022-09-01', 'Class C', 1),
     ('{"monday": {"8:00-10:00": "History", "10:00-12:00": "Science"}, "tuesday": {"8:00-10:00": "Math", "10:00-12:00": "Art"}}', '2022-09-01', 'Class D', 1),
     ('{"monday": {"8:00-10:00": "Science", "10:00-12:00": "Math"}, "tuesday": {"8:00-10:00": "French", "10:00-12:00": "English"}}', '2022-09-01', 'Class E', 1);
-select * from student;
 
 
-INSERT INTO `student` (`email`, `password`, `national_student_id`, `numberInClass`, `is_publisher`, `is_responsable`, `photo_path`, `first_name`, `last_name`, `phone_number`, `contact_email`, `class`) 
+INSERT INTO `student` (`email`, `password`, `national_student_id`, `numberInClass`, `is_publisher`, `is_responsable`, `photo_path`, `first_name`, `last_name`, `phone_number`, `contact_email`, `class`, `birth_date`) 
 VALUES 
-('st-ahmedrashid@ofppt.com', 'p@ssw0rd1', 'a123456', 1, 0, 1, '/photos/ahmed_rashid.jpg', 'Ahmed', 'Rashid', '+971501234567', 'ahmed.rashid@ofppt.com', 1),
-('st-alimohammed@ofppt.com', 'p@ssw0rd2', 'b234567', 2, 0, 0, '/photos/ali_mohammed.jpg', 'Ali', 'Mohammed', '+971501234568', 'ali.mohammed@ofppt.com', 1),
-('st-fatimahassan@ofppt.com', 'p@ssw0rd3', 't345678', 3, 1, 0, '/photos/fatima_hassan.jpg', 'Fatima', 'Hassan', '+971501234569', 'fatima.hassan@ofppt.com', 2),
-('st-hassanahmed@ofppt.com', 'p@ssw0rd4', 'th456789', 4, 0, 0, '/photos/hassan_ahmed.jpg', 'Hassan', 'Ahmed', '+971501234570', 'hassan.ahmed@ofppt.com', 2),
-('st-abdelrahmanmohammed@ofppt.com', 'p@ssw0rd5', 'j567890', 5, 1, 0, '/photos/abdelrahman_mohammed.jpg', 'Abdelrahman', 'Mohammed', '+971501234571', 'abdelrahman.mohammed@ofppt.com', 3),
-('st-fatmahamza@ofppt.com', 'p@ssw0rd6', 'h678901', 6, 0, 0, '/photos/fatma_hamza.jpg', 'Fatma', 'Hamza', '+971501234572', 'fatma.hamza@ofppt.com', 3),
-('st-younesahmed@ofppt.com', 'p@ssw0rd7', 'k789012', 7, 0, 1, '/photos/younes_ahmed.jpg', 'Younes', 'Ahmed', '+971501234573', 'younes.ahmed@ofppt.com', 4),
-('st-khadijabouazza@ofppt.com', 'p@ssw0rd8', 'l890123', 8, 0, 0, '/photos/khadija_bouazza.jpg', 'Khadija', 'Bouazza', '+971501234574', 'khadija.bouazza@ofppt.com', 4),
-('st-mouhamedabdelaziz@ofppt.com', 'p@ssw0rd9', 'm901234', 9, 1, 0, '/photos/mouhamed_abdelaziz.jpg', 'Mouhamed', 'Abdelaziz', '+971501234575', 'mouhamed.abdelaziz@ofppt.com', 5);
+('st-ahmedrashid@ofppt.com', 'p@ssw0rd1', 'a123456', 1, 0, 1, '/photos/ahmed_rashid.jpg', 'Ahmed', 'Rashid', '+971501234567', 'ahmed.rashid@ofppt.com', 1, '2001-04-02'),
+('st-alimohammed@ofppt.com', 'p@ssw0rd2', 'b234567', 2, 0, 0, '/photos/ali_mohammed.jpg', 'Ali', 'Mohammed', '+971501234568', 'ali.mohammed@ofppt.com', 1, '2001-04-08'),
+('st-fatimahassan@ofppt.com', 'p@ssw0rd3', 't345678', 3, 1, 0, '/photos/fatima_hassan.jpg', 'Fatima', 'Hassan', '+971501234569', 'fatima.hassan@ofppt.com', 2, '2001-01-07'),
+('st-hassanahmed@ofppt.com', 'p@ssw0rd4', 'th456789', 4, 0, 0, '/photos/hassan_ahmed.jpg', 'Hassan', 'Ahmed', '+971501234570', 'hassan.ahmed@ofppt.com', 2, '2004-07-07'),
+('st-abdelrahmanmohammed@ofppt.com', 'p@ssw0rd5', 'j567890', 5, 1, 0, '/photos/abdelrahman_mohammed.jpg', 'Abdelrahman', 'Mohammed', '+971501234571', 'abdelrahman.mohammed@ofppt.com', 3, '2002-09-01'),
+('st-fatmahamza@ofppt.com', 'p@ssw0rd6', 'h678901', 6, 0, 0, '/photos/fatma_hamza.jpg', 'Fatma', 'Hamza', '+971501234572', 'fatma.hamza@ofppt.com', 3, '2001-07-20'),
+('st-younesahmed@ofppt.com', 'p@ssw0rd7', 'k789012', 7, 0, 1, '/photos/younes_ahmed.jpg', 'Younes', 'Ahmed', '+971501234573', 'younes.ahmed@ofppt.com', 4, '2002-05-02'),
+('st-khadijabouazza@ofppt.com', 'p@ssw0rd8', 'l890123', 8, 0, 0, '/photos/khadija_bouazza.jpg', 'Khadija', 'Bouazza', '+971501234574', 'khadija.bouazza@ofppt.com', 4, '2001-04-02'),
+('st-mouhamedabdelaziz@ofppt.com', 'p@ssw0rd9', 'm901234', 9, 1, 0, '/photos/mouhamed_abdelaziz.jpg', 'Mouhamed', 'Abdelaziz', '+971501234575', 'mouhamed.abdelaziz@ofppt.com', 5, '2003-05-12');
 
 
 INSERT INTO `ista_website_db`.`teacher` (`first_name`, `last_name`, `photo_path`, `phone_number`, `contact_email`, `email`, `password`)
@@ -32,7 +31,6 @@ VALUES
 ('Omar', 'Boussaid', '/teachers/omar_boussaid.jpg', '0678912345', 'omar.boussaid@ofppt.com', 'te-oboussaid@ofppt.com', 'Fk81#rNm'),
 ('Amina', 'El Haddadi', '/teachers/amina_elhaddadi.jpg', '0656789012', 'amina.elhaddadi@ofppt.com', 'te-aehaddadi@ofppt.com', 'Jn59@qYh');
 
-select * from teacher;
 
 INSERT INTO `administration` (`email`, `password`, `first_name`, `last_name`, `contact_email`)
 VALUES
@@ -47,7 +45,6 @@ VALUES
 ('ad-youssef@ofppt.com', 'sTn6zX8yRvG5', 'Youssef', 'Khalil', 'youssef.khalil@yahoo.com'),
 ('ad-imane@ofppt.com', 'qJf4wS5pLhV8', 'Imane', 'Sahraoui', 'imane.sahraoui@gmail.com');
 
-select * from administration;
 
 
 INSERT INTO `ista_website_db`.`super_user` (`email`, `password`, `super_user_privelage`, `super_user_legacy`)
@@ -55,9 +52,6 @@ VALUES
   ('sp-user1@ofppt.com', 'pass123', 'admin', 'ghost'),
   ('sp-user2@ofppt.com', 'pass123', 'admin', 'shadow'),
   ('sp-user3@ofppt.com', 'pass123', 'editor', 'L');
-
-
-select * from super_user;
 
 
 
@@ -76,15 +70,28 @@ VALUES
 (10, 'Computer Networks', 3, 2);
 
 
-
 INSERT INTO `note` (`subject_id`, `student_id`, `controle_1`, `controle_2`, `controle_3`, `EFM`) VALUES
-(1, 11, 18, 12, 16, 14),
-(2, 11, 19, 12, 16, 14),
-(1, 12, 17.5, 12, 16, 14),
-(2, 12, 18.5, 12, 16, 14),
-(3, 12, 17, 12, 16, 14),
-(3, 13, 19.5, 12, 16, 14),
-(4, 13, 18.5, 12, 16, 14),
-(4, 14, 18, 12, 16, 14),
-(5, 14, 19, 12, 16, 14),
-(5, 15, 19.5, 12, 16, 14);
+(1, 1, 18, 12, 16, 14),
+(2, 1, 19, 12, 16, 14),
+(1, 2, 17.5, 12, 16, 14),
+(2, 2, 18.5, 12, 16, 14),
+(3, 2, 17, 12, 16, 14),
+(3, 3, 19.5, 12, 16, 14),
+(4, 3, 18.5, 12, 16, 14),
+(4, 4, 18, 12, 16, 14),
+(5, 4, 19, 12, 16, 14),
+(5, 5, 19.5, 12, 16, 14);
+
+
+INSERT INTO `ista_website_db`.`article` (`publisher_id`, `title`, `body`, `date_time`, `keywords`, `resources`, `user_type`)
+VALUES
+(1, 'Article 1', 'Body of Article 1', '2023-05-01 10:00:00', 'keyword1, keyword2', 5, 'administration'),
+(2, 'Article 2', 'Body of Article 2', '2023-05-05 11:00:00', 'keyword3, keyword4', 3, 'administration'),
+(3, 'Article 3', 'Body of Article 3', '2023-05-10 12:00:00', 'keyword1, keyword5', 2, 'administration'),
+(1, 'Article 4', 'Body of Article 4', '2023-05-15 13:00:00', 'keyword6, keyword7', NULL, 'administration'),
+(2, 'Article 5', 'Body of Article 5', '2023-05-20 14:00:00', 'keyword8, keyword9', 1, 'administration'),
+(3, 'Article 6', 'Body of Article 6', '2023-05-25 15:00:00', 'keyword10, keyword2', NULL, 'administration'),
+(1, 'Article 7', 'Body of Article 7', '2023-05-30 16:00:00', 'keyword3, keyword11', 4, 'administration'),
+(2, 'Article 8', 'Body of Article 8', '2023-06-05 17:00:00', 'keyword12, keyword4', 2, 'teacher'),
+(3, 'Article 9', 'Body of Article 9', '2023-06-10 18:00:00', 'keyword1, keyword5', 3, 'administration'),
+(1, 'Article 10', 'Body of Article 10', '2023-06-15 19:00:00', 'keyword6, keyword13', NULL, 'teacher');

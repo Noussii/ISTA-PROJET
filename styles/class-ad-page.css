@@ -1,0 +1,23 @@
+@import url('../styles/class-page.css');
+
+input[type='file']{
+    padding: 5px;
+}
+
+#add_emploi_form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type='submit']{
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

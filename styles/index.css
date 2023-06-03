@@ -93,7 +93,7 @@ header[class="h-main"] a {
     cursor: pointer;
 }
 #main-content{
-    height: 3000px;
+  
 }
 .section-1{
     margin-top: 10px;
@@ -305,3 +305,75 @@ footer section div h6{
 /* footer a:hover {
     color: orange;
   } */
+
+/*  Faq section */
+  #faq {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .accordion-button {
+    background-color: #fff;
+    color: #212529;
+    border: 1px solid #dee2e6;
+    border-radius: 0;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .accordion-button:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #f8f9fa;
+  }
+  
+  .accordion-body {
+    background-color: #fff;
+    color: #212529;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0;
+    font-size: 16px;
+    padding: 20px;
+  }
+  
+  .fas.fa-question-circle {
+    color: #252525;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+/*Article Section*/
+
+  #latest-articles {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  #articles-container {
+    margin-top: 30px;
+  }
+  
+  .article {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+  }
+  
+  .article h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .article p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
