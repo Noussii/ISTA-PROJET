@@ -79,8 +79,9 @@ class Teacher extends User{
                 $stmt->execute([$obj_arr['controle_1'], $obj_arr['controle_2'], $obj_arr['controle_3'], $obj_arr['EFM'], $obj_arr['student_id'], $obj_arr['subject_id']]);
                 $success = true;
                 // construct($recepient_id, $recepient_type, $context, $message);
-                $teacher_name = $this->return_all_data()['first_name'];
-                $noti = new Notification($obj_arr['student_id'], 'student', 'teacher', "teacher $teacher_name has updated your marks", null);
+                $teacher_data = $this->return_all_data();
+                $teacher_full_name = $teacher_data['first_name'].' '.$teacher_data['last_name'];
+                $noti = new Notification($obj_arr['student_id'], 'student', 'teacher', "teacher $teacher_full_name has updated your marks", '/page/notes.php');
                 $noti->send();
             }
             }catch(RuntimeException $e){

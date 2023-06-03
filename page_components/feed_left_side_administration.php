@@ -86,7 +86,7 @@
 
 <aside class='left-side' data-visibility='1'>
 
-        <a class='left-side-profile-card' href="./profile.php">
+        <a class='left-side-profile-card' href="./profile_ad.php">
             <span class='profile-img'></span>
             <span class='profile-right-text'>
                 <span><?= $_SESSION['first_name'] ?></span>

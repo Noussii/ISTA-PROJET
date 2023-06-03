@@ -6,6 +6,10 @@ function get_publisher_data(article_id, date_time, user_type){
         let txt = document.querySelector('.publisher > .txt-span');
         let right_far_right_txt = document.querySelector('.publisher > .txt-right-span');
         if(user_type === 'administration'){
+            document.querySelector('.publisher').classList.add('clr-red');
+            console.log(document.querySelector('.publisher'))
+        }
+        if(user_type === 'teacher'){
             document.querySelector('.publisher').classList.add('clr-green');
             console.log(document.querySelector('.publisher'))
         }
@@ -16,7 +20,6 @@ function get_publisher_data(article_id, date_time, user_type){
         txt.children[0].innerText = json.first_name;
         txt.children[1].innerText = json.last_name;
     }
-
 
 
     fetch('../api/articles_A.php?q=publisher&ref='+article_id)

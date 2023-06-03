@@ -38,7 +38,7 @@ class Notification extends Dbc{
 
     public static function get_all_notifications($recepient_id ,$recepient_type){
         try{
-            $pre_stmt = "select * from notification where recepient = ? and user_type = ?;";
+            $pre_stmt = "select notification_id as noti_id, message, checked, context, date, link from notification where recepient = ? and user_type = ?;";
             $stmt = new Dbc();
             $stmt = $stmt->connect()->prepare($pre_stmt);
             $stmt->execute([$recepient_id, $recepient_type]);
@@ -48,6 +48,20 @@ class Notification extends Dbc{
             }
         }catch (PDOException $e){
             $success = false;
+            echo $e->getMessage();
+        }
+    }
+
+    public static function set_to_checked_with_noti_id($noti_id, $user_id, $user_type){
+        $success = false;
+        try{
+            $pre_stmt = "update notification set checked = 1 where notification_id = ? and recepient = ? and user_type = ?;";
+            $stmt = new Dbc();
+            $stmt = $stmt->connect()->prepare($pre_stmt);
+            $success = $stmt->execute([$noti_id, $user_id, $user_type]);
+            return $success;
+        }catch (PDOException $e){
+            return $success;
             echo $e->getMessage();
         }
     }

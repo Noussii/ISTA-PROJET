@@ -9,7 +9,7 @@ check_general_authentication();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/create_article_ad_page.css" >
-    <link rel='stylesheet' href='../styles/bootstrap/css/bootstrap.min.css'>
+    <!-- <link rel='stylesheet' href='../styles/bootstrap/css/bootstrap.min.css'> -->
     <title>corner - class</title>
     <link rel="icon" type="image/x-icon" href="../media/fav.ico">
 

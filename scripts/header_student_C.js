@@ -49,6 +49,7 @@ function getNotifications(){
 
     function populateNotifications(json){
         let noti_menu = document.querySelector('.header-notification-menu');
+        let active_noti_counter = 0;
         
         if(json.dont_have_notifications) return;
 
@@ -57,24 +58,45 @@ function getNotifications(){
         }
         
         json.forEach(dataObj => {
-            let one_noti = document.createElement('div');
+            console.log(dataObj)
+            let one_noti = document.createElement('a');
             one_noti.innerText = dataObj.message;
-            one_noti.classList.add('header-one-notification', 'active-notification');
             one_noti.dataset.checked = dataObj.checked;
             one_noti.dataset.context = dataObj.context;
-            switch(dataObj.context){
-                case 'administration':
-                    one_noti.classList.add('ad');
-                    break;
-                case 'teacher':
-                    one_noti.classList.add('te');
-                    break;
-                case 'system':
-                    one_noti.classList.add('sys');
+            one_noti.dataset.ref = dataObj.noti_id;
+            one_noti.classList.add('header-one-notification');
+            // if(dataObj.link) one_noti.setAttribute('href', dataObj.link);
+            if(dataObj.checked == 0){
+                active_noti_counter++;
+                one_noti.classList.add('active-notification');
+                switch(dataObj.context){
+                    case 'administration':
+                        one_noti.classList.add('ad');
+                        break;
+                    case 'teacher':
+                        one_noti.classList.add('te');
+                        break;
+                    case 'system':
+                        one_noti.classList.add('sys');
+                }
             }
+
+            one_noti.addEventListener('click', function (){
+                if(one_noti.dataset.checked == 1){
+                    window.location.href = dataObj.link;
+                    return;
+                }
+                one_noti.dataset.checked = 1;
+                one_noti.classList.remove('active-notification', 'te');
+                fetch('../api/header.php?q=checked&noti_ref='+one_noti.dataset.ref)
+                .then(()=> {
+                    window.location.href = dataObj.link;
+                })
+                .catch(err => console.log(err));
+            });
             noti_menu.insertAdjacentElement('afterbegin',one_noti);
         });
-        document.querySelector('#header-notification-btn').classList.add('active-notification');
+        active_noti_counter > 0 ? document.querySelector('#header-notification-btn').classList.add('active-notification') : false;
     }
 
     fetch('../api/header.php?req=notifications')

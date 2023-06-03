@@ -44,18 +44,6 @@
         </div>
         <a href="./page/article.php?title=test-article&date=2023-05-12" class="invisible-clickable-slideshow-link-layer"></a>
     </div>
-<<<<<<< Updated upstream
-=======
-    <div class="carousel-item">
-        <div class="slideshow-img-container">
-            <img src="/media/slider-Education.jpg" class="slideshow-img">
-        </div>
-        <div class="carousel-caption d-none d-md-block">
-            <h2 class="text-center banner_taital">Official Site ISTA LAZARET</h2>
-        </div>
-        <a href="./page/article.php?title=test-article&date=2023-05-12" class="invisible-clickable-slideshow-link-layer"></a>
-    </div>
->>>>>>> Stashed changes
   </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

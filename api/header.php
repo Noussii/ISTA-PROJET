@@ -14,4 +14,10 @@ if(check_authentication_with_redirection_unauthorized_student('../page/unauthori
             echo json_encode($notifications);
         }
     }
+
+    if(isset($_GET['q'], $_GET['noti_ref']) && $_GET['q'] === 'checked' && is_numeric($_GET['noti_ref'])){
+        $sts = Notification::set_to_checked_with_noti_id((int) $_GET['noti_ref'], $_SESSION['user_id'], $_SESSION['user_type']);
+        echo $sts;
+        
+    }
 }
