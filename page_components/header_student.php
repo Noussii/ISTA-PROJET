@@ -41,7 +41,7 @@ if(isset($_SESSION['user_type']) && isset($_SESSION['user_id'])){
         backdrop-filter: blur(5px); /* Main effect */
     }
     .header-one-notification{
-        background-color: transparent;
+        background-color: rgb(248,248,248);
         padding: 10px;
         min-height: 60px;
         width: 100%;

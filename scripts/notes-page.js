@@ -26,6 +26,3 @@ function populateTable(data){
         table.appendChild(tr);
     });
 }
-
-
-

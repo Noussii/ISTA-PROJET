@@ -145,7 +145,7 @@
     color: black;
 }
 .drop-down-menu-item:hover{
-    background-color: var(--dark-primary-color);
+    background-color: lightgray;
 }
 .header-logo-container{
     /* background-color: red; */
@@ -205,9 +205,8 @@ body{
             </button>
             <button class="header-all-button">
                 <nav class="header-drop-down-menu">
-                    <a class="drop-down-menu-item" href="../page/profile.php">Profile</a>
-                    <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
                     <a class="drop-down-menu-item" href="../index.php?acc=1">ISTA Home page</a>
+                    <a class="drop-down-menu-item" href="../page/profile.php">Profile</a>
                     <a class="drop-down-menu-item" href="../page/help.php">Help</a>
                     <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
                 </nav>

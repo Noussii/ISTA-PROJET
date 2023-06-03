@@ -1,9 +1,13 @@
 <?php 
 include_once '../usefulFunctions.php';
 check_general_authentication();
-if(return_user_type() !== 'administration') {
-    header('location:./unauthorized.php');
-    exit();
+switch(return_user_type()){
+    case 'teacher' :
+        header('location:./feed_t.php');
+        break;
+    case 'student' :
+        header('location:./feed.php');
+        break;
 }
 ?>
 <!DOCTYPE html>
@@ -41,4 +45,5 @@ if(return_user_type() !== 'administration') {
         echo "<script src='../scripts/feed_page.js'></script>";        
     }
     ?>
+    <script src='../scripts/feed_page_ad.js'></script>
 </html>

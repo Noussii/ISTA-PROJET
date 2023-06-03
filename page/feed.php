@@ -1,6 +1,16 @@
 <?php 
 include_once '../usefulFunctions.php';
 check_general_authentication();
+switch(return_user_type()){
+    case 'administration' :
+        header('location:./feed_ad.php');
+        exit();
+        break;
+    case 'teacher' :
+        header('location:./feed_t.php');
+        exit();
+        break;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

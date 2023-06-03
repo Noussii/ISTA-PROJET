@@ -2,7 +2,8 @@
 include_once '../usefulFunctions.php';
 include_once '../classes/Dbc.php';
 include_once '../classes/Article.php';
-if(check_general_authentication()){
+// if(check_general_authentication()){
+    if(true){
     if(isset($_GET['q'], $_GET['n']) && $_GET['q'] === 'latest'){
         if((int) $_GET['n'] < 30 && (int) $_GET['n'] > 0){
             if(isset($_GET['no_b']) && (int)$_GET['no_b'] === 1){
@@ -32,14 +33,8 @@ if(check_general_authentication()){
                 echo json_encode(['empty' => true]);
                 exit();
             }
-
-
-     
     }
-
     if(isset($_GET['ref'], $_GET['q']) && $_GET['q'] == 'publisher'){
         echo json_encode(Article::get_publisher_data((int) $_GET['ref']));
     }
 }
-
-
