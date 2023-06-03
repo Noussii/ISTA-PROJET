@@ -3,5 +3,5 @@
     "username": "root",
     "password": "wtf123",
     "dbname": "ista_website_db",
-    "domain" : "http://196.92.173.152:5552"
+    "domain" : "http://localhost:5555"
 }

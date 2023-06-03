@@ -49,6 +49,9 @@ check_general_authentication();
             </section>
         </main> 
     </section>
+    <dialog id='success-dialog'>
+        <h1>Result:</h1>
+    </dialog>
     <script src="../scripts/create_article_ad_page.js"></script>
 </body>
 </html>

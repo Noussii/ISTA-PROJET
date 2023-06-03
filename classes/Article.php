@@ -3,7 +3,7 @@ require_once 'Dbc.php';
 
 class Article {
 
-    public static function create_new_article(int $publisher_id, string $publisher_type, string $title, string $body, string $img_name, $resources_arr){
+    public static function create_new_article(int $publisher_id, string $publisher_type, string $title, string $body, $img_name, $resources_arr){
         $dbc = new Dbc();
         $success = false;
         if(!$resources_arr){
