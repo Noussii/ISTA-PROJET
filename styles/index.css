@@ -356,6 +356,7 @@ footer section div h6{
   
   #articles-container {
     margin-top: 30px;
+    justify-content: center;
   }
   
   .article {
@@ -365,11 +366,16 @@ footer section div h6{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 30px;
     padding: 20px;
+    display: block;
+    height: 90%;
   }
   
   .article h3 {
     font-size: 24px;
     margin-bottom: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 15px;
   }
   
   .article p {
@@ -377,3 +383,11 @@ footer section div h6{
     margin-bottom: 0;
   }
 
+.article > .article-img-container{
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 100px;
+  overflow: hidden;
+}
