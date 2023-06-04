@@ -39,3 +39,27 @@ function populate_slide_show(json) {
   
 
 fetch_articles_with_num(5)
+
+const articlesContainer = document.getElementById('articles-container');
+
+fetch('./api/articles_A.php?q=latest&n=6')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(article => {
+      console.log(article)
+      const articleElement = document.createElement('a');
+      articleElement.href = 'http://localhost:5555/page/article.php?q=sing&ref='+article.article_id;
+      articleElement.classList.add('col-md-6', 'col-lg-4');
+      articleElement.innerHTML = `
+        <div class="article">
+          <h3>${article.title}</h3>
+          <div class='article-img-container'>
+            <img width='100%' src='${article.key_img_path}' alt='article_img'>
+          </div>
+          <p>${article.body.slice(0,100)+'...'}</p>
+        </div>
+      `;
+      articlesContainer.appendChild(articleElement);
+    });
+  })
+  .catch(error => console.error(error));
