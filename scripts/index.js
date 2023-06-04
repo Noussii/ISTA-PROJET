@@ -48,7 +48,7 @@ fetch('./api/articles_A.php?q=latest&n=6')
     data.forEach(article => {
       console.log(article)
       const articleElement = document.createElement('a');
-      articleElement.href = 'http://localhost:5555/page/article.php?q=sing&ref='+article.article_id;
+      articleElement.href = '../page/article.php?q=sing&ref='+article.article_id;
       articleElement.classList.add('col-md-6', 'col-lg-4');
       articleElement.innerHTML = `
         <div class="article">

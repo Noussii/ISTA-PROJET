@@ -41,50 +41,25 @@ function isertMessenger(){
 
 }
 
-function TempEmploiInsertion(){
-    let outerContainer =document.querySelector('.main-container-reactive')
+
+function get_emploi(){
+    fetch('../api/class_A.php?req=emploi')
+    .then(res => res.text())
+    .then(link => TempEmploiInsertion(link))
+    .catch(err => console.log(err));
+}
+function TempEmploiInsertion(emploi_link){
+    let outerContainer =document.querySelector('#updated-container');
         outerContainer.innerHTML = `
-        <section>
-        <div class="top-cards-container">
-        <div target='_blank' href='../api/class_A.php?req=emploi' class="card" onclick='TempMessengerInsertion()'>
-            <h4>Chat</h4>
-        </div>
-        <div class="card">
-            <h4>Cours</h4>
-        </div>
-        <div class="card emploi_card" onclick='TempEmploiInsertion()'>
-            <h4>Emploi</h4>
-        </div>
-        <div class="card ">
-            <h4>Anouncement</h4>
-        </div>
-        </div>
-        </section>
         <section id='iframe-section'>
-            <iframe src='../resources/pdf/emploi_du_temps/ffa77b4817a99535402f18f43f5d17978c79b43d3e47ae0fd6199bbd279f1870.pdf'></iframe>
+            <iframe src='${emploi_link}'></iframe>
         </section>
                 `;
 }
 
 function TempMessengerInsertion(){
-    let outerContainer =document.querySelector('.main-container-reactive')
+    let outerContainer =document.querySelector('#updated-container')
         outerContainer.innerHTML = `
-        <section>
-        <div class="top-cards-container">
-        <div target='_blank' href='../api/class_A.php?req=emploi' class="card" onclick='TempMessengerInsertion()'>
-            <h4>Chat</h4>
-        </div>
-        <div class="card">
-            <h4>Cours</h4>
-        </div>
-        <div class="card emploi_card" onclick='TempEmploiInsertion()'>
-            <h4>Emploi</h4>
-        </div>
-        <div class="card ">
-            <h4>Anouncement</h4>
-        </div>
-        </div>
-        </section>
             <section class='messages-outer-container'>
             <h1>latest messages: </h1>
             <div class="messages-container">
@@ -120,13 +95,13 @@ function TempMessengerInsertion(){
                 <p>I'm doing well, thank you!</p>
                 </div>
                 </div>
-                </section>
-                <section class='message-writing-container'>
-                <input type="text" placeholder='type message here..'>
-                <input type="button" value='send'>
+                    <section class='message-writing-container'>
+                    <input type="text" placeholder='type message here..'>
+                    <input type="button" value='send'>
+                    </section>
                 </section>
                 `;
         }
             
-            emploi_btn.onclick = TempEmploiInsertion;
+            emploi_btn.onclick = get_emploi;
             chat_btn.onclick = TempMessengerInsertion;

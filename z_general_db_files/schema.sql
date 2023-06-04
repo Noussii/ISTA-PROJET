@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`class` (
   `class_year` DATE NOT NULL,
   `name` VARCHAR(45) NOT NULL,
   `is_current` TINYINT NOT NULL DEFAULT 1,
-  `emploi_pdf_path` TEXT NULL,
+  `emploi_pdf_path` VARCHAR(500) NOT NULL DEFAULT '/resources/pdf/emploi_du_temps/emploi_placeholder.pdf',
   PRIMARY KEY (`class_id`))
 ENGINE = InnoDB;
 
