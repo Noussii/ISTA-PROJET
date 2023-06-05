@@ -40,7 +40,7 @@ check_general_authentication();
                         <textarea required name="body" id="body" rows="10" placeholder='your text here...' style='width: 100%; max-width: 100%; min-width: 100%; height: auto;'></textarea>
                     </div>
                     
-                    <div class="resources">
+                    <div class="resources" style='display: none;'>
                         <h3>resources:</h3>
                         <input type="file" name="resources" id="resources" multiple>
                     </div>

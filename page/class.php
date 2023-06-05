@@ -74,10 +74,10 @@ if(return_user_type() !== 'student') {
                         <p>I'm doing well, thank you!</p>
                     </div>
                 </div>
-            </section>
-            <section class='message-writing-container'>
-                <input type="text" placeholder='type message here..'>
-                <input type="button" value='send'>
+                <section class='message-writing-container'>
+                    <input type="text" placeholder='type message here..'>
+                    <input type="button" value='send'>
+                </section>
             </section>
         </main> 
     </section>

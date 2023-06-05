@@ -106,9 +106,6 @@
         <a href='../index.php' class="left-side-button">
         <img src="../media/icons/homework_icon_feed.png"> <span>Homework&nbsp;&nbsp;</span>
         </a>
-        <a href='../index.php' class="left-side-button">
-        <img src="../media/icons/newsLetter_icon_feed.png"> <span>Newsletter</span>
-        </a>
     </aside>
 
 
