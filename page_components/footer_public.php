@@ -13,8 +13,7 @@
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
                     <p><a href="../page/about.php" class="text-white">About us</a> </p>
-                    <p><a href="../page/article.php" class="text-white">Articles</a></p>          
-                    <p><a href="../page/updates.php" class="text-white">Updates</a></p>           
+                    <p><a href="../page/updates.php" class="text-white">Articles</a></p>          
                     <p><a href="../page/newsLetter.php" class="text-white">Newsletter</a></p>
                 </div>
             <hr class="w-100 d-md-none" />

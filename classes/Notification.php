@@ -60,7 +60,7 @@ class Notification extends Dbc{
 
     public static function get_all_notifications($recepient_id ,$recepient_type){
         try{
-            $pre_stmt = "select notification_id as noti_id, message, checked, context, date, link from notification where recepient = ? and user_type = ?;";
+            $pre_stmt = "select notification_id as noti_id, message, checked, context, date, link from notification where recepient = ? and user_type = ? order by checked desc;";
             $stmt = new Dbc();
             $stmt = $stmt->connect()->prepare($pre_stmt);
             $stmt->execute([$recepient_id, $recepient_type]);

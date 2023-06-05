@@ -34,6 +34,15 @@ function return_user_type(){
     return $_SESSION['user_type'];
 }
 
+function really_destroy_session(){
+    setcookie("PHPSESSID", "", time() - 3600, "/");
+    session_destroy();
+    header('Cache-Control: no-store, no-cache, must-revalidate');
+    header('Expires: Thu, 01 Jan 1970 00:00:00 GMT');
+    header('Pragma: no-cache');
+    header('location:../index.php');
+}
+
 function check_authentication_with_redirection_logged_in($redirection_link){
     if(!isset($_COOKIE['PHPSESSID'])) {
         return false;

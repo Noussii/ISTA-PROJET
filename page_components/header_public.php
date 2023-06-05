@@ -1,6 +1,17 @@
 <header class="h-main">
 <div class="header-logo-container">
-        <a href="../index.php?acc=1">
+
+    <?php 
+        require_once '../usefulFunctions.php';
+        $logo_link = '../index.php?acc=1';
+        session_start();
+        if(isset($_SESSION['user_id'], $_SESSION['user_type'])) {
+            $logo_link = '../index.php';
+        };
+    
+    ?>
+
+        <a href="<?=$logo_link?>">
             <img height="40px" src="../media/logo.png" alt="website_logo">
         </a>
         </div>
