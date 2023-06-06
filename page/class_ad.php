@@ -27,7 +27,7 @@ check_general_authentication();
 
             <section>
                     <div class="form-row-close-big">
-                        <label for="class-list-inp">select class: </label>
+                        <label for="class-list-inp">Sélectionnez une classe : </label>
 
                         <input list='class-list' name='selected_class' id='class-list-inp' autofocus>
                         <datalist id="class-list" value='Edge' required>
@@ -39,7 +39,7 @@ check_general_authentication();
                     </div>
             </section> 
             <section>
-                <h1>Add emploi:</h1>
+                <h1>Ajouter un emploi :</h1>
                     <div class="form-row">
                         <label for="emploi">Emploi pdf:</label>
                         <input type="file" name='emploiPdf' accept='application/pdf'>
@@ -53,7 +53,7 @@ check_general_authentication();
             <section style='display: none;'>
                 <div class="top-cards-container">
                     <div id='emploi_btn' class="card">
-                        <h4>Add Emploi</h4>
+                        <h4>Ajouter un emploi :</h4>
                     </div>
                     <div class="card emploi_card">
                         <h4>Emploi</h4>
@@ -62,7 +62,7 @@ check_general_authentication();
                         <h4>Connections</h4>
                     </div>
                     <div id='creat_class_btn' target='_blank' class="card chat_card">
-                        <h4>Creat Class</h4>
+                        <h4>Créer une classe :</h4>
                     </div>
                 </div>
             </section>

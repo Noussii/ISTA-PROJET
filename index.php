@@ -104,7 +104,7 @@
     <!-- Latest Articles Section -->
 <section id="latest-articles">
     <div class="container">
-      <h2 class="text-center mb-5 fw-bold">Latest Articles</h2>
+      <h2 class="text-center mb-5 fw-bold">Derniers articles</h2>
       <div class="row" id="articles-container">
         <!-- Articles seront ajoutés ici dynamiquement via JavaScript -->
       </div>
@@ -118,7 +118,7 @@
         <!-- FAQ section -->
         <section id="faq">
   <div class="container">
-    <h2 class="text-center mb-5 fw-bold">Frequently Asked Questions</h2>
+    <h2 class="text-center mb-5 fw-bold">Questions fréquemment posées</h2>
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
@@ -175,10 +175,10 @@
             <!-- Do not delete this line; shown only in sm / used to separate divs with hr -->
             <hr class="w-100 d-md-none" />
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-                    <p><a href="./page/about.php" class="text-white">About us</a> </p>
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Liens Utiles</h6>
+                    <p><a href="./page/about.php" class="text-white">À propos de nous</a> </p>
                     <p><a href="./page/article.php" class="text-white">Articles</a></p>          
-                    <p><a href="./page/updates.php" class="text-white">Updates</a></p>           
+                    <p><a href="./page/updates.php" class="text-white">Actualités</a></p>           
                     <p><a href="./page/newsLetter.php" class="text-white">Newsletter</a></p>
                 </div>
             <hr class="w-100 d-md-none" />

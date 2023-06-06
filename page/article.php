@@ -20,7 +20,7 @@
         <div class='article-page-nested-outer-container'> 
             <aside id='left-side-articles-container'>
                 <div id='left-side-articles-inner-container'>
-                    <h4 style='margin-top: 10px; text-align: center;'>Latest:</h4>
+                    <h4 style='margin-top: 10px; text-align: center;'>Dernières actualités :</h4>
                 </div>
             </aside>
                 <main class='article-page-inner-conainer'>
