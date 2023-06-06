@@ -28,7 +28,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
         <div class="slideshow-img-container">
-            <img src="/media/man.png" class="slideshow-img">
+            <img src="/media/slider-1-1.jpg" class="slideshow-img">
         </div>
         <div class="carousel-caption d-none d-md-block">
             <h2 class="text-center banner_taital">Official Site ISTA LAZARET</h2>
@@ -37,7 +37,7 @@
     </div>
     <div class="carousel-item">
         <div class="slideshow-img-container">
-            <img src="/media/slider-2.jpg" class="slideshow-img">
+            <img src="/media/slider-2-2.jpg" class="slideshow-img">
         </div>
         <div class="carousel-caption d-none d-md-block">
             <h2 class="text-center banner_taital">Official Site ISTA LAZARET</h2>
@@ -100,18 +100,66 @@
   </div>
     </div>
         <a class="go-to-main-btn" href="#main-content">▼</a>
-        <section class="section-2">
-            <div class="section-2-inner-container">
-                <img width="50%" src="/media/ista.jpg">
-                <div class="text">
-                    <h1>ISTA Lazaret</h1>
-                    <p>    
-                        institution since 1945 this Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed distinctio harum velit iure quod, ratione rerum porro maxime fuga explicabo voluptate soluta eligendi numquam dolorem corrupti voluptas dolore. Deleniti, delectus?
-                    </p>
-                </div>
 
-            </div>
-        </section>
+    <!-- Latest Articles Section -->
+<section id="latest-articles">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Derniers articles</h2>
+      <div class="row" id="articles-container">
+        <!-- Articles seront ajoutés ici dynamiquement via JavaScript -->
+      </div>
+    </div>
+</section>
+
+
+<!-- Archive Section -->
+
+
+        <!-- FAQ section -->
+        <section id="faq">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">Questions fréquemment posées</h2>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <i class="fas fa-question-circle"></i> Comment s'inscrire ?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Les comptes stagiaires sont délivrés que par l'administaration pour éviter toute conflit ou spam de comptes
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <i class="fas fa-question-circle"></i> Question 2
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Answer 2
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <i class="fas fa-question-circle"></i> Question 3
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Answer 3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
 
 
@@ -127,10 +175,10 @@
             <!-- Do not delete this line; shown only in sm / used to separate divs with hr -->
             <hr class="w-100 d-md-none" />
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-                    <p><a href="./page/about.php" class="text-white">About us</a> </p>
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Liens Utiles</h6>
+                    <p><a href="./page/about.php" class="text-white">À propos de nous</a> </p>
                     <p><a href="./page/article.php" class="text-white">Articles</a></p>          
-                    <p><a href="./page/updates.php" class="text-white">Updates</a></p>           
+                    <p><a href="./page/updates.php" class="text-white">Actualités</a></p>           
                     <p><a href="./page/newsLetter.php" class="text-white">Newsletter</a></p>
                 </div>
             <hr class="w-100 d-md-none" />
@@ -156,6 +204,31 @@
 
     <script src="/scripts/index.js"></script>
     <script src="./styles/bootstrap/js/bootstrap.min.js"></script>
+<script>const articlesContainer = document.getElementById('articles-container');
 
+fetch('./api/articles_A.php?q=latest&n=5')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(article => {
+      const articleElement = document.createElement('div');
+      articleElement.classList.add('col-md-6', 'col-lg-4');
+      articleElement.innerHTML = `
+        <div class="article">
+          <h3>${article.title}</h3>
+          <p>${article.description}</p>
+        </div>
+      `;
+      articlesContainer.appendChild(articleElement);
+    });
+  })
+  .catch(error => console.error(error));
+
+//********************** */
+
+
+
+//************************** */
+
+</script>
 </body>
 </html>

@@ -1,7 +1,8 @@
 let classes_select = document.querySelector('#classes_select');
 let module_select = document.querySelector('#module');
 let top_filter_btn = document.querySelector('#top_filter_btn');
-let global_notes_data = [];
+let initial_global_notes = [];
+let filtered_global_notes = [];
 
 function insert_module_select(json){
     while(module_select.lastChild){
@@ -69,14 +70,43 @@ top_filter_btn.onclick = function (e){
     .then(res => res.json())
     .then(data => {
         populateTable(data);
-        global_notes_data = data;
+        initial_global_notes = data;
+        set_notes_from_dom_to_global_obj(initial_global_notes);
     });
 }
 
-function collect_notes_changes_to_json(){
+
+// filter_notes_to_be_updated filters notes from the dom and compare them to the initial notes
+// retreived from the server initially it checkes if there is a change made by the teacher
+// and if there is it returns only the changed note objcts to be send to the server to be updated.
+
+function filter_notes_to_be_updated(){
+
+    let filtered_notes = [];
+    set_notes_from_dom_to_global_obj(filtered_notes);
+    console.log('initial: ', initial_global_notes);
+    console.log('filtered: ',filtered_notes);
+    let final = [];
+
+    for(let initial_note_obj of initial_global_notes){
+        for(let check_note_obj of filtered_notes){
+            if(initial_note_obj['student_id'] === check_note_obj['student_id']){
+                
+                let all_properties_are_equals = initial_note_obj['controle_1'] === check_note_obj['controle_1'] && initial_note_obj['controle_2'] === check_note_obj['controle_2']
+                               && initial_note_obj['controle_3'] === check_note_obj['controle_3'] && initial_note_obj['EFM'] === check_note_obj['EFM'];
+
+                if(!all_properties_are_equals) final.push(check_note_obj);
+            }
+        }
+    }
+
+    return final;
+    // return filtered_notes;
+}
+function set_notes_from_dom_to_global_obj(target_notes_obj){
     let table_body = document.querySelector('#notes-table-body');
     let table_rows = Array.from(table_body.children);
-    global_notes_data = [];
+    curr_global_notes = [];
 
     table_rows.forEach(row => {
         let obj_for_curr_row = {};
@@ -91,10 +121,10 @@ function collect_notes_changes_to_json(){
             obj_for_curr_row[single_td.dataset.value] = inp.value;
         });
         obj_for_curr_row['subject_id'] = module_select.value;
-        global_notes_data.push(obj_for_curr_row);
+        curr_global_notes.push(obj_for_curr_row);
     })
-    // console.log('data dd: ', global_notes_data);
-    return global_notes_data;
+    Object.assign(target_notes_obj ,curr_global_notes);
+    return target_notes_obj;
 }
 
 
@@ -105,12 +135,12 @@ document.querySelector('input[value="submit notes"]').onclick = function (e){
         notes_dialog.close();
     }
     document.querySelector('#confirme_notes_modal_btn').onclick = function (e){
-        // window.location = '../api/notes.php?q=notes&mod=update&v='+JSON.stringify(collect_notes_changes_to_json());
-        fetch('../api/notes.php?q=notes&mod=update&v='+JSON.stringify(collect_notes_changes_to_json()), {method: 'POST'})
+        // window.location = '../api/notes.php?q=notes&mod=update&v='+JSON.stringify(set_notes_from_dom_to_global_obj());
+        fetch('../api/notes.php?q=notes&mod=update&v='+JSON.stringify(filter_notes_to_be_updated()), {method: 'POST'})
         .then(response => response.text())
         .then(data => console.log(data))
         notes_dialog.close();
-        // console.log(global_notes_data);
-        // console.log(collect_notes_changes_to_json())
+        // console.log(initial_global_notes);
+        // console.log(set_notes_from_dom_to_global_obj())
     }
 }

@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`class` (
   `class_year` DATE NOT NULL,
   `name` VARCHAR(45) NOT NULL,
   `is_current` TINYINT NOT NULL DEFAULT 1,
-  `emploi_pdf_path` TEXT NULL,
+  `emploi_pdf_path` VARCHAR(500) NOT NULL DEFAULT '/resources/pdf/emploi_du_temps/emploi_placeholder.pdf',
   PRIMARY KEY (`class_id`))
 ENGINE = InnoDB;
 
@@ -90,7 +90,6 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`student` (
   PRIMARY KEY (`student_id`),
   UNIQUE INDEX `user_id_UNIQUE` (`student_id` ASC) ,
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) ,
-  UNIQUE INDEX `numberInClass_UNIQUE` (`numberInClass` ASC) ,
   UNIQUE INDEX `national_student_id_UNIQUE` (`national_student_id` ASC) ,
   UNIQUE INDEX `photo_path_UNIQUE` (`photo_path` ASC) ,
   INDEX `fk_student_class_idx` (`class` ASC) ,

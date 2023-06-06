@@ -9,7 +9,7 @@ check_general_authentication();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/create_article_ad_page.css" >
-    <link rel='stylesheet' href='../styles/bootstrap/css/bootstrap.min.css'>
+    <!-- <link rel='stylesheet' href='../styles/bootstrap/css/bootstrap.min.css'> -->
     <title>corner - class</title>
     <link rel="icon" type="image/x-icon" href="../media/fav.ico">
 
@@ -40,7 +40,7 @@ check_general_authentication();
                         <textarea required name="body" id="body" rows="10" placeholder='your text here...' style='width: 100%; max-width: 100%; min-width: 100%; height: auto;'></textarea>
                     </div>
                     
-                    <div class="resources">
+                    <div class="resources" style='display: none;'>
                         <h3>resources:</h3>
                         <input type="file" name="resources" id="resources" multiple>
                     </div>

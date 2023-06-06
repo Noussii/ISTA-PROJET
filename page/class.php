@@ -39,7 +39,7 @@ if(return_user_type() !== 'student') {
                     </div>
                 </div>
             </section>
-            <section class='messages-outer-container'>
+            <section class='messages-outer-container' id='updated-container'>
                 <h1>latest messages: </h1>
                 <div class="messages-container">
                     <div class="one-message-container">
@@ -74,10 +74,10 @@ if(return_user_type() !== 'student') {
                         <p>I'm doing well, thank you!</p>
                     </div>
                 </div>
-            </section>
-            <section class='message-writing-container'>
-                <input type="text" placeholder='type message here..'>
-                <input type="button" value='send'>
+                <section class='message-writing-container'>
+                    <input type="text" placeholder='type message here..'>
+                    <input type="button" value='send'>
+                </section>
             </section>
         </main> 
     </section>

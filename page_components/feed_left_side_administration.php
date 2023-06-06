@@ -86,11 +86,11 @@
 
 <aside class='left-side' data-visibility='1'>
 
-        <a class='left-side-profile-card' href="./profile.php">
+        <a class='left-side-profile-card' href="./profile_ad.php">
             <span class='profile-img'></span>
             <span class='profile-right-text'>
                 <span><?= $_SESSION['first_name'] ?></span>
-                <span style="font-size: 10px;">profile</span>
+                <span style="font-size: 10px;">Profile</span>
             </span>
         </a>
 
@@ -98,7 +98,7 @@
             <img src="../media/icons/home_icon_feed.png"> <span>Feed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
         <a href='../page/class_ad.php' class="left-side-button">
-        <img src="../media/icons/class_icon_feed.png"> <span>Class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <img src="../media/icons/class_icon_feed.png"> <span>Emploi&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
         <a href='../page/create_article_ad.php' class="left-side-button">
         <img src="../media/icons/newsLetter_icon_feed.png"> <span>Article&nbsp;&nbsp;&nbsp;</span>

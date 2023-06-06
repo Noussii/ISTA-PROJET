@@ -41,7 +41,7 @@ if(isset($_SESSION['user_type']) && isset($_SESSION['user_id'])){
         backdrop-filter: blur(5px); /* Main effect */
     }
     .header-one-notification{
-        background-color: transparent;
+        background-color: rgb(248,248,248);
         padding: 10px;
         min-height: 60px;
         width: 100%;
@@ -212,14 +212,14 @@ body{
             </button>
             <button class="header-all-button">
                 <nav class="header-drop-down-menu">
-                    <a class="drop-down-menu-item" href="../index.php?acc=1">ISTA Home page</a>
+                    <a class="drop-down-menu-item" href="../index.php?acc=1">Page d'accueil</a>
                     <a class="drop-down-menu-item" href="../page/profile.php">Profile</a>
-                    <a class="drop-down-menu-item" href="#">Help</a>
-                    <a class="drop-down-menu-item" href="../api/logout.php">Logout</a>
+                    <a class="drop-down-menu-item" href="#">Aide</a>
+                    <a class="drop-down-menu-item" href="../api/logout.php">Déconnexion</a>
                 </nav>
             </button>
             <div class="header-notification-menu" data-visibility="0">
-                <div class="header-one-notification" style="text-align: center;">You have no notifications today.</div>
+                <div class="header-one-notification" style="text-align: center;">Vous n'avez aucune notification aujourd'hui.</div>
             </div>
         </div>
 </header>
