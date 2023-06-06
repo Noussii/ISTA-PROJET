@@ -98,7 +98,7 @@
             <img src="../media/icons/home_icon_feed.png"> <span>Feed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
         <a href='../page/class_ad.php' class="left-side-button">
-        <img src="../media/icons/class_icon_feed.png"> <span>Class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <img src="../media/icons/class_icon_feed.png"> <span>Emploi&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
         <a href='../page/create_article_ad.php' class="left-side-button">
         <img src="../media/icons/newsLetter_icon_feed.png"> <span>Article&nbsp;&nbsp;&nbsp;</span>

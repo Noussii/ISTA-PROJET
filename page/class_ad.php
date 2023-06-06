@@ -50,7 +50,7 @@ check_general_authentication();
                 </form>
             </section>
 
-            <section>
+            <section style='display: none;'>
                 <div class="top-cards-container">
                     <div id='emploi_btn' class="card">
                         <h4>Add Emploi</h4>
