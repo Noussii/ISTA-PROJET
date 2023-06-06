@@ -135,24 +135,25 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <i class="fas fa-question-circle"></i> Question 2
+            <i class="fas fa-question-circle"></i> Comment puis-je accéder à mes notes ?
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            Answer 2
+          Pour accéder à vos notes en ligne, il vous suffit de vous connecter à votre compte étudiant fourni par l'administration .
+           Une fois connecté, rendez-vous dans la section "Notes"  où vous trouverez la liste des matières avec les notes correspondantes. 
           </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <i class="fas fa-question-circle"></i> Question 3
+            <i class="fas fa-question-circle"></i> Où puis-je trouver les derniers articles et actualités de l'établissement ?
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            Answer 3
+          Les derniers articles et actualités de l'établissement sont disponibles dans la section "Flux" de votre profil ou sur la page dédiée aux articles sur le site web.
           </div>
         </div>
       </div>
