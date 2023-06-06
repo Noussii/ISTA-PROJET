@@ -26,6 +26,28 @@ class Article {
             return $success;
         }
     }
+
+    public static function get_latest_articles_with_range_and_date($before_date, int $max_num_of_rows){
+        $dbc = new Dbc();
+        try{
+            $pre_stmt = "select * from article where date_time < ? order by date_time desc limit $max_num_of_rows";
+            $stmt = $dbc->connect()->prepare($pre_stmt);
+            $stmt->execute([$before_date]);
+            $result = $stmt->fetchAll();
+            if(count($result) > 0){
+                for($i = 0; $i < count($result); $i++){
+                        $global_json_file = json_decode(file_get_contents('../config.json'), true);
+                        $result[$i]['key_img_path'] = $global_json_file['domain'].$result[$i]['key_img_path'];
+                    }
+                    return $result;
+                }else{
+                    return false;
+                }
+            }catch(RuntimeException $e){
+                return $e->getMessage();
+            }
+    }
+
     
     public static function get_latest_articles_with_range(int $max_num_of_rows){
         $dbc = new Dbc();
