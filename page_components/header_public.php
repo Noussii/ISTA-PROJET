@@ -7,8 +7,9 @@
         session_start();
         if(isset($_SESSION['user_id'], $_SESSION['user_type'])) {
             $logo_link = '../index.php';
-        };
-    
+        }else{
+            really_destroy_session();
+        }
     ?>
 
         <a href="<?=$logo_link?>">

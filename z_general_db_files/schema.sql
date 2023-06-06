@@ -90,7 +90,6 @@ CREATE TABLE IF NOT EXISTS `ista_website_db`.`student` (
   PRIMARY KEY (`student_id`),
   UNIQUE INDEX `user_id_UNIQUE` (`student_id` ASC) ,
   UNIQUE INDEX `email_UNIQUE` (`email` ASC) ,
-  UNIQUE INDEX `numberInClass_UNIQUE` (`numberInClass` ASC) ,
   UNIQUE INDEX `national_student_id_UNIQUE` (`national_student_id` ASC) ,
   UNIQUE INDEX `photo_path_UNIQUE` (`photo_path` ASC) ,
   INDEX `fk_student_class_idx` (`class` ASC) ,
