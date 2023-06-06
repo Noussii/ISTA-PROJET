@@ -12,14 +12,14 @@
     <?php include_once '../page_components/header_public.php'; ?>
     <section class="outer-container">
         <main class='main-container-reactive' style='max-width: 1000px'>
-        <h1 class='top-title'>Check out our latest articles: </h1>
+        <h1 class='top-title'>Consulter les derniers articles : </h1>
             <section>
                 <div class="big-card">
                     <div class="img-container">
                         <img src="../media/man.png" alt="test_img">
                     </div>
                     <div class="txt-container">
-                        <h1 class='card-title'>Title</h1>
+                        <h1 class='card-title'>Titre</h1>
                         <p class='card-paragraph'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam aliquam ratione maiores, rerum quo molestiae praesentium eveniet quam consectetur delectus beatae rem quos non neque cum atque autem. Impedit!</p>
                         <div class="read-more-btn">Read More.</div>
                     </div>

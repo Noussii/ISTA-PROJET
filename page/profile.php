@@ -72,7 +72,7 @@ if(check_general_authentication()){
                 </div>
             </section>
             <section>
-                <p> <b>Check your data :</b> <br><br> if something wrong please contact you local administration.</p>
+                <p> <b>Vérifiez vos données :</b> <br><br> Si quelque chose ne s'avérait pas conforme, nous vous prions de bien vouloir contacter l'administration.</p>
             </section>
         </main>
     </section>
