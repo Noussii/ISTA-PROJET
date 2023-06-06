@@ -62,7 +62,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-sm-4">
-                <div class="card shadow border-0">
+                <div class="card shadow border-0 annonces-card">
                     <div class="card-body text-center">
                         <i class="fa fa-bullhorn fa-3x mb-3"></i>
                         <h5 class="card-title mb-2">Les dernières annonces</h5>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card shadow border-0">
+                <div class="card shadow border-0 formateur-card">
                     <div class="card-body text-center">
                         <i class="fa fa-chalkboard-teacher fa-3x mb-3"></i>
                         <h5 class="card-title mb-2">Espace Formateur</h5>
@@ -86,7 +86,7 @@
                 </div>
             </div>
     <div class="col-sm-4">
-        <div class="card shadow border-0">
+        <div class="card shadow border-0 stagiaire-card">
             <div class="card-body text-center">
                 <i class="fa fa-graduation-cap fa-3x mb-3"></i>
                 <h5 class="card-title mb-2">Espace stagiaire</h5>
@@ -204,31 +204,6 @@
 
     <script src="/scripts/index.js"></script>
     <script src="./styles/bootstrap/js/bootstrap.min.js"></script>
-<script>const articlesContainer = document.getElementById('articles-container');
 
-fetch('./api/articles_A.php?q=latest&n=5')
-  .then(response => response.json())
-  .then(data => {
-    data.forEach(article => {
-      const articleElement = document.createElement('div');
-      articleElement.classList.add('col-md-6', 'col-lg-4');
-      articleElement.innerHTML = `
-        <div class="article">
-          <h3>${article.title}</h3>
-          <p>${article.description}</p>
-        </div>
-      `;
-      articlesContainer.appendChild(articleElement);
-    });
-  })
-  .catch(error => console.error(error));
-
-//********************** */
-
-
-
-//************************** */
-
-</script>
 </body>
 </html>

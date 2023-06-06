@@ -15,14 +15,14 @@
     <section class="outer-container">
         <main class="main-container-reactive">
             <section>
-                <h1>the following are your marks:</h1>
+                <h1>Vos notes :</h1>
                 <table id='notes-table' border='1'>
     <thead>
         <tr>
-            <th>subject_name</th>
-            <th>controle 1</th>
-            <th>controle 2</th>
-            <th>controle 3</th>
+            <th>Nom de la matière</th>
+            <th>Contrôle 1</th>
+            <th>Contrôle 2</th>
+            <th>Contrôle 3</th>
             <th>EFM</th>
         </tr>
     </thead>

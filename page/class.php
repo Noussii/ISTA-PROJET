@@ -25,59 +25,22 @@ if(return_user_type() !== 'student') {
         <main class='main-container-reactive'>
             <section>
                 <div class="top-cards-container">
-                    <div target='_blank' class="card chat_card">
-                        <h4>Chat</h4>
-                    </div>
-                    <div class="card">
-                        <h4>Cours</h4>
-                    </div>
                     <div class="card emploi_card">
                         <h4>Emploi</h4>
                     </div>
                     <div class="card ">
-                        <h4>Anouncement</h4>
+                        <h4>Annonce</h4>
+                    </div>
+                    <div class="card">
+                        <h4>Cours</h4>
+                    </div>
+                    <div target='_blank' class="card chat_card disabled-card">
+                        <h4>Chat</h4>
                     </div>
                 </div>
             </section>
-            <section class='messages-outer-container' id='updated-container'>
-                <h1>latest messages: </h1>
-                <div class="messages-container">
-                    <div class="one-message-container">
-                        <div class="user-identifier">
-                            <span class="message-user-name">Ilias</span>
-                            <span class="message-datetime">2023-05-17 6:23pm</span>
-                        </div>
-                        <p>Hello</p>
-                    </div>
-
-                    <div class="one-message-container my-message">
-                        <div class="user-identifier">
-                            <span class="message-user-name">John</span>
-                            <span class="message-datetime">2023-05-17 7:45pm</span>
-                        </div>
-                        <p>How are you doing?</p>
-                    </div>
-
-                    <div class="one-message-container">
-                        <div class="user-identifier">
-                            <span class="message-user-name">Sarah</span>
-                            <span class="message-datetime">2023-05-17 8:12pm</span>
-                        </div>
-                        <p>Hey there!</p>
-                    </div>
-
-                    <div class="one-message-container">
-                        <div class="user-identifier">
-                            <span class="message-user-name">Ilias</span>
-                            <span class="message-datetime">2023-05-17 8:35pm</span>
-                        </div>
-                        <p>I'm doing well, thank you!</p>
-                    </div>
-                </div>
-                <section class='message-writing-container'>
-                    <input type="text" placeholder='type message here..'>
-                    <input type="button" value='send'>
-                </section>
+            <section class='messages-outer-container disabled-section' id='updated-container'>
+               
             </section>
         </main> 
     </section>

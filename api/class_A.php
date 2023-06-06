@@ -37,7 +37,16 @@ if(check_general_authentication()){
                     // file_put_contents($_SERVER['DOCUMENT_ROOT'].'/resources/pdf/emploi_du_temps/'.$in_server_pdf_name, $pdf);
                     // $saving_pdf_success = true;
                     // $pdf_name = '/resources/pdf/emploi_du_temps/'.$in_server_pdf_name;
-                    echo Class_cls::add_emploi($class_id, $emploi_pdf);
+                    $success = Class_cls::add_emploi($class_id, $emploi_pdf);
+                    if($success){
+                        echo json_encode(['success_state'=> true, 'title' => 'Great!', 'message' => 'emploi was uploaded successfully.']);
+                        exit();
+                    }else{
+                        echo json_encode(['success_state'=> false, 'title' => 'Failed!', 'message' => 'something went wrong please check every thing is correct and try again.']);
+                        exit();
+                    }
+                }else{
+                    header('location:../page/create_article_ad.php?success=something went wrong');
                 }
             
             }catch(RuntimeException $e){

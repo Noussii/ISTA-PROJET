@@ -79,7 +79,7 @@ function add_header_and_left_side_after_auth(){
         include '../page_components/feed_left_side_teacher.php';
     }  
     else if ($_SESSION['user_type'] === 'administration'){
-        include '../page_components/header_teacher.php';
+        include '../page_components/header_administration.php';
         include '../page_components/feed_left_side_administration.php';
     }
 

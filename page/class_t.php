@@ -29,7 +29,7 @@ if(return_user_type() !== 'teacher') {
                         <h4>Cours</h4>
                     </div>
                     <div class="card ">
-                        <h4>Anouncement</h4>
+                        <h4>Annonce</h4>
                     </div>
                 </div>
             </section>
