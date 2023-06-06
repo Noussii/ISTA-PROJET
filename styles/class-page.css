@@ -24,6 +24,13 @@
     color: white;
     background-color: var(--sn-dark-blue);
 }
+
+.disabled-card{
+    background-color: lightgray;
+}
+.disabled-section{
+    background-color: gray;
+}
 iframe{
     width: 100%;
     height: auto;

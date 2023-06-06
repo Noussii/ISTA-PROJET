@@ -1,9 +1,4 @@
 <?php
-if(isset($_SESSION['user_type']) && isset($_SESSION['user_id'])){
-    
-}
-
-// new User(12344);
 
 ?>
 
@@ -41,7 +36,7 @@ if(isset($_SESSION['user_type']) && isset($_SESSION['user_id'])){
         backdrop-filter: blur(5px); /* Main effect */
     }
     .header-one-notification{
-        background-color: rgb(248,248,248);
+        background-color: transparent;
         padding: 10px;
         min-height: 60px;
         width: 100%;
@@ -196,10 +191,8 @@ body{
 </style>
 
 
-
-
-
 <header class="header">
+
         <div class="header-logo-container">
             <button class='left-side-visibility-btn' onclick="leftSideVisibilityHandler()">|||</button>
             <a href="./feed.php">
@@ -213,7 +206,6 @@ body{
             <button class="header-all-button">
                 <nav class="header-drop-down-menu">
                     <a class="drop-down-menu-item" href="../index.php?acc=1">Page d'accueil</a>
-                    <a class="drop-down-menu-item" href="../page/profile.php">Profile</a>
                     <a class="drop-down-menu-item" href="../page/help.php">Aide</a>
                     <a class="drop-down-menu-item" href="../api/logout.php">Déconnexion</a>
                 </nav>
