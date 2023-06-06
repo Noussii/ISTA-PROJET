@@ -90,7 +90,7 @@
             <span class='profile-img'></span>
             <span class='profile-right-text'>
                 <span><?= $_SESSION['first_name'] ?></span>
-                <span style="font-size: 10px;">profile</span>
+                <span style="font-size: 10px;">Profile</span>
             </span>
         </a>
 
