@@ -50,6 +50,10 @@ check_general_authentication();
                 </form>
             </section>
 
+            <dialog id='success-dialog'>
+            </dialog>
+
+
             <!-- <section>
                 <div class="top-cards-container">
                     <div id='emploi_btn' class="card">

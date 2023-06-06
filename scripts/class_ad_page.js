@@ -22,11 +22,42 @@ function send_emploi_pdf(ref){
                 "enctype": "multipart/form-data"
             }
         })
-        .then(res => res.text())
-        .then(data => console.log(data))
+        .then(res => res.json())
+        .then(data => showMyModal(data.title, data.message, 4000, data.success_state))
         .catch(err => console.log(err))
     }
+    else{
+        showMyModal('Failed!', 'please upload a time schedule.',  4000, 'orange');
+    }
+    pdf_inp.value = '';
 }
+
+function showMyModal(title, message, duration, success){
+        let dialog = document.getElementById('success-dialog');
+        dialog.innerHTML = '';
+        let title_element = document.createElement('h1');
+        let message_element = document.createElement('p');
+        message_element.innerText = message;
+        title_element.innerText = title;
+        
+        if(success && success !== true){
+            dialog.style.border = '3px solid '+success;
+        }
+
+        if(success === false){
+            dialog.style.border = '3px solid red';
+        }
+
+
+        dialog.append(title_element, message_element);
+        dialog.showModal()
+        if(duration && typeof duration == 'number'){
+            setTimeout(() => {
+                dialog.close();
+            }, duration);
+        }
+}
+
 
 function get_selected_class_id(){
     let inp = document.querySelector("input[list='class-list']");
@@ -45,4 +76,4 @@ document.getElementById('pdf-updload-btn').addEventListener('click', function(e)
     send_emploi_pdf(get_selected_class_id());
 })
 
-document.querySelector('#pdf-updload-btn').addEventListener('click', send_emploi_pdf);
+// document.querySelector('#pdf-updload-btn').addEventListener('click', send_emploi_pdf);

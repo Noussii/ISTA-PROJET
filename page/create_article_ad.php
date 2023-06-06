@@ -27,7 +27,7 @@ check_general_authentication();
                         <label for="title"><h3>Titre:</h3></label>
                         <input id='title' name='title' type="text" placeholder='Entrez le titre' required>
                     </div>
-                    <div class="upload-img">
+                    <div class="upload-img form-section">
                         <h3>Veuillez sélectionner l'image que vous souhaitez télécharger:</h3>
                         <input onchange="updatePreview(this, 'image-preview')" class='form-control-file is-invalid'  type="file" name="key_img" id="key_img" accept='.png, .jpeg, .jpg'>
                         <div id='image-preview-container'>
@@ -35,7 +35,7 @@ check_general_authentication();
                         </div>
                     </div>
                     
-                    <div class="article-body">
+                    <div class="article-body form-section">
                         <h3>Corps de l'article :</h3>
                         <textarea required name="body" id="body" rows="10" placeholder='Votre texte ici...' style='width: 100%; max-width: 100%; min-width: 100%; height: auto;'></textarea>
                     </div>
@@ -50,7 +50,6 @@ check_general_authentication();
         </main> 
     </section>
     <dialog id='success-dialog'>
-        <h1>Résultat :</h1>
     </dialog>
     <script src="../scripts/create_article_ad_page.js"></script>
 </body>

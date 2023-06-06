@@ -29,12 +29,12 @@ if(check_general_authentication()){
                 if($saving_img_success && $img_name){
                     //create_new_article(int $publisher_id, int $publisher_type, $title, $body, $resources_arr);
                     // img_name comes from the lines above after checking for errors. 
-                    $sucess = Article::create_new_article((int) $_SESSION['user_id'], $_SESSION['user_type'], $title, $body, $img_name, null);
-                    if($sucess){
-                        header('location:../page/create_article_ad.php?success=1');
+                    $success = Article::create_new_article((int) $_SESSION['user_id'], $_SESSION['user_type'], $title, $body, $img_name, null);
+                    if($success){
+                        header('location:../create_article_ad.php?dt='.json_encode(['success_state'=> true, 'title' => 'Great!', 'message' => 'article was published successfully.']));
                         exit();
                     }else{
-                        header('location:../page/create_article_ad.php?success=0');
+                        header('location:../create_article_ad.php?dt='.json_encode(['success_state'=> false, 'title' => 'failed!', 'message' => 'something went wrong please check every thing is correct and try again.']));
                         exit();
                     }
                 }
@@ -46,12 +46,12 @@ if(check_general_authentication()){
         if(!empty($title) && !empty($body)){
             //create_new_article(int $publisher_id, int $publisher_type, $title, $body, $resources_arr);
             // img_name comes from the lines above after checking for errors. 
-            $sucess = Article::create_new_article((int) $_SESSION['user_id'], $_SESSION['user_type'], $title, $body, null, null);
-            if($sucess){
-                header('location:../page/create_article_ad.php?success=1');
+            $success = Article::create_new_article((int) $_SESSION['user_id'], $_SESSION['user_type'], $title, $body, null, null);
+            if($success){
+                header('location:../page/create_article_ad.php?dt='.json_encode(['success_state'=> true, 'title' => 'Great!', 'message' => 'article was published successfully.']));
                 exit();
             }else{
-                header('location:../page/create_article_ad.php?success=0');
+                header('location:../page/create_article_ad.php?dt='.json_encode(['success_state'=> false, 'title' => 'failed!', 'message' => 'something went wrong please check every thing is correct and try again.']));
                 exit();
             }
             

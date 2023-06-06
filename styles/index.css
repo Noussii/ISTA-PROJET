@@ -182,11 +182,21 @@ header[class="h-main"] a {
 
 /* cards section */
 .card {
-    /* background-color: blue; */
-    height: 100%;
-    padding-bottom: 50px;
-    background-color: rgb(237, 239, 244);
+  /* background-color: blue; */
+  height: 100%;
+  padding-bottom: 50px;
+  background-color: rgb(237, 239, 244);
 }
+.formateur-card{
+  background-color: rgb(193, 255, 193);
+}
+.stagiaire-card{
+  background-color: rgb(193, 227, 255);
+}
+.annonces-card{
+  background-color: rgb(224, 224, 224);
+}
+
 .card-title {
   font-size: 24px;
 }
@@ -205,9 +215,8 @@ header[class="h-main"] a {
     left: calc(2.5%);
 }
 .cc:hover{
-    background-color: #f26522;
+    background-color: #000000;
     color: white;
-    font-weight: bolder;
 }
 /* CSS of the slide-show section*/
 .banner_taital {
