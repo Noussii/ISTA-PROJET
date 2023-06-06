@@ -25,36 +25,36 @@ check_authentication_with_redirection_logged_in('./feed.php')
 
             <div class="text-center">
                 <a href="../index.php"><img src="../media/logo.png" alt="" width="88" height="100"></a>
-                <h1 class="text-dark h3 mt-3">Login</h1>
+                <h1 class="text-dark h3 mt-3">Connexion</h1>
             </div>
             <form class="mt-4" action="../api/authentication.php" method="post">
                 <div class="input-group uf-input-group input-group-lg mb-3">
                     <span class="input-group-text fa fa-user"></span>
-                    <input type="text" class="form-control" name="email" id="email" placeholder="Email address" required >
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Adresse e-mail" required >
                 </div>
                 <div class="input-group uf-input-group input-group-lg mb-3">
                     <span class="input-group-text fa fa-lock"></span>
-                    <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" required>
                 </div>
                 <!-- <div class="d-flex mb-3 justify-content-between">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input uf-form-check-input" id="exampleCheck1">
                         <label class="form-check-label text-dark" for="exampleCheck1">Remember Me</label>
                     </div>
-                    <a href="#">Forgot password?</a>
+                    <a href="#">Mot de passe oublié ?</a>
                 </div> -->
                 <div class="d-grid mb-4">
-                    <button type="submit"  name="submit" class="btn btn-cc btn-lg text-white">Login</button>
+                    <button type="submit"  name="submit" class="btn btn-cc btn-lg text-white">Connexion</button>
                 </div>
-            <!-- Alert-message section -->
+                <!-- Alert-message section -->
                 <div class="alert alert-danger alert-dismissible fade" id="alert-message" style="display:none;">
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" onclick="Close()"></button>
-                    <span class="err-title">Something went wrong: Please enter a valid email and password.</span>
+                    <span class="err-title">Quelque chose s'est mal passé : Veuillez entrer une adresse e-mail et un mot de passe valides.</span>
                 </div>
 
                 <div class="d-flex mb-3">
                     <div class="dropdown-divider m-auto w-25"></div>
-                    <small class="text-nowrap text-dark"><a href="../page/login-help.html">Get help</a> </small>
+                    <small class="text-nowrap text-dark"><a href="../page/login-help.html">Obtenir de l'aide</a> </small>
                     <div class="dropdown-divider m-auto w-25"></div>
                 </div>
 

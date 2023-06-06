@@ -45,12 +45,12 @@ check_general_authentication();
                         <input type="file" name='emploiPdf' accept='application/pdf'>
                     </div>
                     <div class="form-row">
-                        <input type="submit" value='upload' id='pdf-updload-btn'>
+                        <input type="submit" value='Envoyer' id='pdf-updload-btn'>
                     </div>
                 </form>
             </section>
 
-            <section style='display: none;'>
+            <!-- <section>
                 <div class="top-cards-container">
                     <div id='emploi_btn' class="card">
                         <h4>Ajouter un emploi :</h4>
@@ -65,7 +65,7 @@ check_general_authentication();
                         <h4>Créer une classe :</h4>
                     </div>
                 </div>
-            </section>
+            </section> -->
         </main> 
     </section>
     

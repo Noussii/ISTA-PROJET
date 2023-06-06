@@ -90,18 +90,18 @@
             <span class='profile-img'></span>
             <span class='profile-right-text'>
                 <span><?= $_SESSION['first_name'] ?></span>
-                <span style="font-size: 10px;">profile</span>
+                <span style="font-size: 10px;">Profile</span>
             </span>
         </a>
 
         <a href='../page/feed.php' class="left-side-button">
-            <img src="../media/icons/home_icon_feed.png"> <span>Feed&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <img src="../media/icons/home_icon_feed.png"> <span>Flux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
         <a href='../page/notes_t.php' class="left-side-button">
             <img src="../media/icons/notes_icon_feed.png"> <span>Notes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
         <a href='../page/class_t.php' class="left-side-button">
-        <img src="../media/icons/class_icon_feed.png"> <span>Class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <img src="../media/icons/class_icon_feed.png"> <span>Classe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
         <a href='../index.php' class="left-side-button">
         <img src="../media/icons/homework_icon_feed.png"> <span>Homework&nbsp;&nbsp;</span>
