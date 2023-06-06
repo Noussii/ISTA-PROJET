@@ -36,13 +36,13 @@ check_authentication_with_redirection_logged_in('./feed.php')
                     <span class="input-group-text fa fa-lock"></span>
                     <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
                 </div>
-                <div class="d-flex mb-3 justify-content-between">
+                <!-- <div class="d-flex mb-3 justify-content-between">
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input uf-form-check-input" id="exampleCheck1">
                         <label class="form-check-label text-dark" for="exampleCheck1">Remember Me</label>
                     </div>
                     <a href="#">Forgot password?</a>
-                </div>
+                </div> -->
                 <div class="d-grid mb-4">
                     <button type="submit"  name="submit" class="btn btn-cc btn-lg text-white">Login</button>
                 </div>
