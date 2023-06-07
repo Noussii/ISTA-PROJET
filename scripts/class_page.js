@@ -41,92 +41,71 @@ function isertMessenger(){
 
 }
 
-function TempEmploiInsertion(){
-    let outerContainer =document.querySelector('.main-container-reactive')
+
+function get_emploi(){
+    fetch('../api/class_A.php?req=emploi')
+    .then(res => res.text())
+    .then(link => TempEmploiInsertion(link))
+    .catch(err => console.log(err));
+}
+function TempEmploiInsertion(emploi_link){
+    let outerContainer =document.querySelector('#updated-container');
+    outerContainer.style.backgroundColor = 'white';
         outerContainer.innerHTML = `
-        <section>
-        <div class="top-cards-container">
-        <div target='_blank' href='../api/class_A.php?req=emploi' class="card" onclick='TempMessengerInsertion()'>
-            <h4>Chat</h4>
-        </div>
-        <div class="card">
-            <h4>Cours</h4>
-        </div>
-        <div class="card emploi_card" onclick='TempEmploiInsertion()'>
-            <h4>Emploi</h4>
-        </div>
-        <div class="card ">
-            <h4>Anouncement</h4>
-        </div>
-        </div>
-        </section>
-        <section id='iframe-section'>
-            <iframe src='../resources/pdf/emploi_du_temps/ffa77b4817a99535402f18f43f5d17978c79b43d3e47ae0fd6199bbd279f1870.pdf'></iframe>
+        <section id='iframe-section' style='margin-top: 20px;'>
+            <iframe src='${emploi_link}'></iframe>
         </section>
                 `;
 }
 
 function TempMessengerInsertion(){
-    let outerContainer =document.querySelector('.main-container-reactive')
+    let outerContainer =document.querySelector('#updated-container')
+    outerContainer.style.backgroundColor = 'rgb(230,230,230)';
         outerContainer.innerHTML = `
-        <section>
-        <div class="top-cards-container">
-        <div target='_blank' href='../api/class_A.php?req=emploi' class="card" onclick='TempMessengerInsertion()'>
-            <h4>Chat</h4>
-        </div>
-        <div class="card">
-            <h4>Cours</h4>
-        </div>
-        <div class="card emploi_card" onclick='TempEmploiInsertion()'>
-            <h4>Emploi</h4>
-        </div>
-        <div class="card ">
-            <h4>Anouncement</h4>
-        </div>
-        </div>
-        </section>
-            <section class='messages-outer-container'>
-            <h1>latest messages: </h1>
-            <div class="messages-container">
+        <section class='messages-outer-container' id='updated-container'>
+        <h1>the following section will be added on later updates</h1>
+        <h1>Derniers messages :</h1>
+        <div class="messages-container">
             <div class="one-message-container">
-            <div class="user-identifier">
-            <span class="message-user-name">Ilias</span>
-            <span class="message-datetime">2023-05-17 6:23pm</span>
+                <div class="user-identifier">
+                    <span class="message-user-name">Ilias</span>
+                    <span class="message-datetime">2023-06-07 6:23pm</span>
+                </div>
+                <p>Salut</p>
             </div>
-            <p>Hello</p>
-            </div>
-            
+
             <div class="one-message-container my-message">
-            <div class="user-identifier">
-            <span class="message-user-name">John</span>
-            <span class="message-datetime">2023-05-17 7:45pm</span>
+                <div class="user-identifier">
+                    <span class="message-user-name">SNOUSSI</span>
+                    <span class="message-datetime">2023-06-07 7:45pm</span>
+                </div>
+                <p>Bonjour !</p>
             </div>
-            <p>How are you doing?</p>
-            </div>
-            
+
             <div class="one-message-container">
                 <div class="user-identifier">
-                <span class="message-user-name">Sarah</span>
-                    <span class="message-datetime">2023-05-17 8:12pm</span>
+                    <span class="message-user-name">Ilias</span>
+                    <span class="message-datetime">2023-06-07 8:12pm</span>
                 </div>
-                <p>Hey there!</p>
-                </div>
-                
-                <div class="one-message-container">
+                <p>Demain la compétition</p>
+            </div>
+
+            <div class="one-message-container">
                 <div class="user-identifier">
-                <span class="message-user-name">Ilias</span>
-                <span class="message-datetime">2023-05-17 8:35pm</span>
+                    <span class="message-user-name">SNOUSSI</span>
+                    <span class="message-datetime">2023-06-07 8:35pm</span>
                 </div>
-                <p>I'm doing well, thank you!</p>
-                </div>
-                </div>
-                </section>
-                <section class='message-writing-container'>
-                <input type="text" placeholder='type message here..'>
-                <input type="button" value='send'>
-                </section>
-                `;
-        }
+                <p>Oui, on va gagner sans doute.</p>
+            </div>
+        </div>
+        <section class='message-writing-container'>
+            <input type="text" placeholder='Saisissez votre message ici...'>
+            <input type="button" value='send'>
+        </section>
+    </section>`;
+}
             
-            emploi_btn.onclick = TempEmploiInsertion;
-            chat_btn.onclick = TempMessengerInsertion;
+emploi_btn.onclick = get_emploi;
+chat_btn.onclick = TempMessengerInsertion;
+
+document.body.onload = get_emploi

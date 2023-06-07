@@ -75,6 +75,15 @@ top_filter_btn.onclick = function (e){
     });
 }
 
+module_select.addEventListener('change', function(){
+    fetch('../api/notes.php?q=notes&subj='+module_select.value)
+    .then(res => res.json())
+    .then(data => {
+        populateTable(data);
+        initial_global_notes = data;
+        set_notes_from_dom_to_global_obj(initial_global_notes);
+    });
+})
 
 // filter_notes_to_be_updated filters notes from the dom and compare them to the initial notes
 // retreived from the server initially it checkes if there is a change made by the teacher
@@ -129,7 +138,7 @@ function set_notes_from_dom_to_global_obj(target_notes_obj){
 
 
 let notes_dialog = document.querySelector('#notes_confirmation_dialog');
-document.querySelector('input[value="submit notes"]').onclick = function (e){
+document.querySelector('input[class="submit-notes"]').onclick = function (e){
     notes_dialog.showModal();
     document.querySelector('#close_notes_modal_btn').onclick = function(e){
         notes_dialog.close();

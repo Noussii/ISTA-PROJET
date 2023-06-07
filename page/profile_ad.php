@@ -60,9 +60,6 @@ if(check_general_authentication()){
                     </div>
                 </div>
             </section>
-            <section>
-                <p> <b>Check your data :</b> <br><br> if something wrong please contact you local administration.</p>
-            </section>
         </main>
     </section>
 </body>
