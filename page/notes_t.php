@@ -26,7 +26,7 @@ check_general_authentication();
     <section class='teacher_top_section'>
         <div class='class-module-div'>
         <div>
-            <label for="classes_select">class: </label>
+            <label for="classes_select">Classe: </label>
             <select name="classes" id="classes_select">
                 <?php
         $teacher = new Teacher($_SESSION['user_id']);
@@ -39,24 +39,24 @@ check_general_authentication();
         </select>
         </div>
         <div>
-            <label for="module">module</label>
+            <label for="module">Module: </label>
             <select name="module" id="module">
             </select>
         </div>
         </div>
-                <input type="button" value="filter" id='top_filter_btn'>
+                <input type="button" value="Filtrer" id='top_filter_btn'>
             </section>
             
             <section>
-        <h1>manipulate students marks:</h1>
+        <h1>Remplir/Modifier les notes des stagiaires:</h1>
         
         <table id='notes-table' border='1'>
     <thead>
         <tr>
-            <th>student</th>
-            <th>controle 1</th>
-            <th>controle 2</th>
-            <th>controle 3</th>
+            <th>stagiaire</th>
+            <th>Contrôle 1</th>
+            <th>Contrôle 2</th>
+            <th>Contrôle 3</th>
             <th>EFM</th>
         </tr>
     </thead>
@@ -67,13 +67,13 @@ check_general_authentication();
     </table>
     </section>
     <section>
-        <input class='submit-notes' type="submit" value="submit notes">
+        <input class='submit-notes' type="submit" value="Soumettre les notes">
     </section>
 </main>
 </section>
 <dialog data-modal id='notes_confirmation_dialog'>
-    <h1>are you sure you want to update students notes.</h1>
-    <p>these changes will be shown to students as their new marks</p>
+    <h1>Êtes-vous sûr de vouloir mettre à jour les notes des stagiaires ?</h1>
+    <p>Ces modifications seront affichées aux staigiares en tant que leurs nouvelles notes.</p>
     <div class='buttons-div'>
         <button id='close_notes_modal_btn'>cancel</button>
         <button id='confirme_notes_modal_btn'>confirme</button>

@@ -182,11 +182,21 @@ header[class="h-main"] a {
 
 /* cards section */
 .card {
-    /* background-color: blue; */
-    height: 100%;
-    padding-bottom: 50px;
-    background-color: rgb(237, 239, 244);
+  /* background-color: blue; */
+  height: 100%;
+  padding-bottom: 50px;
+  background-color: rgb(237, 239, 244);
 }
+.formateur-card{
+  background-color: rgb(193, 255, 193);
+}
+.stagiaire-card{
+  background-color: rgb(193, 227, 255);
+}
+.annonces-card{
+  background-color: rgb(224, 224, 224);
+}
+
 .card-title {
   font-size: 24px;
 }
@@ -205,9 +215,8 @@ header[class="h-main"] a {
     left: calc(2.5%);
 }
 .cc:hover{
-    background-color: #f26522;
+    background-color: #000000;
     color: white;
-    font-weight: bolder;
 }
 /* CSS of the slide-show section*/
 .banner_taital {
@@ -390,4 +399,71 @@ footer section div h6{
   align-items: center;
   max-height: 100px;
   overflow: hidden;
+}
+
+.section-title-custom {
+  padding: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #252525;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.section-title-custom::before {
+  content: "";
+  width: 20px;
+  height: 3px;
+  background-color: #007bff;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.about-heading-custom {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.about-description-custom {
+  font-size: 20px;
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+.about-list-custom {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.about-list-custom li {
+  margin-bottom: 10px;
+}
+
+.about-list-custom li i {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.read-more-btn-custom {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.read-more-btn-custom:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.cc-2 {
+  background-color: #252525;
+  color: white;
 }

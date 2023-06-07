@@ -10,6 +10,14 @@
 </head>
 <body>
     <?php include_once '../page_components/header_public.php'; ?>
-    
+    <section class="outer-container">
+        <main class='main-container-reactive' style='max-width: 1000px'>
+        <h1 class='top-title'>Consulter les derniers articles : </h1>
+            <!-- articles will be added here dynamically -->
+        </main>
+    </section>
+
+    <?php include_once '../page_components/footer_public.php'; ?>
+    <script src="../scripts/updates-page.js"></script>
 </body>
 </html>

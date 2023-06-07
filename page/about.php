@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Corner</title>
     <link rel="stylesheet" href="../styles/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../styles/about.css">
 </head>
 <body>
     <?php include '../page_components/header_public.php';?>
+
+
+
+    <section class="outer-container">
+        <main class='main-container-reactive'>
+            <section></section>
+        </main>
+    </section>
+
     <main class="contaier-fluid">
         <section class="image-container"> 
             <img src="../media/Slider-Education.jpg" alt="image not found"  id="img-main" class="-webkit-tap-highlight-color:transparent">
-            <div class="image-title">About us</div>
+            <div class="image-title">À propos de nous</div>
         </section>
 
         <section class=" container-fluid">
@@ -22,7 +31,7 @@
                     <img src="../media/png2.png" alt="image not found">
                 </div>
                 <div class=" col-md-6 text-center">
-                    <h1 class=" fw-bold">About us</h1>
+                    <h1 class=" fw-bold">À propos de nous</h1>
                     <p class="p-about">Ista lazaret Oujda is a vocational training institute located in Oujda, a city in northeastern Morocco.
                          The institute offers a range of technical and professional training programs designed to prepare students for careers in various fields.
                         </p>

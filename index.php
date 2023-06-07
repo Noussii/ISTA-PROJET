@@ -62,7 +62,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-sm-4">
-                <div class="card shadow border-0">
+                <div class="card shadow border-0 annonces-card">
                     <div class="card-body text-center">
                         <i class="fa fa-bullhorn fa-3x mb-3"></i>
                         <h5 class="card-title mb-2">Les dernières annonces</h5>
@@ -74,7 +74,7 @@
                 </div>
             </div>
             <div class="col-sm-4">
-                <div class="card shadow border-0">
+                <div class="card shadow border-0 formateur-card">
                     <div class="card-body text-center">
                         <i class="fa fa-chalkboard-teacher fa-3x mb-3"></i>
                         <h5 class="card-title mb-2">Espace Formateur</h5>
@@ -86,7 +86,7 @@
                 </div>
             </div>
     <div class="col-sm-4">
-        <div class="card shadow border-0">
+        <div class="card shadow border-0 stagiaire-card">
             <div class="card-body text-center">
                 <i class="fa fa-graduation-cap fa-3x mb-3"></i>
                 <h5 class="card-title mb-2">Espace stagiaire</h5>
@@ -104,21 +104,61 @@
     <!-- Latest Articles Section -->
 <section id="latest-articles">
     <div class="container">
-      <h2 class="text-center mb-5 fw-bold">Latest Articles</h2>
+      <h2 class="text-center mb-5 fw-bold">Derniers articles</h2>
       <div class="row" id="articles-container">
         <!-- Articles seront ajoutés ici dynamiquement via JavaScript -->
       </div>
     </div>
 </section>
 
+<!-- Ista Presentation Section -->
+
+<section class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="./media/ista.jpg" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+
+                <h1 class="mb-4 fw-bold">Bievenue à ISTA-LAZARET</h1>
+                <h6 class="section-title-custom bg-white text-start text-primary pe-3">Description</h6>
+                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                <div class="row gy-2 gx-4 mb-4">
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2" style="color: #18263e;"></i>Des programmes éducatifs innovants</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2" style="color: #252525;"></i>Des formateurs passionnés et expérimentés</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2" style="color: #252525;"></i>Des installations modernes et bien équipées</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2" style="color: #252525;"></i>Des activités parascolaires variées</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2" style="color: #252525;"></i>Une approche pédagogique axée sur le développement intégral de chaque stagiaire</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"  style="color: #252525;"></i>International Certificate</p>
+                    </div>
+                </div>
+                <a class="btn  py-3 px-5 mt-2 cc-2" href="./page/login.php">Découvrir</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Archive Section -->
 
 
-        <!-- FAQ section -->
-        <section id="faq">
+<!-- FAQ section -->
+<section id="faq">
   <div class="container">
-    <h2 class="text-center mb-5 fw-bold">Frequently Asked Questions</h2>
+    <h2 class="text-center mb-5 fw-bold">Questions fréquemment posées</h2>
     <div class="accordion" id="accordionExample">
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
@@ -135,24 +175,25 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            <i class="fas fa-question-circle"></i> Question 2
+            <i class="fas fa-question-circle"></i> Comment puis-je accéder à mes notes ?
           </button>
         </h2>
         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            Answer 2
+          Pour accéder à vos notes en ligne, il vous suffit de vous connecter à votre compte étudiant fourni par l'administration .
+           Une fois connecté, rendez-vous dans la section "Notes"  où vous trouverez la liste des matières avec les notes correspondantes. 
           </div>
         </div>
       </div>
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <i class="fas fa-question-circle"></i> Question 3
+            <i class="fas fa-question-circle"></i> Où puis-je trouver les derniers articles et actualités de l'établissement ?
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
           <div class="accordion-body">
-            Answer 3
+          Les derniers articles et actualités de l'établissement sont disponibles dans la section "Flux" de votre profil ou sur la page dédiée aux articles sur le site web.
           </div>
         </div>
       </div>
@@ -175,10 +216,10 @@
             <!-- Do not delete this line; shown only in sm / used to separate divs with hr -->
             <hr class="w-100 d-md-none" />
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                    <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-                    <p><a href="./page/about.php" class="text-white">About us</a> </p>
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Liens Utiles</h6>
+                    <p><a href="./page/about.php" class="text-white">À propos de nous</a> </p>
                     <p><a href="./page/article.php" class="text-white">Articles</a></p>          
-                    <p><a href="./page/updates.php" class="text-white">Updates</a></p>           
+                    <p><a href="./page/updates.php" class="text-white">Actualités</a></p>           
                     <p><a href="./page/newsLetter.php" class="text-white">Newsletter</a></p>
                 </div>
             <hr class="w-100 d-md-none" />
@@ -204,31 +245,6 @@
 
     <script src="/scripts/index.js"></script>
     <script src="./styles/bootstrap/js/bootstrap.min.js"></script>
-<script>const articlesContainer = document.getElementById('articles-container');
 
-fetch('./api/articles_A.php?q=latest&n=5')
-  .then(response => response.json())
-  .then(data => {
-    data.forEach(article => {
-      const articleElement = document.createElement('div');
-      articleElement.classList.add('col-md-6', 'col-lg-4');
-      articleElement.innerHTML = `
-        <div class="article">
-          <h3>${article.title}</h3>
-          <p>${article.description}</p>
-        </div>
-      `;
-      articlesContainer.appendChild(articleElement);
-    });
-  })
-  .catch(error => console.error(error));
-
-//********************** */
-
-
-
-//************************** */
-
-</script>
 </body>
 </html>

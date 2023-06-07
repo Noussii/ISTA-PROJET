@@ -11,7 +11,6 @@ check_general_authentication();
     <link rel="stylesheet" href="../styles/class-ad-page.css" >
     <title>corner - class</title>
     <link rel="icon" type="image/x-icon" href="../media/fav.ico">
-
 </head>
 <body>
     <?php 
@@ -19,10 +18,46 @@ check_general_authentication();
     ?>
     <section class='outer-container'>
         <main class='main-container-reactive'>
+
+
+        <?php 
+            require_once '../classes/Class.php';
+            $all_classes = Class_cls::get_all_classes_data();
+        ?>
+
             <section>
+                    <div class="form-row-close-big">
+                        <label for="class-list-inp">Sélectionnez une classe : </label>
+
+                        <input list='class-list' name='selected_class' id='class-list-inp' autofocus>
+                        <datalist id="class-list" value='Edge' required>
+
+                        <?php for($i = 0; $i < count($all_classes); $i++){ ?>
+                            <option id="<?=$all_classes[$i]['class_id']?>" value="<?= $all_classes[$i]['name'] ?>" >
+                        <?php } ?>
+                        </datalist>
+                    </div>
+            </section> 
+            <section>
+                <h1>Ajouter un emploi :</h1>
+                    <div class="form-row">
+                        <label for="emploi">Emploi pdf:</label>
+                        <input type="file" name='emploiPdf' accept='application/pdf'>
+                    </div>
+                    <div class="form-row">
+                        <input type="submit" value='Envoyer' id='pdf-updload-btn'>
+                    </div>
+                </form>
+            </section>
+
+            <dialog id='success-dialog'>
+            </dialog>
+
+
+            <!-- <section>
                 <div class="top-cards-container">
                     <div id='emploi_btn' class="card">
-                        <h4>Add Emploi</h4>
+                        <h4>Ajouter un emploi :</h4>
                     </div>
                     <div class="card emploi_card">
                         <h4>Emploi</h4>
@@ -31,24 +66,13 @@ check_general_authentication();
                         <h4>Connections</h4>
                     </div>
                     <div id='creat_class_btn' target='_blank' class="card chat_card">
-                        <h4>Creat Class</h4>
+                        <h4>Créer une classe :</h4>
                     </div>
                 </div>
-            </section>
-            <section>
-                <h1>Add emploi:</h1>
-                <form id='add_emploi_form' action="../api/upload.php" method='post' enctype='multipart/form-data'>
-                    <div class="form-row">
-                        <label for="emploi">Emploi pdf:</label>
-                        <input type="file" name='emploiPdf' accept='.pdf'>
-                    </div>
-                    <div class="form-row">
-                        <input type="submit" value='upload'>
-                    </div>
-                </form>
-            </section>
+            </section> -->
         </main> 
     </section>
+    
     <script src="../scripts/class_ad_page.js"></script>
 </body>
 </html>
