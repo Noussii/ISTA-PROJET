@@ -1,0 +1,61 @@
+@import url('./root_styles.css');
+.top-cards-container{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 10px;
+}
+
+.card{
+    height: 80px;
+    width: 150px;
+    border-radius: 10px;
+    /* background: linear-gradient(45deg, yellow, green); */
+    background-color: rgb(0, 255, 183);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-bottom: 3px solid lightgray;
+}
+
+
+.card:hover {
+    cursor: pointer;
+    color: white;
+    background-color: var(--sn-dark-blue);
+}
+
+
+.disabled-card{
+    background-color: lightgray;
+}
+.disabled-section{
+    background-color: gray;
+}
+
+.from-section{
+    padding: 10px; 
+    border: 1px solid lightgray;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+textarea{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    background-color: rgb(246, 246, 246);
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 20px;
+}
+input[type='submit'], input[type='reset']{
+    margin-top: 20px;
+    background-color: green;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}

@@ -12,7 +12,7 @@ if(return_user_type() !== 'teacher') {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/class-page.css" >
+    <link rel="stylesheet" href="../styles/class-page-t.css" >
     <title>corner - class</title>
     <link rel="icon" type="image/x-icon" href="../media/fav.ico">
 
@@ -25,19 +25,26 @@ if(return_user_type() !== 'teacher') {
         <main class='main-container-reactive'>
             <section>
                 <div class="top-cards-container">
-                    <div class="card">
-                        <h4>Cours</h4>
-                    </div>
-                    <div class="card ">
+                    
+                    <button type='button' class="card annonce-btn">
                         <h4>Annonce</h4>
-                    </div>
+                    </button>
+                
+                    <button type='button' class="card cours-btn">
+                        <h4>Cours</h4>
+                    </button>
+                    
                 </div>
             </section>
-            <section class='messages-outer-container' id='updated-container'>
-                
+            <section>
+                <label for="class-select">Select a class:</label>
+                <select name="class_list" id="class-select"></select>
+            </section>
+            <section id='updated-container'>
+                <!-- this will change dynamically -->
             </section>
         </main> 
     </section>
-    <script src="../scripts/class_page.js"></script>
+    <script src="../scripts/class_page_t.js"></script>
 </body>
 </html>

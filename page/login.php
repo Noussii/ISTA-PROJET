@@ -35,6 +35,9 @@ check_authentication_with_redirection_logged_in('./feed.php')
                 <div class="input-group uf-input-group input-group-lg mb-3">
                     <span class="input-group-text fa fa-lock"></span>
                     <input type="password" class="form-control" name="password" id="password" placeholder="Mot de passe" required>
+                    <span id="show_hide_pass" onclick="toggle()">
+                        <i class="fa fa-eye"></i>
+                    </span>
                 </div>
                 <!-- <div class="d-flex mb-3 justify-content-between">
                     <div class="form-check">

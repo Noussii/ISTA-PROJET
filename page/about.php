@@ -10,6 +10,15 @@
 </head>
 <body>
     <?php include '../page_components/header_public.php';?>
+
+
+
+    <section class="outer-container">
+        <main class='main-container-reactive'>
+            <section></section>
+        </main>
+    </section>
+
     <main class="contaier-fluid">
         <section class="image-container"> 
             <img src="../media/Slider-Education.jpg" alt="image not found"  id="img-main" class="-webkit-tap-highlight-color:transparent">
