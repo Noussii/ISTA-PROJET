@@ -55,6 +55,7 @@ function populate_artilce(json){
 
     get_publisher_data(json.article_id, json.date_time, json.user_type);
 }
+
 function populate_side_bar(json){
     const side_bar = document.querySelector('#left-side-articles-inner-container');
     json.forEach(article => {

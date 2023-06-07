@@ -1,6 +1,5 @@
 @import url('./root_styles.css');
 
-
 .top-title{
   background-color: white;
   padding: 10px;
@@ -23,13 +22,28 @@
   gap: 20px;
   padding: 10px;
   box-sizing: border-box;
+  animation-name: big-card-appearance;
+  animation-duration: 1s;
 }
+
+@keyframes big-card-appearance {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 .big-card:hover{
   cursor: pointer;
   border-bottom: 1px solid lightgray;
   background-color: rgb(226, 226, 226);
 
 }
+
+
+
 .big-card > .img-container{
   background-color: rgb(221, 221, 221);
   height: 100%;
@@ -41,8 +55,8 @@
   overflow: hidden;
 }
 .img-container > img{
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
+  width: auto;
 }
 .big-card > .txt-container{
   background-color: rgb(243, 243, 243);

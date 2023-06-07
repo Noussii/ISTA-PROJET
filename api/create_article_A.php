@@ -24,6 +24,8 @@ if(check_general_authentication()){
             }
             $title = $_POST['title'];
             $body = $_POST['body'];
+            $title = htmlspecialchars($title);
+            $body = htmlspecialchars($body);
             
             if(!empty($title) && !empty($body)){
                 if($saving_img_success && $img_name){
@@ -31,10 +33,10 @@ if(check_general_authentication()){
                     // img_name comes from the lines above after checking for errors. 
                     $success = Article::create_new_article((int) $_SESSION['user_id'], $_SESSION['user_type'], $title, $body, $img_name, null);
                     if($success){
-                        header('location:../create_article_ad.php?dt='.json_encode(['success_state'=> true, 'title' => 'Great!', 'message' => 'article was published successfully.']));
+                        header('location:../page/create_article_ad.php?dt='.json_encode(['success_state'=> true, 'title' => 'Great!', 'message' => 'article was published successfully.']));
                         exit();
                     }else{
-                        header('location:../create_article_ad.php?dt='.json_encode(['success_state'=> false, 'title' => 'failed!', 'message' => 'something went wrong please check every thing is correct and try again.']));
+                        header('location:../page/create_article_ad.php?dt='.json_encode(['success_state'=> false, 'title' => 'failed!', 'message' => 'something went wrong please check every thing is correct and try again.']));
                         exit();
                     }
                 }
@@ -42,6 +44,9 @@ if(check_general_authentication()){
         }
         $title = $_POST['title'];
         $body = $_POST['body'];
+        $title = htmlspecialchars($title);
+        $body = htmlspecialchars($body);
+        
         
         if(!empty($title) && !empty($body)){
             //create_new_article(int $publisher_id, int $publisher_type, $title, $body, $resources_arr);
