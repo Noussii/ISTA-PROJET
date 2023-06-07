@@ -1,11 +1,11 @@
 <?php
 include_once '../usefulFunctions.php';
 include_once '../classes/Student.php';
+include_once '../classes/Teacher.php';
 include_once '../classes/Class.php';
 
 if(check_general_authentication()){
 
-    $hash = hash('sha256', 'dev101');
     if(isset($_GET['req']) && $_GET['req'] === 'emploi'){
         if($_SESSION['user_type'] === 'student'){
             $emploi_pdf_url = Class_cls::get_emploi_url($_SESSION['user_id']);
@@ -24,7 +24,6 @@ if(check_general_authentication()){
 
     if(return_user_type() === 'administration'){
 
-
         if(isset($_GET['q'], $_GET['cls']) && $_GET['q'] == 'add_emp' && is_numeric($_GET['cls'])){
 
             $class_id = (int) $_GET['cls'];
@@ -32,11 +31,6 @@ if(check_general_authentication()){
             try{
                 $emploi_pdf = $_FILES['emploiPdf'];
                 if($emploi_pdf['tmp_name']){
-                    // $pdf = file_get_contents($emploi_pdf['tmp_name']);
-                    // $in_server_pdf_name = time().'.pdf';
-                    // file_put_contents($_SERVER['DOCUMENT_ROOT'].'/resources/pdf/emploi_du_temps/'.$in_server_pdf_name, $pdf);
-                    // $saving_pdf_success = true;
-                    // $pdf_name = '/resources/pdf/emploi_du_temps/'.$in_server_pdf_name;
                     $success = Class_cls::add_emploi($class_id, $emploi_pdf);
                     if($success){
                         echo json_encode(['success_state'=> true, 'title' => 'Great!', 'message' => 'emploi was uploaded successfully.']);
@@ -54,11 +48,18 @@ if(check_general_authentication()){
                 header('location:../page/create_article_ad.php?success=something went wrong');
                 exit();
             }
-
         }
-
-
     }
-
-
+    if($_SESSION['user_type'] === 'teacher' && isset($_GET['q'])){
+        if($_GET['q'] === 'clss'){
+            $teacher = new Teacher((int) $_SESSION['user_id']);
+            $classes_data = $teacher->get_my_classes();
+            header('Content-Type: application/json');
+            if($classes_data){
+                echo json_encode($classes_data);
+            }else{
+                echo json_encode(['err' => true]);
+            }
+        }
+    }
 }

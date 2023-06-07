@@ -75,6 +75,15 @@ top_filter_btn.onclick = function (e){
     });
 }
 
+module_select.addEventListener('change', function(){
+    fetch('../api/notes.php?q=notes&subj='+module_select.value)
+    .then(res => res.json())
+    .then(data => {
+        populateTable(data);
+        initial_global_notes = data;
+        set_notes_from_dom_to_global_obj(initial_global_notes);
+    });
+})
 
 // filter_notes_to_be_updated filters notes from the dom and compare them to the initial notes
 // retreived from the server initially it checkes if there is a change made by the teacher
