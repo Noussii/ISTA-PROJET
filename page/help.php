@@ -4,9 +4,9 @@ include_once '../classes/Administration.php';
 
 if(check_general_authentication()){
     $user_type = $_SESSION['user_type'];
-    $st_help_message = 'if you encountered any problems please contact your local administration. <br><br> <b>phone: 0600000001.</b>';
-    $te_help_message = 'if you encountered any problems please contact your local administration. <br><br> <b>phone: 0600000002.</b>';
-    $ad_help_message = 'if you encountered any problems please contact official website developers. <br><br> <b>phone: 0699999999.</b>';
+    $st_help_message = 'Si vous avez rencontré des problèmes, veuillez contacter votre administration locale. <br><br> <b>Contact: 0637567890.</b>';
+    $te_help_message = 'Si vous avez rencontré des problèmes, veuillez contacter votre administration locale. <br><br> <b>Contact: 0637567891.</b>';
+    $ad_help_message = 'Si vous avez rencontré des problèmes, veuillez contacter  l`\équipe DEV 101 ". <br><br> <b>Contact: 0637567892.</b>';
 }else header('location:../api/logout.php');
 
 ?>
@@ -26,7 +26,7 @@ if(check_general_authentication()){
     <section class="outer-container">
         <main class='main-container-reactive'>
             <section>
-               <h1>Get Help:</h1>
+               <h1>Obtenir de l'aide :</h1>
                <p>
                 <?php
                     if($user_type === 'student'){

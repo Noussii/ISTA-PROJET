@@ -5,8 +5,8 @@
         <div class="row">
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">E-ISTALAZARET</h6>
-                    <p>institution since 1945 this Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sed distinctio harum velit iure quod.</p>
+                    <p>ISTA Lazaret est un institut de formation professionnelle renommé situé à Oujda, 
+                        au Maroc, offrant une éducation technique de qualité et formant des professionnels hautement qualifiés.</p>
                 </div>
             <!-- Do not delete this line; shown only in sm / used to separate divs with hr -->
             <hr class="w-100 d-md-none" />

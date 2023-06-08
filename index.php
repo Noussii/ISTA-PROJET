@@ -125,7 +125,8 @@
 
                 <h1 class="mb-4 fw-bold">Bievenue à ISTA-LAZARET</h1>
                 <h6 class="section-title-custom bg-white text-start text-primary pe-3">Description</h6>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                <p class="mb-4">ISTA Lazaret est un institut de formation professionnelle renommé situé à Oujda, 
+                        au Maroc, offrant une éducation technique de qualité et formant des professionnels hautement qualifiés.</p>
                 <div class="row gy-2 gx-4 mb-4">
                     <div class="col-sm-6">
                         <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2" style="color: #18263e;"></i>Des programmes éducatifs innovants</p>
@@ -210,8 +211,8 @@
         <div class="row">
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">E-ISTALAZARET</h6>
-                    <p>institution since 1945 this Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sed distinctio harum velit iure quod.</p>
+                    <p>ISTA Lazaret est un institut de formation professionnelle renommé situé à Oujda, au Maroc,
+                         offrant une éducation technique de qualité et formant des professionnels hautement qualifiés.</p>
                 </div>
             <!-- Do not delete this line; shown only in sm / used to separate divs with hr -->
             <hr class="w-100 d-md-none" />
