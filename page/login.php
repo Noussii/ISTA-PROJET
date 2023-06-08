@@ -57,7 +57,7 @@ check_authentication_with_redirection_logged_in('./feed.php')
 
                 <div class="d-flex mb-3">
                     <div class="dropdown-divider m-auto w-25"></div>
-                    <small class="text-nowrap text-dark"><a href="../page/login-help.html">Obtenir de l'aide</a> </small>
+                    <!-- <small class="text-nowrap text-dark"><a href="../page/login-help.html">Obtenir de l'aide</a> </small> -->
                     <div class="dropdown-divider m-auto w-25"></div>
                 </div>
 
