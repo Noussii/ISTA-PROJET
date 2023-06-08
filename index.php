@@ -220,7 +220,6 @@
                     <p><a href="./page/about.php" class="text-white">À propos de nous</a> </p>
                     <p><a href="./page/article.php" class="text-white">Articles</a></p>          
                     <p><a href="./page/updates.php" class="text-white">Actualités</a></p>           
-                    <p><a href="./page/newsLetter.php" class="text-white">Newsletter</a></p>
                 </div>
             <hr class="w-100 d-md-none" />
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">

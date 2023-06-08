@@ -58,7 +58,6 @@ function getNotifications(){
         }
         
         json.forEach(dataObj => {
-            console.log(dataObj)
             let one_noti = document.createElement('a');
             one_noti.innerText = dataObj.message;
             one_noti.dataset.checked = dataObj.checked;
