@@ -30,7 +30,7 @@ if(return_user_type() !== 'teacher') {
                         <h4>Annonce</h4>
                     </button>
                 
-                    <button type='button' class="card cours-btn">
+                    <button type='button' class="card cours-btn disabled-card">
                         <h4>Cours</h4>
                     </button>
                     
@@ -45,6 +45,9 @@ if(return_user_type() !== 'teacher') {
             </section>
         </main> 
     </section>
+
+    <dialog id='success-dialog'>
+    </dialog>
     <script src="../scripts/class_page_t.js"></script>
 </body>
 </html>

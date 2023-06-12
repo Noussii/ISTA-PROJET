@@ -4,6 +4,9 @@ if (dataList.options.length > 0) {
     input.value = dataList.options[0].value;
 }
 
+function showError(err){
+    console.log(err)
+}
 
 function send_emploi_pdf(ref){
     const pdf_inp = document.querySelector("input[name='emploiPdf']");

@@ -5,8 +5,8 @@
         <div class="row">
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                     <h6 class="text-uppercase mb-4 font-weight-bold">E-ISTALAZARET</h6>
-                    <p>institution since 1945 this Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sed distinctio harum velit iure quod.</p>
+                    <p>ISTA Lazaret est un institut de formation professionnelle renommé situé à Oujda, 
+                        au Maroc, offrant une éducation technique de qualité et formant des professionnels hautement qualifiés.</p>
                 </div>
             <!-- Do not delete this line; shown only in sm / used to separate divs with hr -->
             <hr class="w-100 d-md-none" />
@@ -14,7 +14,6 @@
                     <h6 class="text-uppercase mb-4 font-weight-bold">Liens Utiles</h6>
                     <p><a href="../page/about.php" class="text-white">À propos de nous</a> </p>
                     <p><a href="../page/updates.php" class="text-white">Articles</a></p>          
-                    <p><a href="../page/newsLetter.php" class="text-white">Newsletter</a></p>
                 </div>
             <hr class="w-100 d-md-none" />
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
@@ -30,7 +29,7 @@
             <section class="p-3 pt-0">
                 <div class="row d-flex align-items-center">
                 <div class="col-md-7 col-lg-8 text-center text-md-start">
-                    <div class="p-3">© 2023 Copyright:<a class="text-white" href="index.php">e-istalazaret.com</a></div>    
+                    <div class="p-3">© 2023 Copyright:<a class="text-white" href="../index.php">e-istalazaret.com</a></div>    
                 </div>
                 </div>
             </section>

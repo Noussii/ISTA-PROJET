@@ -16,26 +16,24 @@ class Notification extends Dbc{
         if($link) $this->link = $link;
     }
 
-    public static function class_notification_class_id($class_id, $noti_message){
-
-        
-        try{
-
+    public static function class_notification_class_id($class_id, $noti_message, $context = 'administration', $user_type = 'student', $link = '#')
+    {
+        try {
             $sql = "INSERT INTO ista_website_db.notification (recepient, message, checked, context, user_type, link, date)
-                SELECT s.student_id, ?, 0, 'administration', 'student', '/page/class.php', CURRENT_DATE()
+                SELECT s.student_id, ?, 0, ?, ?, ?, CURRENT_DATE()
                 FROM ista_website_db.student s
                 JOIN ista_website_db.class c ON s.class = c.class_id
                 WHERE c.class_id = ?;";
-
+    
             $stmt = new Dbc();
             $stmt = $stmt->connect()->prepare($sql);
-            $stmt->execute([$noti_message, $class_id]);
-        }catch (PDOException $e){
+            $stmt->execute([$noti_message, $context, $user_type, $link, $class_id]);
+        } catch (PDOException $e) {
             return false;
             echo $e->getMessage();
         }
-
     }
+    
 
     public function send(){
         $success = true;

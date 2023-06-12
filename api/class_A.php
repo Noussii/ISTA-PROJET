@@ -2,6 +2,7 @@
 include_once '../usefulFunctions.php';
 include_once '../classes/Student.php';
 include_once '../classes/Teacher.php';
+include_once '../classes/Announcement.php';
 include_once '../classes/Class.php';
 
 if(check_general_authentication()){
@@ -50,6 +51,22 @@ if(check_general_authentication()){
             }
         }
     }
+
+    if($_SESSION['user_type'] === 'student' && isset($_GET['q'])){
+
+        if($_GET['q'] === 'gt_announcements'){
+
+            $announcements_data = Announcement::retreive_announcement_from_class_id((int) $_SESSION['user_id']);
+            header('Content-Type: application/json');
+            if($announcements_data){
+                echo json_encode($announcements_data);
+            }else{
+                echo json_encode(['success'=> false]);
+            }
+        }
+
+    }
+
     if($_SESSION['user_type'] === 'teacher' && isset($_GET['q'])){
         if($_GET['q'] === 'clss'){
             $teacher = new Teacher((int) $_SESSION['user_id']);
@@ -59,6 +76,26 @@ if(check_general_authentication()){
                 echo json_encode($classes_data);
             }else{
                 echo json_encode(['err' => true]);
+            }
+        }
+
+        if( isset($_GET['cls_ref']) && $_GET['q'] === 'publish_announce'){
+            $cls_id = $_GET['cls_ref'];
+            if(is_numeric($cls_id)){
+                header('Content-Type: application/json');
+                try{
+                    $announcement = new Announcement((int)$_SESSION['user_id'], $_SESSION['user_type'], (int) $cls_id);
+                    if(isset($_GET['announcement_body'])){
+                        $announcement->set_body(htmlspecialchars($_GET['announcement_body']));
+                        $success = $announcement->send();
+                        echo json_encode(["success" => $success]);
+                    }else{
+                        echo json_encode(["success" => false]);
+                    }
+
+                }catch(RuntimeException $e){
+                    echo json_encode(["success" => false]);
+                }
             }
         }
     }

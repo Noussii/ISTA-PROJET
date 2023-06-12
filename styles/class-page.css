@@ -28,6 +28,12 @@
 .disabled-card{
     background-color: lightgray;
 }
+
+.disabled-card:hover{
+    background-color: lightgray;
+    color: black;
+    cursor: default;
+}
 .disabled-section{
     background-color: gray;
 }
@@ -91,4 +97,33 @@ iframe{
 .message-writing-container input[type='button']:hover{
     background-color: rgb(0, 206, 148);
     cursor: pointer;
+}
+
+
+
+.announce-outer-container{
+    background-color: rgb(226, 226, 226);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+.announce-left-side-text-container{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.announce-right-side-text-container{
+    background-color: #d5ffd5;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 4px solid lightgray;
+}
+.announce-text-body{
+    text-transform: capitalize;
 }

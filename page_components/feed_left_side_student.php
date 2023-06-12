@@ -104,9 +104,6 @@
         <a href='../page/class.php' class="left-side-button">
         <img src="../media/icons/class_icon_feed.png"> <span>Classe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </a>
-        <a href='../index.php' class="left-side-button">
-        <img src="../media/icons/homework_icon_feed.png"> <span>Homework&nbsp;&nbsp;</span>
-        </a>
     </aside>
 
 

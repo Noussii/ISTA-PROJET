@@ -28,7 +28,8 @@ class Class_cls {
                         $stmt = $dbc->connect()->prepare($sql);
                         $success = $stmt->execute([$pdf_name, $class_id]);
 
-                        Notification::class_notification_class_id($class_id, "Avis de changement d'emploi du temps");
+                        Notification::class_notification_class_id($class_id, "Avis de changement d'emploi du temps", $context = 'administration', $user_type = 'student', $link = 'class.php');
+                        // Notification::class_notification_class_id($class_id, "Avis de changement d'emploi du temps");
                         return true;
                         exit();
                     }catch (PDOException $e){
@@ -39,12 +40,13 @@ class Class_cls {
 
                     $pdf = file_get_contents($emploi_pdf['tmp_name']);
                     file_put_contents($_SERVER['DOCUMENT_ROOT'].$result['emploi_pdf_path'], $pdf);
-                    Notification::class_notification_class_id($class_id, "Avis de changement d'emploi du temps");
+                    Notification::class_notification_class_id($class_id, "Avis de changement d'emploi du temps", $context = 'administration', $user_type = 'student', $link = 'class.php');
+                    // Notification::class_notification_class_id($class_id, "Avis de changement d'emploi du temps");
                     return true;
                 }
             }
         }catch (PDOException $e){
-            echo $e;
+            // echo $e;
             return false;
         }
     }

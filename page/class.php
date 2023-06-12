@@ -28,10 +28,10 @@ if(return_user_type() !== 'student') {
                     <div class="card emploi_card">
                         <h4>Emploi</h4>
                     </div>
-                    <div class="card ">
+                    <div class="card anounce_card">
                         <h4>Annonce</h4>
                     </div>
-                    <div class="card">
+                    <div class="card disabled-card">
                         <h4>Cours</h4>
                     </div>
                     <div target='_blank' class="card chat_card disabled-card">
