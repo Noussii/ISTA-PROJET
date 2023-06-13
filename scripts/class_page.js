@@ -53,6 +53,7 @@ function populate_announcements(json){
 
     let outerContainer =document.querySelector('#updated-container');
     outerContainer.innerHTML = '<h1>No announcements have been sent yet.</h1>';
+    outerContainer.style.backgroundColor = 'white'; 
     if(json.length > 0){
         outerContainer.innerHTML = '';
 

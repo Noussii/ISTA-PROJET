@@ -88,6 +88,6 @@ function generatePosts(json){
     }
 }
 
-let articlesData = fetch('../api/articles_A.php?q=latest&n=5')
+let articlesData = fetch('../api/articles_A.php?q=latest&n=20')
 .then(res => res.json())
 .then(json => generatePosts(json));

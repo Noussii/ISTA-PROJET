@@ -147,5 +147,5 @@ VALUES
 (3, 'Article 6', 'Body of Article 6', '2023-05-25 15:00:00', 'keyword10, keyword2', NULL, 'administration'),
 (1, 'Article 7', 'Body of Article 7', '2023-05-30 16:00:00', 'keyword3, keyword11', 4, 'administration'),
 (2, 'Article 8', 'Body of Article 8', '2023-06-05 17:00:00', 'keyword12, keyword4', 2, 'teacher'),
-(3, 'Article 9', 'Body of Article 9', '2023-06-10 18:00:00', 'keyword1, keyword5', 3, 'administration'),
-(1, 'Article 10', 'Body of Article 10', '2023-06-15 19:00:00', 'keyword6, keyword13', NULL, 'teacher');
+(3, 'Article 9', 'Body of Article 9', '2023-06-07 18:00:00', 'keyword1, keyword5', 3, 'administration'),
+(1, 'Article 10', 'Body of Article 10', '2023-06-07 19:00:00', 'keyword6, keyword13', NULL, 'teacher');
