@@ -75,8 +75,8 @@ check_general_authentication();
     <h1>Êtes-vous sûr de vouloir mettre à jour les notes des stagiaires ?</h1>
     <p>Ces modifications seront affichées aux staigiares en tant que leurs nouvelles notes.</p>
     <div class='buttons-div'>
-        <button id='close_notes_modal_btn'>cancel</button>
-        <button id='confirme_notes_modal_btn'>confirme</button>
+        <button id='close_notes_modal_btn'>Annuler</button>
+        <button id='confirme_notes_modal_btn'>confirmer</button>
     </div>
 </dialog>
     <script src="../scripts/notes_t.js"></script>

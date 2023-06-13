@@ -69,7 +69,10 @@ function populate_side_bar(json){
         if(normalized_title.length > 22){
             normalized_title = normalized_title.slice(0, 22)+'..';
         }
-        container.href = './article.php?title='+article.title+'&ref='+article.article_id;
+
+        // hehofuhs ufhsdo ifhso ihsodh fosdh oshd osho fsdoihf ois
+
+        container.href = './article.php?ref='+article.article_id;
         title.className = 'title';
         title.title = article.title;
         date.className = 'date';
