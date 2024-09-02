@@ -13,7 +13,6 @@ include_once '../classes/Article.php';
                     if (preg_match($pattern, $bfr_date)) {
                         $data = Article::get_latest_articles_with_range_and_date($bfr_date, (int) $_GET['n']);
                         if($data){
-                            // echo 'fuck you '.'<br>';
                             header('Content-Type: application/json');
                             echo json_encode($data);
                             exit();
